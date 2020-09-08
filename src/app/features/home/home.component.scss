@@ -1,10 +1,10 @@
 .all {}
 
 ngb-carousel {
-    width: 80%;
+    width: 65%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -140px;
+    margin-top: -155px;
 }
 
 img {
@@ -16,37 +16,6 @@ img {
     border-right: 40px solid rgb(187, 187, 187);
 }
 
-.menu {
-    background: linear-gradient(90deg, rgba(239, 213, 255, 1) 0%, rgba(81, 90, 218, 1) 100%);
-    height: 250px;
-}
-
-.title {
-    padding: 20px;
-    text-align: center;
-    font-size: 30px;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
-.strong {
-    font-weight: bolder;
-}
-
-.cart {
-    width: 150px;
-    position: absolute;
-    right: 3%;
-    top: 20px;
-    font-size: 20px;
-    color: white;
-}
-
-.icart {
-    height: 40px;
-    border: 0;
-}
-
 .bott {
     text-align: center;
     margin: 10px auto;
@@ -56,12 +25,12 @@ button {
     margin: 0 auto;
     outline: none;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 15px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    height: 50px;
-    width: 210px;
+    height: 60px;
+    width: 230px;
     background-color: rgb(194, 168, 211);
     border: 1px solid white;
     color: white;
@@ -111,4 +80,36 @@ button:hover span {
     100% {
         transform: translate3d(0, 0, 0) translateZ(0);
     }
+}
+
+//menu
+.menu {
+    background: linear-gradient(90deg, rgba(239, 213, 255, 1) 0%, rgba(81, 90, 218, 1) 100%);
+    height: 260px;
+}
+
+.title {
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.strong {
+    font-weight: bolder;
+}
+
+.cart {
+    width: 150px;
+    position: absolute;
+    right: 3%;
+    top: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.icart {
+    height: 40px;
+    border: 0;
 }

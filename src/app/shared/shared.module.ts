@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { MenuComponent } from './menu/menu.component'
 
 
 @NgModule({
-  declarations: [],
+  declarations: [MenuComponent],
   imports: [
     CommonModule,
     FormsModule,
