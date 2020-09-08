@@ -1,8 +1,10 @@
 <div class="all">
     <div class="menu">
         <div class="opac">
-            <p class="title">Welcome to CalcioStore</p>
-            <span class="cart">Carrello</span>
+            <p class="title">Welcome to <span class="strong">CalcioStore</span></p>
+            <p class="cart">
+                <img src="\..\..\assets\img\cart.svg" alt="" class="icart">
+            </p>
         </div>
     </div>
     <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
@@ -12,4 +14,7 @@
             </div>
         </ng-template>
     </ngb-carousel>
+    <div class="bott">
+        <button>Personalizza</button>
+    </div>
 </div>
