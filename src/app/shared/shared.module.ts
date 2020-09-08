@@ -12,7 +12,8 @@ import { MenuComponent } from './menu/menu.component'
   ],
   exports:[
     CommonModule,
-    FormsModule
+    FormsModule,
+    MenuComponent,
   ]
 })
 export class SharedModule { }
