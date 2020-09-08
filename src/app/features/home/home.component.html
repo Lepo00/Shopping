@@ -1,1 +1,15 @@
-<p>home works!</p>
+<div class="all">
+    <div class="menu">
+        <div class="opac">
+            <p class="title">Welcome to CalcioStore</p>
+            <span class="cart">Carrello</span>
+        </div>
+    </div>
+    <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+        <ng-template ngbSlide *ngFor="let img of images; index as i">
+            <div class="picsum-img-wrapper">
+                <img [src]="img">
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>
