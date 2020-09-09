@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { addToCart } from 'src/app/redux/cart/cart.actions';
 
 @Component({
   selector: 'app-customize',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomizeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store:Store) { }
 
   ngOnInit(): void {
+  }
+
+  addToCart(text){
+    this.store.dispatch(addToCart({product: text}));
   }
 
 }

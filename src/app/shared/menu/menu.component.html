@@ -3,7 +3,8 @@
     <div class="cart">
         <span alt="" class="icart"></span>
         <span class="items">Carrello</span>
-        <table class="products">
+        <table class="products" *ngFor="let item of products |async">
+            <li>{{item}}</li>
             <tr>
                 <td class="left">Prodotto</td>
                 <td class="strong">Inter</td>
