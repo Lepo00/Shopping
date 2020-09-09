@@ -1,9 +1,17 @@
 {
     "products": [{
-        "team": "Scarpe",
-        "color": "black",
-        "player": "gian",
-        "champion": "true",
-        "id": 1
-    }]
+            "team": "Scarpe",
+            "color": "black",
+            "player": "gian",
+            "champions": true,
+            "id": 1
+        },
+        {
+            "color": "black",
+            "player": "eriksen",
+            "team": "inter",
+            "champions": true,
+            "id": 2
+        }
+    ]
 }
