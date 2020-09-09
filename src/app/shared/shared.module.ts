@@ -8,11 +8,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [MenuComponent],
   imports: [
+    NgbModule,
     CommonModule,
     FormsModule,
     NgbModule,
   ],
   exports:[
+    NgbModule,
     CommonModule,
     FormsModule,
     MenuComponent,

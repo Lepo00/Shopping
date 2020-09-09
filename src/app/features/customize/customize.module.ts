@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { CustomizeRoutingModule } from './customize-routing.module';
 import { CustomizeComponent } from './customize.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
   declarations: [CustomizeComponent],
   imports: [
-    CommonModule,
-    CustomizeRoutingModule
+    CustomizeRoutingModule,
+    SharedModule
   ]
 })
 export class CustomizeModule { }
