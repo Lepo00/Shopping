@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { selectProducts } from 'src/app/redux/cart';
 import { Observable } from 'rxjs';
+import { Product } from 'src/app/core/models/product';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +10,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  get products() : Observable<string[]>{
+  get products() : Observable<Product[]>{
     return this.store.pipe(select(selectProducts));
   };
 

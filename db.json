@@ -1,3 +1,9 @@
 {
-    "products": ["ciao", "capo"]
+    "products": [{
+        "team": "Scarpe",
+        "color": "black",
+        "player": "gian",
+        "champion": "true",
+        "id": 1
+    }]
 }

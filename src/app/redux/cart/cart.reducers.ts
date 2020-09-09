@@ -1,8 +1,9 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import {addToCart} from './cart.actions'
+import {saveToCart, initCart} from './cart.actions'
+import { Product } from 'src/app/core/models/product';
 
 export interface CartState{
-    products: string[];
+    products: Product[];
 }
 
 export const initialState: CartState = {
@@ -11,7 +12,8 @@ export const initialState: CartState = {
 
 const cartReducerFun = createReducer(
     initialState,
-    on(addToCart, (state, {product}) => ({...state, products:[...state.products, product]})),
+    on(saveToCart, (state, {product}) => ({...state, products:[...state.products, product]})),
+    on(initCart, (state, { products }) => ({ ...state, products: products })),
 );
 
 export function cartReducer(state: CartState | undefined, action: Action) {

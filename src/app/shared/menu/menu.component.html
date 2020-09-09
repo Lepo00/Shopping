@@ -4,40 +4,21 @@
         <span alt="" class="icart"></span>
         <span class="items">Carrello</span>
         <table class="products" *ngFor="let item of products |async">
-            <li>{{item}}</li>
             <tr>
-                <td class="left">Prodotto</td>
-                <td class="strong">Inter</td>
+                <td class="left">Squadra</td>
+                <td class="strong">{{item?.team}}</td>
             </tr>
             <tr>
                 <td class="left">Champions</td>
-                <td class="strong">Sì</td>
+                <td class="strong">{{item?.champions}}</td>
             </tr>
             <tr>
                 <td class="left">Nome</td>
-                <td class="strong">Luca</td>
+                <td class="strong">{{item?.player}}</td>
             </tr>
             <tr>
                 <td class="left">Colore nome</td>
-                <td class="strong">Blu</td>
-            </tr>
-        </table>
-        <table class="products">
-            <tr>
-                <td class="left">Prodotto</td>
-                <td class="strong">Inter</td>
-            </tr>
-            <tr>
-                <td class="left">Champions</td>
-                <td class="strong">Sì</td>
-            </tr>
-            <tr>
-                <td class="left">Nome</td>
-                <td class="strong">Luca</td>
-            </tr>
-            <tr>
-                <td class="left">Colore nome</td>
-                <td class="strong">Blu</td>
+                <td class="strong">{{item?.color}}</td>
             </tr>
         </table>
     </div>
