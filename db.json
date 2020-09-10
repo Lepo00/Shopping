@@ -1,8 +1,8 @@
 {
     "products": [{
-            "team": "Scarpe",
             "color": "black",
-            "player": "gian",
+            "player": "eriksen",
+            "team": "inter",
             "champions": true,
             "id": 1
         },
@@ -12,6 +12,17 @@
             "team": "inter",
             "champions": true,
             "id": 2
+        }
+    ],
+    "user": [{
+            "username": "lepo",
+            "email": "luca",
+            "password": "123"
+        },
+        {
+            "username": "leporati",
+            "email": "luke",
+            "password": "123"
         }
     ]
 }

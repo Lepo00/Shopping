@@ -12,4 +12,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  login(mail:string, pass:string){
+    //console.log("ciao"+ mail+" "+pass);
+  }
+
 }

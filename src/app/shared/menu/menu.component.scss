@@ -15,6 +15,11 @@
     font-weight: bolder;
 }
 
+.strongs {
+    font-weight: bolder;
+    text-align: left;
+}
+
 .cart {
     text-align: center;
     z-index: 1;
@@ -82,4 +87,9 @@ td {
 
 .cart:hover .icart {
     background-image: url("/../../assets/img/cart-black.svg");
+}
+
+.empty {
+    font-weight: bold;
+    font-size: 20px;
 }
