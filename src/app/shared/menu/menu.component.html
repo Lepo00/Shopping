@@ -2,7 +2,11 @@
     <p class="title">Welcome to <span class="strong">CalcioStore</span></p>
     <div class="cart">
         <span alt="" class="icart"></span>
-        <span class="items">Carrello</span>
+        <span class="items">Carrello
+            <ng-container *ngIf="products.length>0">
+                ({{products.length}})
+            </ng-container>
+        </span>
         <ng-container *ngIf="products.length>0;else empty">
             <table class="products" *ngFor="let item of products">
                 <tr>
@@ -21,6 +25,7 @@
                     <td class="left">Colore nome</td>
                     <td class="strongs">{{item?.color}}</td>
                 </tr>
+                <p (click)="rimuovi(item.id)">rimuovi {{item.id}}</p>
             </table>
         </ng-container>
         <ng-template #empty>

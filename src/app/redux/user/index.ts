@@ -4,7 +4,7 @@ import {UserState} from '../user/user.reducers'
 
 export const selectUserState = (state)=>state.userState;
 
-export const selectProducts = createSelector(
+export const selectUsers = createSelector(
     selectUserState,
     (userState: UserState) => userState.user
 )
