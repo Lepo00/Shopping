@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/core/models/user';
 import { Store } from '@ngrx/store';
-import { signup } from 'src/app/redux/user/user.actions';
+import { signUpUser } from 'src/app/redux/user/user.actions';
 
 @Component({
   selector: 'app-register',
@@ -14,9 +14,9 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  signup(usr:string,mail:string,pass:string){
-    let user:User = {"username":usr,"email":mail,"password":pass};
-    console.log(user);
-    this.store.dispatch(signup({user}));
+  signup(username:string,email:string,password:string){
+    //let user:User = {"username":usr,"email":mail,"password":pass};
+    //console.log(user);
+    this.store.dispatch(signUpUser({username,password,email}));
   }
 }

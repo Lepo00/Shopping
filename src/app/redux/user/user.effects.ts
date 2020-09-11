@@ -5,14 +5,19 @@ import { HttpCommunicationsService } from 'src/app/core/services/http-communicat
 import { switchMap, map, mergeMap, tap } from 'rxjs/operators';
 import { Action } from '@ngrx/store';
 import { User } from 'src/app/core/models/user';
-import { initUser, login, loginUserFailure, loginUserSuccess, signup } from './user.actions';
+import { initUser, login, loginUserFailure, loginUserSuccess, signUpUser, signUpUserSuccess } from './user.actions';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class UserEffects{
-    constructor(private actions$:Actions, private http: HttpCommunicationsService){}
+    constructor(private actions$:Actions, private http: HttpCommunicationsService, private router:Router){}
+
+    formatUser(user:User):User{
+        return {username:user.username,email:user.email} as User;
+    }
 
     registerUser(username:string,password:string,email: string):Observable<User>{
-        return this.http.retrievePostCall<User>("users",{username,password,email})
+        return this.http.retrievePostCall<User>("user",{username,password,email})
     }
 
     retreiveAllUsers():Observable<User[]>{
@@ -44,15 +49,30 @@ export class UserEffects{
         tap( action => {
             sessionStorage.setItem("utente", JSON.stringify({username: action.user.username, email: action.user.email }))
         }),
-        map(action=> initUser({user: action.user}))
+        tap(()=>this.router.navigateByUrl('/home')),
+        map(action=> initUser({user: action.user})),
     ))
 
 
-    signUp$: Observable<Action> = createEffect(() => this.actions$.pipe(
-        ofType(signup),
-        switchMap((action) => this.http.retrievePostCall("products",action.user)
-        .pipe(
-            map(() => signup({user:action.user}))
+    signUpUser$=createEffect(()=>this.actions$.pipe(
+        ofType(signUpUser),
+        switchMap(action=>this.registerUser(action.username,action.password,action.email).pipe(
+        tap(user=> console.log(user)),
+        switchMap(user=>of(this.formatUser(user)).pipe(
+        map( (formattedUser) => signUpUserSuccess({ user: formattedUser }))
+        ))
         ))
     ));
+        
+    signUpUserSuccess$=createEffect(()=>this.actions$.pipe(
+        ofType(signUpUserSuccess),
+        //tap((action)=>console.log('utente,registrato adesso devo registrarlo nella sessione e reindirizzarlo',action)),
+        map( (action) => initUser({ user:action.user })),
+        tap((action)=>{
+        //console.log('salvo in sessione l\'utente appena registrato');
+        sessionStorage.setItem("utente", JSON.stringify({username: action.user.username, email: action.user.email }))
+        this.router.navigateByUrl('/home');
+    })
+    ))
+
 }

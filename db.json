@@ -24,14 +24,16 @@
   ],
   "user": [
     {
-      "username": "lepo",
-      "email": "luca",
-      "password": "123"
+      "username": "aaa",
+      "password": "aaa",
+      "email": "aaa",
+      "id": 1
     },
     {
-      "username": "leporati",
-      "email": "luke",
-      "password": "123"
+      "username": "bbb",
+      "password": "bbb",
+      "email": "bbb",
+      "id": 2
     }
   ]
 }
