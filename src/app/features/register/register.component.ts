@@ -15,7 +15,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
   signup(usr:string,mail:string,pass:string){
-    let user:User = {"username":usr,"mail":mail,"password":pass};
+    let user:User = {"username":usr,"email":mail,"password":pass};
     console.log(user);
     this.store.dispatch(signup({user}));
   }

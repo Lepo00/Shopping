@@ -14,6 +14,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { CartEffects } from './redux/cart/cart.effects';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HttpCommunicationsService } from './core/services/http-communications.service';
+import { UserEffects } from './redux/user/user.effects';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { HttpCommunicationsService } from './core/services/http-communications.s
   ],
   imports: [
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([CartEffects]),
+    EffectsModule.forRoot([CartEffects, UserEffects]),
     BrowserModule,
     AppRoutingModule,
     CoreModule,

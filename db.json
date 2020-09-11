@@ -1,28 +1,37 @@
 {
-    "products": [{
-            "color": "black",
-            "player": "eriksen",
-            "team": "inter",
-            "champions": true,
-            "id": 1
-        },
-        {
-            "color": "black",
-            "player": "eriksen",
-            "team": "inter",
-            "champions": true,
-            "id": 2
-        }
-    ],
-    "user": [{
-            "username": "lepo",
-            "email": "luca",
-            "password": "123"
-        },
-        {
-            "username": "leporati",
-            "email": "luke",
-            "password": "123"
-        }
-    ]
+  "products": [
+    {
+      "color": "black",
+      "player": "eriksen",
+      "team": "inter",
+      "champions": true,
+      "id": 1
+    },
+    {
+      "color": "black",
+      "player": "eriksen",
+      "team": "inter",
+      "champions": true,
+      "id": 2
+    },
+    {
+      "color": "black",
+      "player": "eriksen",
+      "team": "inter",
+      "champions": true,
+      "id": 3
+    }
+  ],
+  "user": [
+    {
+      "username": "lepo",
+      "email": "luca",
+      "password": "123"
+    },
+    {
+      "username": "leporati",
+      "email": "luke",
+      "password": "123"
+    }
+  ]
 }

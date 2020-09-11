@@ -8,3 +8,8 @@ export const selectProducts = createSelector(
     selectUserState,
     (userState: UserState) => userState.user
 )
+
+export const selectErrorMessage = createSelector(
+    selectUserState,
+    (userState: UserState) => userState.errorMessage
+)

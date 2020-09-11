@@ -1,18 +1,21 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import { User } from 'src/app/core/models/user';
-import { login, signup } from './user.actions';
+import { initUser, login, loginUserFailure, signup } from './user.actions';
 
 export interface UserState{
     user: User;
+    errorMessage: string | null;
 }
 
 export const initialState: UserState = {
-    user:null
+    user:null,
+    errorMessage: null
 };
 
 const userReducerFun = createReducer(
     initialState,
-    on(login, (state, { user }) => ({ ...state, user: user })),
+    on(initUser, (state, {user}) => ({ ...state, user, errorMessage: null })),
+    on(loginUserFailure, (state, {error}) => ({...state, user: null, errorMessage: error})),
     on(signup),
 );
 
