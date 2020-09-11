@@ -15,6 +15,7 @@ import { CartEffects } from './redux/cart/cart.effects';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HttpCommunicationsService } from './core/services/http-communications.service';
 import { UserEffects } from './redux/user/user.effects';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { UserEffects } from './redux/user/user.effects';
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [HttpCommunicationsService],
   bootstrap: [AppComponent]

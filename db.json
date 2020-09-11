@@ -1,5 +1,13 @@
 {
-  "products": [],
+  "products": [
+    {
+      "color": "black",
+      "player": "eriksen",
+      "team": "inter",
+      "champions": true,
+      "id": 1
+    }
+  ],
   "user": [
     {
       "username": "aaa",

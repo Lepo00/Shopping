@@ -1,6 +1,6 @@
 <div class="all">
     <app-menu></app-menu>
-    <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+    <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)" class="animate__animated animate__fadeInDown">
         <ng-template ngbSlide *ngFor="let img of images; index as i">
             <div class="picsum-img-wrapper">
                 <img [src]="img">
@@ -8,6 +8,6 @@
         </ng-template>
     </ngb-carousel>
     <div class="bott">
-        <button routerLink="/customize">Personalizza ora</button>
+        <button routerLink="/customize" class="animate__animated animate__pulse animate__delay-1s">Personalizza ora</button>
     </div>
 </div>
