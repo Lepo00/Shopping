@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 
 import { RegisterRoutingModule } from './register-routing.module';
 import { RegisterComponent } from './register.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { FeaturesModule } from '../features.module';
 
 
 @NgModule({
   declarations: [RegisterComponent],
   imports: [
     RegisterRoutingModule,
-    SharedModule
+    FeaturesModule
   ]
 })
 export class RegisterModule { }

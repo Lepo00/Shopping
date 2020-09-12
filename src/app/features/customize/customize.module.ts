@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 
 import { CustomizeRoutingModule } from './customize-routing.module';
 import { CustomizeComponent } from './customize.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { FeaturesModule } from '../features.module';
 
 
 @NgModule({
   declarations: [CustomizeComponent],
   imports: [
     CustomizeRoutingModule,
-    SharedModule
+    FeaturesModule
   ]
 })
 export class CustomizeModule { }

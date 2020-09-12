@@ -40,7 +40,7 @@ export class UserEffects{
     loginUserSuccess$ : Observable<Action> = createEffect(() => this.actions$.pipe(
         ofType(loginUserSuccess),
         tap( action => {
-            sessionStorage.setItem("utente", JSON.stringify({username: action.user.username, email: action.user.email }))
+            sessionStorage.setItem("user", JSON.stringify({username: action.user.username, email: action.user.email }))
         }),
         tap(()=>this.router.navigateByUrl('/home')),
         map(action=> initUser({user: action.user})),
@@ -63,7 +63,7 @@ export class UserEffects{
         map( (action) => initUser({ user:action.user })),
         tap((action)=>{
         //console.log('salvo in sessione l\'utente appena registrato');
-        sessionStorage.setItem("utente", JSON.stringify({username: action.user.username, email: action.user.email }))
+        sessionStorage.setItem("user", JSON.stringify({username: action.user.username, email: action.user.email }))
         this.router.navigateByUrl('/home');
     })
     ))

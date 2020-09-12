@@ -6,6 +6,18 @@
       "password": "dio",
       "email": "cod",
       "id": 1
+    },
+    {
+      "username": "ciao",
+      "password": "ciao",
+      "email": "ciao",
+      "id": 2
+    },
+    {
+      "username": "luca",
+      "password": "123",
+      "email": "luca",
+      "id": 3
     }
   ]
 }

@@ -12,10 +12,11 @@ import { environment } from 'src/environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { CartEffects } from './redux/cart/cart.effects';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HttpCommunicationsService } from './core/services/http-communications.service';
 import { UserEffects } from './redux/user/user.effects';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FeaturesModule } from './features/features.module';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     }),
     HttpClientModule,
     BrowserAnimationsModule,
+    FeaturesModule,
   ],
   providers: [HttpCommunicationsService],
   bootstrap: [AppComponent]
