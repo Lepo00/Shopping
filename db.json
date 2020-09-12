@@ -1,13 +1,5 @@
 {
-  "products": [
-    {
-      "team": "liverpool",
-      "champions": false,
-      "player": "salah",
-      "color": "bianco",
-      "id": 1
-    }
-  ],
+  "products": [],
   "user": [
     {
       "username": "por",
