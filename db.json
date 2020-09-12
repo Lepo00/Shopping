@@ -1,9 +1,19 @@
 {
-    "products": [],
-    "user": [{
-        "username": "por",
-        "password": "dio",
-        "email": "co",
-        "id": 4
-    }]
+  "products": [
+    {
+      "team": "liverpool",
+      "champions": false,
+      "player": "salah",
+      "color": "bianco",
+      "id": 1
+    }
+  ],
+  "user": [
+    {
+      "username": "por",
+      "password": "dio",
+      "email": "cod",
+      "id": 1
+    }
+  ]
 }

@@ -1,5 +1,5 @@
 <app-menu></app-menu>
-<div class="animate__animated animate__flipInX all">
+<div class="animate__animated animate__flipInX">
     <div class="wrapper">
         <div class="product-img">
             <img src={{immagine}} height="420" width="327">
@@ -59,7 +59,7 @@
                         </div>
                     </div>
                     <div class="product-price-btn animate__animated animate__fadeInDown animate__delay-1s">
-                        <button type="submit" [disabled]="customizeForm.status === 'INVALID'" ng-class="disabled">Aggiungi al carrello</button>
+                        <button type="submit" [disabled]="customizeForm.status === 'INVALID'">Aggiungi al carrello</button>
                     </div>
                 </div>
             </div>

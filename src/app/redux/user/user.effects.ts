@@ -56,7 +56,7 @@ export class UserEffects{
 
     signUpUser$=createEffect(()=>this.actions$.pipe(
         ofType(signUpUser),
-        switchMap(action=>this.registerUser(action.username,action.password,action.email).pipe(
+        switchMap(action=>this.registerUser(action.user.username,action.user.password,action.user.email).pipe(
         tap(user=> console.log(user)),
         switchMap(user=>of(this.formatUser(user)).pipe(
         map( (formattedUser) => signUpUserSuccess({ user: formattedUser }))
