@@ -2,10 +2,13 @@
 <div class="animate__animated animate__flipInX">
     <div class="wrapper">
         <div class="product-img">
-            <img src={{immagine}} height="420" width="327">
+            <img src={{immagine}} *ngIf="immagine; else imgEmpty">
             <div class="product-reset-btn animate__animated animate__fadeInDown animate__delay-1s">
                 <button type="button" (click)="cls();">Reset</button>
             </div>
+            <ng-template #imgEmpty>
+                <h1 class="imgEmpty">Scegli una squadra</h1>
+            </ng-template>
         </div>
         <form [formGroup]="customizeForm" (ngSubmit)="addToCart()">
             <div class="product-info">
@@ -14,22 +17,22 @@
                         <h1 class="title">Personalizza</h1>
                         <div class="container">
                             <div class="button-wrap">
-                                <input class="hidden radio-label" id="inter-button" type="radio" name="team" formControlName="team" value="inter">
+                                <input class="hidden radio-label" id="inter-button" type="radio" name="team" formControlName="team" value="inter" (click)="changeImage(0)">
                                 <label class="button-label" for="inter-button">
-                            <h1>Inter</h1>
-                        </label>
-                                <input class="hidden radio-label" id="liverpool-button" type="radio" name="team" formControlName="team" value="liverpool">
+                                    <h1>Inter</h1>
+                                </label>
+                                <input class="hidden radio-label" id="liverpool-button" type="radio" name="team" formControlName="team" value="liverpool" (click)="changeImage(1)">
                                 <label class="button-label" for="liverpool-button">
-                            <h1>Liverpool</h1>
-                        </label>
-                                <input class="hidden radio-label" id="atalanta-button" type="radio" name="team" formControlName="team" value="atalanta">
+                                    <h1>Liverpool</h1>
+                                </label>
+                                <input class="hidden radio-label" id="atalanta-button" type="radio" name="team" formControlName="team" value="atalanta" (click)="changeImage(2)">
                                 <label class="button-label" for="atalanta-button">
-                            <h1>Atalanta</h1>
-                        </label>
-                                <input class="hidden radio-label" id="no-button" type="radio" name="team" formControlName="team" value="milan">
+                                    <h1>Atalanta</h1>
+                                </label>
+                                <input class="hidden radio-label" id="no-button" type="radio" name="team" formControlName="team" value="milan" (click)="changeImage(3)">
                                 <label class="button-label" for="no-button">
-                            <h1>Milan</h1>
-                        </label>
+                                    <h1>Milan</h1>
+                                </label>
                             </div>
                         </div>
                     </div>

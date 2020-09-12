@@ -1,6 +1,7 @@
 $background: whitesmoke;
-.disabled {
-    background-color: red;
+.imgEmpty {
+    padding: 10px;
+    margin: 170px 0 121px 40px;
 }
 
 .title {
@@ -39,8 +40,8 @@ $background: whitesmoke;
     width: 100%;
     //padding: 10px;
     border: 30px solid $background;
-    border-bottom: 25px solid $background;
-    border-right: 25px solid $background;
+    border-bottom: 15px solid $background;
+    border-right: 15px solid $background;
 }
 
 .product-info {
@@ -66,10 +67,9 @@ $background: whitesmoke;
 }
 
 .product-price-btn {
-    height: 103px;
     width: 327px;
     position: relative;
-    margin: 45px 100px 0px;
+    margin: 30px 100px 0px;
 }
 
 .product-price-btn p {

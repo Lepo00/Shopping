@@ -12,7 +12,7 @@ import { temporaryAllocator } from '@angular/compiler/src/render3/view/util';
   styleUrls: ['./customize.component.scss'],
 })
 export class CustomizeComponent implements OnInit {
-  immagine: string= "../../../assets/img/inter.jpeg";
+  immagine: string;
   products: Product[];
   customizeForm: FormGroup;
 
@@ -38,6 +38,28 @@ export class CustomizeComponent implements OnInit {
 
   cls(){
     this.customizeForm.reset();
+    this.changeImage(-1);
+  }
+
+  changeImage(id:number){
+    switch(id){
+        case -1: this.immagine=null;
+        break;
+        case 0: this.immagine= "../../../assets/img/inter.jpeg";
+        break;
+        case 1: this.immagine= "../../../assets/img/liverpool.jpg";
+        break;
+        case 2: this.immagine= "../../../assets/img/atalanta.jpeg";
+        break;
+        case 3: this.immagine= "../../../assets/img/milan.jpeg";
+        break;
+    }
+    // console.log("id:"+id);
+    // if(id===0)
+    //   this.immagine== "../../../assets/img/inter.jpeg";
+    // else if(id===1)
+    //   this.immagine== "../../../assets/img/liverpool.jpeg";
+
   }
 
 }
