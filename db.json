@@ -1,25 +1,9 @@
 {
-  "products": [
-    {
-      "color": "black",
-      "player": "eriksen",
-      "team": "inter",
-      "champions": true,
-      "id": 1
-    }
-  ],
-  "user": [
-    {
-      "username": "aaa",
-      "password": "aaa",
-      "email": "aaa",
-      "id": 1
-    },
-    {
-      "username": "bbb",
-      "password": "bbb",
-      "email": "bbb",
-      "id": 2
-    }
-  ]
+    "products": [],
+    "user": [{
+        "username": "por",
+        "password": "dio",
+        "email": "co",
+        "id": 4
+    }]
 }

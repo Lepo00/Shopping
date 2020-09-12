@@ -1,23 +1,68 @@
 <app-menu></app-menu>
-<!--<div class="all">
-    <div class="container">
-        <input type="text" #inputValue>
-        <button (click)="addToCart(inputValue.value);">aggiungi</button>
-    </div>
-</div>-->
-<div class="wrapper">
-    <div class="product-img">
-        <img src="http://bit.ly/2tMBBTd" height="420" width="327">
-    </div>
-    <div class="product-info">
-        <div class="product-text">
-            <h1>Harvest Vase</h1>
-            <h2>by studio and friends</h2>
-            <p>Harvest Vases are a reinterpretation<br> of peeled fruits and vegetables as<br> functional objects. The surfaces<br> appear to be sliced and pulled aside,<br> allowing room for growth. </p>
+<div class="animate__animated animate__flipInX all">
+    <div class="wrapper">
+        <div class="product-img">
+            <img src={{immagine}} height="420" width="327">
+            <div class="product-reset-btn animate__animated animate__fadeInDown animate__delay-1s">
+                <button type="button" (click)="cls();">Reset</button>
+            </div>
         </div>
-        <div class="product-price-btn">
-            <p><span>78</span>$</p>
-            <button type="button" (click)="addToCart('ciao');">Aggiungi al carrello</button>
-        </div>
+        <form [formGroup]="customizeForm" (ngSubmit)="addToCart()">
+            <div class="product-info">
+                <div class="product-text">
+                    <div>
+                        <h1 class="title">Personalizza</h1>
+                        <div class="container">
+                            <div class="button-wrap">
+                                <input class="hidden radio-label" id="inter-button" type="radio" name="team" formControlName="team" value="inter">
+                                <label class="button-label" for="inter-button">
+                            <h1>Inter</h1>
+                        </label>
+                                <input class="hidden radio-label" id="liverpool-button" type="radio" name="team" formControlName="team" value="liverpool">
+                                <label class="button-label" for="liverpool-button">
+                            <h1>Liverpool</h1>
+                        </label>
+                                <input class="hidden radio-label" id="atalanta-button" type="radio" name="team" formControlName="team" value="atalanta">
+                                <label class="button-label" for="atalanta-button">
+                            <h1>Atalanta</h1>
+                        </label>
+                                <input class="hidden radio-label" id="no-button" type="radio" name="team" formControlName="team" value="milan">
+                                <label class="button-label" for="no-button">
+                            <h1>Milan</h1>
+                        </label>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>by Official Store</h2>
+                    <input type="checkbox" id="check" formControlName="champions" />
+                    <label for="check" style="--d: 200px">
+                <svg viewBox="0,0,50,50">
+                    <path d="M5 30 L 20 45 L 45 5"></path>
+                </svg>
+                <p class="checkText">Champions</p>
+            </label>
+                    <label for="inp" class="inp">
+                <input type="text" id="inp" placeholder="&nbsp;" formControlName="player">
+                <span class="label">Nome Giocatore</span>
+                <span class="focus-bg"></span>
+              </label>
+                    <div class="container-2">
+                        <div class="button-wrap-2">
+                            <input class="hidden radio-label-2" id="white-button" type="radio" name="color" formControlName="color" value="bianco">
+                            <label class="button-label-2" for="white-button">
+                            <h1>Bianco</h1>
+                        </label>
+                            <input class="hidden radio-label-2" id="black-button" type="radio" name="color" formControlName="color" value="nero">
+                            <label class="button-label-2" for="black-button">
+                            <h1>Nero</h1>
+                    </label>
+                        </div>
+                    </div>
+                    <div class="product-price-btn animate__animated animate__fadeInDown animate__delay-1s">
+                        <button type="submit" [disabled]="customizeForm.status === 'INVALID'" ng-class="disabled">Aggiungi al carrello</button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
