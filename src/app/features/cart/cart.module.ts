@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 
-import { LoginRoutingModule } from './login-routing.module';
-import { LoginComponent } from './login.component';
+import { CartRoutingModule } from './cart-routing.module';
+import { CartComponent } from './cart.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FeaturesModule } from '../features.module';
 
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [CartComponent],
   imports: [
-    LoginRoutingModule,
+    CartRoutingModule,
     SharedModule,
     FeaturesModule,
   ]
 })
-export class LoginModule { }
+export class CartModule { }

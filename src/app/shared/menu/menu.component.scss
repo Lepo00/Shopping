@@ -16,20 +16,21 @@
 }
 
 .strongs {
+    text-transform: capitalize;
     font-weight: bolder;
     text-align: left;
 }
 
 .cart {
+    border-radius: 10px;
     text-align: center;
     z-index: 1;
-    cursor: pointer;
-    width: 180px;
+    width: 210px;
     position: absolute;
     top: 0;
     padding-top: 15px;
     right: 1%;
-    font-size: 20px;
+    font-size: 22px;
     color: white;
 }
 
@@ -39,7 +40,7 @@
     background-size: 30px 30px;
     //padding-left: 10px;
     padding-left: 30px;
-    padding-top: 5px;
+    padding-top: 0px;
     padding-bottom: 10px;
     // height: 50px;
     // width: 50px;
@@ -49,6 +50,7 @@
 .items {
     line-height: 50px;
     padding: 10px;
+    cursor: pointer;
 }
 
 //dropdown
@@ -56,30 +58,44 @@
     background-color: whitesmoke;
     font-size: 14px;
     z-index: 1;
-    display: none;
+    display: block;
     list-style: none;
     position: relative;
     background-color: white;
     color: black;
-    margin-top: 10px;
     border-top: 1px solid black;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
 td {
-    padding: 1px 10px;
+    padding: 2px 10px;
 }
 
 .left {
     text-align: right;
 }
 
+.remove {
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.tooItems {
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
 .cart:hover .products {
     display: block;
-    border-radius: 10px;
 }
 
 .cart:hover {
-    border-radius: 10px;
     background-color: white;
     color: black;
     border: 1px solid black;
@@ -90,6 +106,40 @@ td {
 }
 
 .empty {
+    padding: 8px 10px;
     font-weight: bold;
     font-size: 20px;
+}
+
+.home {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 1%;
+    cursor: pointer;
+    width: 180px;
+    margin-top: 15px;
+    font-size: 20px;
+    color: white;
+}
+
+.ihome {
+    background-image: url("/../../assets/img/home.svg");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    //padding-left: 10px;
+    padding-left: 30px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    // height: 50px;
+    // width: 50px;
+    border: 0;
+}
+
+.home:hover {
+    color: black;
+}
+
+.home:hover .ihome {
+    background-image: url("/../../assets/img/home-black.svg");
 }

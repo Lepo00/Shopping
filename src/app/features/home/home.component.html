@@ -1,5 +1,5 @@
+<app-menu [title]="'Benvenuto su CalcioStore'"></app-menu>
 <div class="all">
-    <app-menu></app-menu>
     <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)" class="animate__animated animate__fadeInDown">
         <ng-template ngbSlide *ngFor="let img of images; index as i">
             <div class="picsum-img-wrapper">

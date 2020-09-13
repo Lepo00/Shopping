@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { addToCart, saveToCart } from 'src/app/redux/cart/cart.actions';
 import { Product } from 'src/app/core/models/product';
-import { selectProducts } from 'src/app/redux/cart';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
-import { temporaryAllocator } from '@angular/compiler/src/render3/view/util';
 
 @Component({
   selector: 'app-customize',
@@ -13,8 +11,24 @@ import { temporaryAllocator } from '@angular/compiler/src/render3/view/util';
 })
 export class CustomizeComponent implements OnInit {
   immagine: string;
-  products: Product[];
   customizeForm: FormGroup;
+
+  get teamControl(): FormControl{
+    return this.customizeForm.get('team') as FormControl;
+  }
+
+  get championsControl(): FormControl{
+    return this.customizeForm.get('champions') as FormControl;
+  }
+
+  get playerControl(): FormControl{
+    return this.customizeForm.get('player') as FormControl;
+  }
+
+  get colorControl(): FormControl{
+    return this.customizeForm.get('color') as FormControl;
+  }
+
 
   constructor(private store:Store, private fb: FormBuilder) {
     this.customizeForm = this.fb.group({
@@ -26,14 +40,27 @@ export class CustomizeComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.store.pipe(select(selectProducts)).subscribe(products=>{
-      this.products=products;
-    });
   }
   //prod:Product = {"color":"black","player":"eriksen","team":"inter","champions":true};
 
   addToCart(){
-    this.store.dispatch(addToCart({product: this.customizeForm.value}))
+    let product:Product=this.customizeForm.value;
+    this.calcPrice(product);
+    this.store.dispatch(addToCart({product}));
+    //this.cls();
+  }
+
+  calcPrice(product: Product) {
+    switch(product.team){
+      case 'liverpool': product.price=10;
+      break;
+      case 'inter': product.price=20;
+      break;
+      case 'atalanta': product.price=30;
+      break;
+      case 'milan': product.price=40;
+      break;
+    }
   }
 
   cls(){
@@ -54,12 +81,6 @@ export class CustomizeComponent implements OnInit {
         case 3: this.immagine= "../../../assets/img/milan.jpeg";
         break;
     }
-    // console.log("id:"+id);
-    // if(id===0)
-    //   this.immagine== "../../../assets/img/inter.jpeg";
-    // else if(id===1)
-    //   this.immagine== "../../../assets/img/liverpool.jpeg";
-
   }
 
 }

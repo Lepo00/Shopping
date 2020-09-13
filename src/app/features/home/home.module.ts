@@ -4,6 +4,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FeaturesModule } from '../features.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { FeaturesModule } from '../features.module';
     HomeRoutingModule,
     FeaturesModule,
     NgbModule,
+    SharedModule
   ]
 })
 export class HomeModule { }
