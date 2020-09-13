@@ -15,6 +15,8 @@ export class MenuComponent implements OnInit {
   title:string;
   @Input()
   home:boolean;
+  @Input()
+  cart:boolean;
 
   constructor(private store:Store) { 
   }

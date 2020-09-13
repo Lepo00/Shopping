@@ -1,55 +1,49 @@
-<app-menu [title]="'Carrello'"></app-menu>
-<div class="wrap cf">
-    <div class="heading cf">
-        <h1>My Cart</h1>
-        <a href="#" class="continue">Continue Shopping</a>
-    </div>
-    <div class="cart">
-        <ul class="cartWrap">
-            <li class="items odd">
-                <div class="infoWrap">
-                    <div class="cartSection">
-                        <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
-                        <p class="itemNumber">#QUE-007544-002</p>
-                        <h3>Item Name 1</h3>
-                        <p> <input type="text" class="qty" placeholder="3" /> x $5.00</p>
-                    </div>
-                    <div class="prodTotal cartSection">
-                        <p>$15.00</p>
-                    </div>
-                    <div class="cartSection removeWrap">
-                        <a href="#" class="remove">x</a>
-                    </div>
-                </div>
-            </li>
-            <li class="items even">
-                <div class="infoWrap">
-                    <div class="cartSection">
-                        <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
-                        <p class="itemNumber">#QUE-007544-002</p>
-                        <h3>Item Name 1</h3>
-                        <p> <input type="text" class="qty" placeholder="3" /> x $5.00</p>
-                    </div>
-                    <div class="prodTotal cartSection">
-                        <p>$15.00</p>
-                    </div>
-                    <div class="cartSection removeWrap">
-                        <a href="#" class="remove">x</a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="promoCode"><label for="promo">Have A Promo Code?</label><input type="text" name="promo" placholder="Enter Code" />
-        <a href="#" class="btn"></a>
-    </div>
-    <div class="subtotal cf">
-        <ul>
-            <li class="totalRow"><span class="label">Subtotal</span><span class="value">$35.00</span></li>
-            <li class="totalRow"><span class="label">Shipping</span><span class="value">$5.00</span></li>
-            <li class="totalRow"><span class="label">Tax</span><span class="value">$4.00</span></li>
-            <li class="totalRow final"><span class="label">Total</span><span class="value">$44.00</span></li>
-            <li class="totalRow"><a href="#" class="btn continue">Checkout</a></li>
-        </ul>
+<app-menu [title]="'Carrello'" [home]=true></app-menu>
+<div class="animate__animated animate__pulse">
+    <div class="wrap cf">
+        <div class="heading cf">
+            <h1>Il Mio Carrello</h1>
+            <a routerLink="/customize" class="continue" *ngIf="products.length>0">Torna a fare Shopping</a>
+        </div>
+        <ng-container *ngIf="products.length>0;else empty">
+            <div class="cart">
+                <ul class="cartWrap">
+                    <li class="items odd" *ngFor="let item of products; let i=index">
+                        <div class="infoWrap">
+                            <div class="cartSection capitalize">
+                                <img src={{returnImage(item.team)}} class="itemImg">
+                                <h3>Maglia {{item.team}}</h3>
+                                <h6>Giocatore: {{item.player}}</h6>
+                                <p>Toppa Champions: {{item.champions ?'Sì' : 'No'}}</p><br>
+                                <p>Colore nome: {{item.color}}</p>
+                            </div>
+                            <div class="prodTotal cartSection">
+                                <p>{{item.price}}€</p>
+                            </div>
+                            <div class="cartSection removeWrap" (click)="remove(item.id)">
+                                <a class="remove">x</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="promoCode"><label for="promo">Hai un codice promo?</label><input type="text" name="promo" placholder="Enter Code" #pr>
+                <a class="btn" (click)="promo(pr.value)"></a>
+            </div>
+            <div class="subtotal cf">
+                <ul>
+                    <li class="totalRow"><span class="label">Netto</span><span class="value">{{netto.toFixed(2)}}€</span></li>
+                    <li class="totalRow"><span class="label">Spedizione</span><span class="value">{{spedizione.toFixed(2)}}€</span></li>
+                    <li class="totalRow"><span class="label">Tasse</span><span class="value">{{tasse.toFixed(2)}}€</span></li>
+                    <li class="totalRow" *ngIf="promo(pr.value)"><span class="label">Promo</span><span class="value">10%</span></li>
+                    <li class="totalRow final"><span class="label">Totale</span><span class="value">{{tot.toFixed(2)}}€</span></li>
+                    <li class="totalRow"><a routerLink="/checkout" class="btn continue">Checkout</a></li>
+                </ul>
+            </div>
+        </ng-container>
+        <ng-template #empty>
+            <h1 class="empty">Il tuo Carrello è vuoto</h1>
+            <h4 class="empty"><a routerLink="/customize"> Comincia a fare shopping</a></h4>
+        </ng-template>
     </div>
 </div>

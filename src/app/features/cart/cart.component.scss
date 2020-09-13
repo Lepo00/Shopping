@@ -1,3 +1,10 @@
+//rgba(81, 90, 218, 1)
+// rgba(239, 213, 255, 1)
+p,
+h6 {
+    margin-bottom: 0;
+}
+
 ol,
 ul {
     list-style: none;
@@ -72,15 +79,15 @@ img {
 }
 
 .wrap {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45), 0 10px 10px rgba(0, 0, 0, 0.42);
     width: 85%;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 5% 0;
-    margin-bottom: 5em;
-    margin-top: -150px;
+    margin-bottom: 0.5em;
+    margin-top: -160px;
     background-color: whitesmoke;
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px 40px;
 }
 
 .projTitle {
@@ -117,7 +124,7 @@ img {
     font-size: .75em;
     padding: 1em;
     color: #fff;
-    background: #82ca9c;
+    background: rgba(81, 90, 218, 1);
     font-weight: bold;
     border-radius: 50px;
     float: right;
@@ -174,17 +181,23 @@ img {
 }
 
 .cart .items {
+    border: 2px solid white;
     display: block;
     width: 100%;
     vertical-align: middle;
-    padding: 1.5em;
+    padding: 15px 1.5em;
     border-bottom: 1px solid #fafafa;
     background-color: white;
     border-radius: 10px;
+    margin: 1px;
 }
 
-.cart .items.even {
+.cart .items:nth-child(even) {
     background: #fafafa;
+}
+
+.items:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .cart .items .infoWrap {
@@ -222,7 +235,7 @@ img {
 }
 
 .cart .items .cartSection p.stockStatus {
-    color: #82CA9C;
+    color: rgba(81, 90, 218, 1);
     font-weight: bold;
     padding: .5em 0 0 1em;
     text-transform: uppercase;
@@ -281,6 +294,7 @@ img {
 }
 
 a.remove {
+    cursor: pointer;
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
@@ -303,10 +317,13 @@ a.remove:hover {
 }
 
 .promoCode {
+    margin-left: 40px;
     border: 2px solid #efefef;
     float: left;
     width: 35%;
     padding: 2%;
+    background-color: rgba(239, 213, 255, 1);
+    border-radius: 10px;
 }
 
 .promoCode label {
@@ -337,7 +354,7 @@ a.remove:hover {
     padding: .75em 0;
     border-radius: 0 1em 1em 0;
     text-align: center;
-    border: 1px solid #82ca9c;
+    border: 1px solid rgba(81, 90, 218, 1);
 }
 
 .promoCode a.btn:hover {
@@ -352,7 +369,7 @@ a.remove:hover {
     font-size: 1em;
     padding: 1em 3em;
     color: #fff;
-    background: #82ca9c;
+    background: rgba(81, 90, 218, 1);
     font-weight: bold;
     border-radius: 50px;
     float: right;
@@ -398,11 +415,10 @@ a.remove:hover {
 
 .subtotal {
     float: right;
-    width: 35%;
 }
 
 .subtotal .totalRow {
-    padding: .5em;
+    padding: 3px .5em;
     text-align: right;
 }
 
@@ -425,7 +441,6 @@ a.remove:hover {
 
 .subtotal .totalRow .value {
     letter-spacing: -.025em;
-    width: 35%;
 }
 
 @media only screen and (max-width: 39.375em) {
@@ -473,4 +488,14 @@ a.remove:hover {
         width: 100%;
         text-align: center;
     }
+}
+
+.empty {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.capitalize {
+    text-transform: capitalize;
+    padding: 0;
 }

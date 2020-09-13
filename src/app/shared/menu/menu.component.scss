@@ -55,10 +55,11 @@
 
 //dropdown
 .products {
+    width: 100%;
     background-color: whitesmoke;
     font-size: 14px;
     z-index: 1;
-    display: block;
+    display: none;
     list-style: none;
     position: relative;
     background-color: white;
@@ -70,6 +71,7 @@
 }
 
 td {
+    width: 105px;
     padding: 2px 10px;
 }
 
@@ -82,20 +84,38 @@ td {
     cursor: pointer;
     font-weight: bold;
     margin-bottom: 0;
+    font-size: 15px;
+}
+
+.ecc {
+    font-size: 25px;
+    margin-top: 0;
+    font-weight: bolder;
+    line-height: 15px;
+    cursor: pointer;
 }
 
 .tooItems {
-    text-align: center;
+    display: none;
+    margin-top: 5px;
+    border-top: 2px solid black;
+    text-align: left;
     cursor: pointer;
     font-weight: bold;
     margin-bottom: 0;
+    padding-left: 10px;
 }
 
 .cart:hover .products {
     display: block;
 }
 
+.cart:hover .tooItems {
+    display: block;
+}
+
 .cart:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45), 0 10px 10px rgba(0, 0, 0, 0.42);
     background-color: white;
     color: black;
     border: 1px solid black;

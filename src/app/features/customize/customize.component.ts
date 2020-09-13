@@ -34,7 +34,7 @@ export class CustomizeComponent implements OnInit {
     this.customizeForm = this.fb.group({
       team: ['', Validators.required],
       champions: false,
-      player: ['', Validators.required],
+      player: ['',Validators.required],
       color: ['', Validators.required],
     });
    }
@@ -61,6 +61,8 @@ export class CustomizeComponent implements OnInit {
       case 'milan': product.price=40;
       break;
     }
+    if(product.champions==true)
+      product.price+=100;
   }
 
   cls(){

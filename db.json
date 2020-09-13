@@ -1,28 +1,12 @@
 {
   "products": [
     {
-      "team": "atalanta",
-      "champions": true,
-      "player": "salah",
-      "color": "bianco",
-      "price": 30,
-      "id": 1
-    },
-    {
       "team": "liverpool",
-      "champions": true,
-      "player": "salah",
-      "color": "bianco",
+      "champions": false,
+      "player": "rty",
+      "color": "nero",
       "price": 10,
-      "id": 2
-    },
-    {
-      "team": "inter",
-      "champions": true,
-      "player": "salah",
-      "color": "bianco",
-      "price": 20,
-      "id": 3
+      "id": 5
     }
   ],
   "user": [
