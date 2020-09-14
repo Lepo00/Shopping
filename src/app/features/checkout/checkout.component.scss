@@ -1,15 +1,220 @@
 .wrapper {
-    border: 2px solid black;
-    width: 80%;
-    margin: -160px auto 20px auto;
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    text-align: center;
+    width: 55%;
+    margin-top: -160px;
     background-color: whitesmoke;
     border-radius: 10px;
+    padding: 20px 30px;
 }
 
 .select {
     height: 40px;
     text-indent: 10px;
-    margin: 5px auto;
-    background-color: white;
-    width: 80%;
+    margin: 15px auto 0px auto;
+    width: 95%;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("../../../assets/img/arrow_down.svg") no-repeat;
+    background-position: 98% 8px;
+    background-color: rgba(239, 213, 255, 1);
+    color: white;
+}
+
+.select option {
+    background-color: rgba(239, 213, 255, 1);
+    color: white;
+}
+
+select:valid {
+    color: black;
+}
+
+.cc {
+    width: 72.5%;
+}
+
+.cvv {
+    width: 19.5%;
+    border: 0;
+    margin: 0;
+}
+
+.left {
+    margin-right: 3%;
+}
+
+input {
+    border: 0;
+    margin: 15px auto 0px auto;
+    background-color: rgba(239, 213, 255, 1);
+    border-bottom: 1px solid white;
+    color: black;
+    width: 95%;
+    height: 40px;
+    font-weight: bold;
+    text-indent: 10px;
+}
+
+input:focus,
+.select:focus {
+    background-color: rgba(255, 255, 255, 0.479);
+}
+
+::placeholder {
+    color: white;
+}
+
+.btnLeft {
+    margin-right: 30%;
+}
+
+.btnRight {
+    background-color: rgb(198, 155, 224);
+    color: white;
+}
+
+//bottone
+button {
+    //min-width: 260px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 40px;
+    width: 33%;
+    background-color: #ffffff;
+    border: 1px solid rgb(0, 13, 202);
+    color: rgba(81, 90, 218, 1);
+}
+
+button span {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+}
+
+button:hover {
+    animation: rotate 0.7s ease-in-out both;
+}
+
+button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes storm {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+}
+
+//grid
+.parent {
+    display: grid;
+    grid-template-columns: 2.5fr 3fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.div3 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.div4 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.div5 {
+    grid-area: 5 / 1 / 6 / 2;
+}
+
+.div6 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.div7 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.div8 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.div9 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.div10 {
+    grid-area: 5 / 2 / 6 / 3;
+}
+
+.div1,
+.div2,
+.div3,
+.div4,
+.div5 {
+    text-align: right;
+    height: 24px;
+    overflow: hidden;
+}
+
+.div6,
+.div7,
+.div8,
+.div9,
+.div10 {
+    text-align: left;
+    font-weight: bolder;
+    overflow: hidden;
+    height: 24px;
 }

@@ -1,39 +1,32 @@
-<app-menu [title]="'Checkout'"></app-menu>
+<app-menu [title]="'Checkout'" [home]=true></app-menu>
 <div class="wrapper">
-    <div class="container">
-        <article class="part card-details">
-            <h1>
-                Dettagli di Pagamento
-            </h1>
-            <form autocomplete="off">
-                <select class="select">
-                        <option value="" disabled selected hidden>Metodo di Pagamento</option>
-                        <option value="carta di credito">Carta di credito</option>
-                        <option value="carta di debito">Carta di debito</option>
-                </select>
-                <select class="select">
-                        <option value="" disabled selected hidden>Tipo di Carta</option>
-                        <option value="visa">Visa</option>
-                        <option value="mastercard">MasterCard</option>
-                        <option value="maestro">Maestro</option>
-                </select>
-                <div class="group card-number">
-                    <label for="first">Card Number</label>
-                    <input type="text" id="first" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;">
-                    <input type="text" id="second" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;">
-                    <input type="text" id="third" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;">
-                    <input type="text" id="fourth" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;">
-                </div>
-                <div class="input-item csv">
-                    <label for="csv">CVV</label>
-                    <input type="text" class="csv">
-                </div>
-                <div class="grup submit-group">
-                    <input type="button" class="back" value="Continue to payment">
-                    <input type="submit" class="submit" value="Continue to payment">
-                </div>
-            </form>
-        </article>
-        <div class="part bg"></div>
+    <div class="parent">
+        <div class="div1">Prodotti acquistati </div>
+        <div class="div2">Prezzo </div>
+        <div class="div3">Spedizione </div>
+        <div class="div4">Indirizzo </div>
+        <div class="div5">Spedito al sig. </div>
+        <div class="div6">2 </div>
+        <div class="div7">30$ </div>
+        <div class="div8">1$ </div>
+        <div class="div9">Via alessandro volra45 </div>
+        <div class="div10">Luca Leporati </div>
     </div>
+    <form autocomplete="off">
+        <select class="select" required>
+            <option value="" disabled selected hidden>Metodo di Pagamento</option>
+            <option value="carta di credito">Carta di credito</option>
+            <option value="carta di debito">Carta di debito</option>
+        </select>
+        <select class="select" required>
+            <option value="" disabled selected hidden invalid>Tipo di Carta</option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">MasterCard</option>
+            <option value="maestro">Maestro</option>
+        </select>
+        <input type="tel" class="cc left" inputmode="numeric" placeholder="Numero Carta" pattern="[0-9\s]{13,19}" maxlength="19">
+        <input type="text" class="cvv" placeholder="CVV">
+        <button class="btnLeft">Indietro</button>
+        <button type="submit" class="btnRight">Prosegui</button>
+    </form>
 </div>

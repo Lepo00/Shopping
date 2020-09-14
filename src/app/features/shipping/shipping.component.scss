@@ -1,10 +1,14 @@
 .all {
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
     margin: 0 auto;
     text-align: center;
     width: 55%;
     margin-top: -160px;
     background-color: whitesmoke;
     border-radius: 10px;
+    padding: 20px 30px;
 }
 
 input:focus {
@@ -48,10 +52,6 @@ input::-webkit-inner-spin-button {
     width: 17%;
 }
 
-.first {
-    margin-top: 25px;
-}
-
 .btnLeft {
     margin-right: 30%;
 }
@@ -76,7 +76,7 @@ button {
     height: 40px;
     width: 33%;
     background-color: #ffffff;
-    border: 1px solid rgba(22, 76, 167, 0.6);
+    border: 1px solid rgb(0, 13, 202);
     color: rgba(81, 90, 218, 1);
 }
 
@@ -93,12 +93,6 @@ button:hover {
 button:hover span {
     animation: storm 0.7s ease-in-out both;
     animation-delay: 0.06s;
-}
-
-button:active {
-    width: 33.5%;
-    height: 52px;
-    margin-top: 3px;
 }
 
 @keyframes rotate {
