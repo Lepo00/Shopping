@@ -11,8 +11,8 @@ const routes: Routes = [
   {path: 'register', loadChildren: () => import('./features/register/register.module').then(m => m.RegisterModule),canActivate: [PagesGuard],canLoad: [PagesGuard] },
   {path: 'customize', loadChildren: () => import('./features/customize/customize.module').then(m => m.CustomizeModule) ,canActivate: [AuthGuard],canLoad: [AuthGuard]},
   { path: 'cart', loadChildren: () => import('./features/cart/cart.module').then(m => m.CartModule), canActivate: [AuthGuard],canLoad: [AuthGuard] },
-  { path: 'checkout', loadChildren: () => import('./features/checkout/checkout.module').then(m => m.CheckoutModule) },
-  { path: 'shipping', loadChildren: () => import('./features/shipping/shipping.module').then(m => m.ShippingModule) }];
+  { path: 'checkout', loadChildren: () => import('./features/checkout/checkout.module').then(m => m.CheckoutModule), canActivate: [AuthGuard],canLoad: [AuthGuard] },
+  { path: 'shipping', loadChildren: () => import('./features/shipping/shipping.module').then(m => m.ShippingModule), canActivate: [AuthGuard],canLoad: [AuthGuard] }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
