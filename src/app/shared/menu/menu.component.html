@@ -38,7 +38,7 @@
                 </table>
             </ng-container>
             <p class="ecc products" routerLink="/cart" *ngIf="products.length>3">...</p>
-            <p class="tooItems" routerLink="/cart" *ngIf="products.length>=3">Vai al Carrello</p>
+            <p class="tooItems" routerLink="/cart" *ngIf="products.length>0">Vai al Carrello</p>
         </ng-container>
         <ng-template #empty>
             <table class="products">

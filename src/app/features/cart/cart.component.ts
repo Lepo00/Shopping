@@ -46,14 +46,14 @@ export class CartComponent implements OnInit {
     this.products.forEach(item => {
       this.tot+=item.price;
     });
+    this.tasse=this.tot*18/100;
+    this.netto=this.tot*82/100;
     if(this.tot<100){
       this.spedizione=5;
       this.tot+=this.spedizione;
     }else{
       this.spedizione=0;
     }
-    this.tasse=this.tot*18/100;
-    this.netto=this.tot*82/100;
   }
 
   promo(code:string):boolean{

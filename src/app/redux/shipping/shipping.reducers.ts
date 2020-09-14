@@ -13,7 +13,6 @@ export const initialState: ShippingState = {
 
 const shippingReducerFun = createReducer(
     initialState,
-    on(saveShipping, (state, {shipping}) => ({...state.shipping, shipping: shipping})),
     on(initShipping, (state, {shipping}) => ({ ...state.shipping, shipping: shipping})),
 );
 
