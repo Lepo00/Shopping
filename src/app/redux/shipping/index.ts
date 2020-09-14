@@ -1,10 +1,10 @@
 import {AppState} from '..';
 import {createSelector } from '@ngrx/store';
-import {CartState} from './cart.reducers'
+import {ShippingState} from './shipping.reducers'
 
-export const selectCartState = (state)=>state.cartState;
+export const selectShippingState = (state)=>state.cartState;
 
-export const selectProducts = createSelector(
-    selectCartState,
-    (cartState: CartState) => cartState.products
+export const selectShipping = createSelector(
+    selectShippingState,
+    (ShippingState: ShippingState) => ShippingState.shipping
 )

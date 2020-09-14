@@ -1,5 +1,22 @@
 {
-  "products": [],
+  "products": [
+    {
+      "team": "atalanta",
+      "champions": false,
+      "player": "rty",
+      "color": "bianco",
+      "price": 30,
+      "id": 2
+    },
+    {
+      "team": "milan",
+      "champions": false,
+      "player": "rty",
+      "color": "bianco",
+      "price": 40,
+      "id": 3
+    }
+  ],
   "user": [
     {
       "username": "por",

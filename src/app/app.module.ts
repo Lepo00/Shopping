@@ -17,6 +17,7 @@ import { HttpCommunicationsService } from './core/services/http-communications.s
 import { UserEffects } from './redux/user/user.effects';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FeaturesModule } from './features/features.module';
+import { ShippingEffects } from './redux/shipping/shipping.effects';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { FeaturesModule } from './features/features.module';
   ],
   imports: [
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([CartEffects, UserEffects]),
+    EffectsModule.forRoot([CartEffects, UserEffects,ShippingEffects]),
     BrowserModule,
     AppRoutingModule,
     CoreModule,
