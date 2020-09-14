@@ -1,32 +1,44 @@
 <app-menu [title]="'Checkout'" [home]=true></app-menu>
-<div class="wrapper">
-    <div class="parent">
-        <div class="div1">Prodotti acquistati </div>
-        <div class="div2">Prezzo </div>
-        <div class="div3">Spedizione </div>
-        <div class="div4">Indirizzo </div>
-        <div class="div5">Spedito al sig. </div>
-        <div class="div6">2 </div>
-        <div class="div7">30$ </div>
-        <div class="div8">1$ </div>
-        <div class="div9">Via alessandro volra45 </div>
-        <div class="div10">Luca Leporati </div>
-    </div>
-    <form autocomplete="off">
-        <select class="select" required>
+<div class="animate__animated animate__zoomIn">
+    <div class="wrapper">
+        <ng-container *ngIf="shipping; else other">
+            <div class="parent">
+                <div class="div1">Prodotti acquistati </div>
+                <div class="div2">Prezzo </div>
+                <div class="div3">Spedizione </div>
+                <div class="div4">Indirizzo </div>
+                <div class="div5">Spedito al sig. </div>
+                <div class="div6">{{products?.length}} </div>
+                <div class="div7">{{price}}€</div>
+                <div class="div8">{{spedizione}}€</div>
+                <div class="div9">{{shipping?.address}}, {{shipping?.number}}</div>
+                <div class="div10">{{shipping?.name}} {{shipping?.surname}}</div>
+            </div>
+            <form autocomplete="off">
+                <select class="select" required>
             <option value="" disabled selected hidden>Metodo di Pagamento</option>
             <option value="carta di credito">Carta di credito</option>
             <option value="carta di debito">Carta di debito</option>
         </select>
-        <select class="select" required>
+                <select class="select" required>
             <option value="" disabled selected hidden invalid>Tipo di Carta</option>
             <option value="visa">Visa</option>
             <option value="mastercard">MasterCard</option>
             <option value="maestro">Maestro</option>
         </select>
-        <input type="tel" class="cc left" inputmode="numeric" placeholder="Numero Carta" pattern="[0-9\s]{13,19}" maxlength="19">
-        <input type="text" class="cvv" placeholder="CVV">
-        <button class="btnLeft">Indietro</button>
-        <button type="submit" class="btnRight">Prosegui</button>
-    </form>
+                <input type="tel" class="cc left" inputmode="numeric" placeholder="Numero Carta" pattern="[0-9\s]{13,19}" maxlength="19">
+                <input type="text" class="cvv" placeholder="CVV">
+                <button class="btnLeft">Indietro</button>
+                <button type="submit" class="btnRight">Prosegui</button>
+            </form>
+        </ng-container>
+        <ng-template #other>
+            <div class="error">
+                <h1>Non hai inserito i dati di spedizione</h1>
+                <h3><a routerLink="/shipping">Inserisci ora i tuoi dati</a></h3>
+                <h5>Oppure</h5>
+                <h3><a routerLink="/customize">Torna a fare Shopping</a></h3>
+            </div>
+        </ng-template>
+    </div>
 </div>

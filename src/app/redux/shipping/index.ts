@@ -2,9 +2,9 @@ import {AppState} from '..';
 import {createSelector } from '@ngrx/store';
 import {ShippingState} from './shipping.reducers'
 
-export const selectShippingState = (state)=>state.cartState;
+export const selectShippingState = (state)=>state.shippingState;
 
 export const selectShipping = createSelector(
     selectShippingState,
-    (ShippingState: ShippingState) => ShippingState.shipping
+    (shippingState: ShippingState) => shippingState.shipping
 )
