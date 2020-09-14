@@ -1,16 +1,18 @@
 .all {
     margin: 0 auto;
     text-align: center;
-    width: 60%;
+    width: 55%;
     margin-top: -160px;
     background-color: whitesmoke;
     border-radius: 10px;
 }
 
-input:focus,
-#commenti:focus,
-select:focus {
+input:focus {
     background-color: rgba(255, 255, 255, 0.479);
+}
+
+::placeholder {
+    color: white;
 }
 
 input {
@@ -18,17 +20,51 @@ input {
     margin: 15px auto 0px auto;
     background-color: rgba(239, 213, 255, 1);
     border-bottom: 1px solid white;
-    color: white;
+    color: black;
     width: 95%;
     height: 40px;
     font-weight: bold;
-    text-indent: 50px;
+    text-indent: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.half {
+    width: 46%;
+}
+
+.left {
+    margin-right: 15px;
+}
+
+.address {
+    width: 75%;
+}
+
+.num {
+    width: 17%;
+}
+
+.first {
+    margin-top: 25px;
+}
+
+.btnLeft {
+    margin-right: 30%;
+}
+
+.btnRight {
+    background-color: rgb(198, 155, 224);
+    color: white;
 }
 
 //bottone
 button {
     //min-width: 260px;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 15px;
     position: relative;
     outline: none;
@@ -37,14 +73,14 @@ button {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    height: 50px;
+    height: 40px;
     width: 33%;
     background-color: #ffffff;
     border: 1px solid rgba(22, 76, 167, 0.6);
+    color: rgba(81, 90, 218, 1);
 }
 
 button span {
-    color: #164ca7;
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.7px;
@@ -98,19 +134,5 @@ button:active {
     }
     100% {
         transform: translate3d(0, 0, 0) translateZ(0);
-    }
-}
-
-@media screen and (max-width: 900px) {
-    label {
-        display: none;
-    }
-    select,
-    input,
-    #commenti {
-        margin-bottom: 10px;
-    }
-    #titolo {
-        margin-bottom: 15px;
     }
 }
