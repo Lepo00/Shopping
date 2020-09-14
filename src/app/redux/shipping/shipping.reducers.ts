@@ -17,6 +17,6 @@ const shippingReducerFun = createReducer(
     on(initShipping, (state, {shipping}) => ({ ...state.shipping, shipping: shipping})),
 );
 
-export function cartReducer(state: ShippingState | undefined, action: Action) {
+export function shippingReducer(state: ShippingState | undefined, action: Action) {
     return shippingReducerFun(state, action);
 }  
