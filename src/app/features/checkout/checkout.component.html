@@ -1,1 +1,39 @@
-<p>checkout works!</p>
+<app-menu [title]="'Checkout'"></app-menu>
+<div class="wrapper">
+    <div class="container">
+        <article class="part card-details">
+            <h1>
+                Dettagli di Pagamento
+            </h1>
+            <form autocomplete="off">
+                <select class="select">
+                        <option value="" disabled selected hidden>Metodo di Pagamento</option>
+                        <option value="carta di credito">Carta di credito</option>
+                        <option value="carta di debito">Carta di debito</option>
+                </select>
+                <select class="select">
+                        <option value="" disabled selected hidden>Tipo di Carta</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">MasterCard</option>
+                        <option value="maestro">Maestro</option>
+                </select>
+                <div class="group card-number">
+                    <label for="first">Card Number</label>
+                    <input type="text" id="first" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;">
+                    <input type="text" id="second" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;">
+                    <input type="text" id="third" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;">
+                    <input type="text" id="fourth" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;">
+                </div>
+                <div class="input-item csv">
+                    <label for="csv">CVV</label>
+                    <input type="text" class="csv">
+                </div>
+                <div class="grup submit-group">
+                    <input type="button" class="back" value="Continue to payment">
+                    <input type="submit" class="submit" value="Continue to payment">
+                </div>
+            </form>
+        </article>
+        <div class="part bg"></div>
+    </div>
+</div>

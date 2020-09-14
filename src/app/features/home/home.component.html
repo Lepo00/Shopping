@@ -1,13 +1,16 @@
 <app-menu [title]="'Benvenuto su CalcioStore'" [cart]=true></app-menu>
 <div class="all">
-    <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)" class="animate__animated animate__fadeInDown">
-        <ng-template ngbSlide *ngFor="let img of images; index as i">
-            <div class="picsum-img-wrapper">
-                <img [src]="img">
-            </div>
-        </ng-template>
-    </ngb-carousel>
-    <div class="bott">
-        <button routerLink="/customize" class="animate__animated animate__pulse animate__delay-1s">Personalizza ora</button>
-    </div>
+    <form [formGroup]="imgForm" (ngSubmit)="ciao()">
+        <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)" class="animate__animated animate__fadeInDown">
+            <ng-template ngbSlide *ngFor="let img of images; index as i">
+                <div class="picsum-img-wrapper">
+                    <img [src]="img" routerLink="/customize/{{i}}">
+                    <input value={{i}} formControlName="index" [hidden]=true>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+        <div class="bott">
+            <button type="submit" class="animate__animated animate__pulse animate__delay-1s">Personalizza ora</button>
+        </div>
+    </form>
 </div>

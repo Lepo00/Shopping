@@ -13,7 +13,7 @@ export class CartComponent implements OnInit {
   promoz:boolean;
   netto:number;
   tot:number;
-  tasse:number=22;
+  tasse:number;
   spedizione:number=0;
   products: Product[];
   constructor(private store:Store) { 
@@ -52,8 +52,8 @@ export class CartComponent implements OnInit {
     }else{
       this.spedizione=0;
     }
-    this.tasse=this.tot*22/100;
-    this.netto=this.tot*78/100;
+    this.tasse=this.tot*18/100;
+    this.netto=this.tot*82/100;
   }
 
   promo(code:string):boolean{
