@@ -51,6 +51,12 @@
         "number": "1234 1234 1234 1234",
         "cvv": "666"
       }
+    },
+    {
+      "username": "lepo",
+      "password": "123",
+      "email": "rati",
+      "id": 4
     }
   ]
 }

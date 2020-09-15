@@ -13,8 +13,8 @@ import { Router } from '@angular/router';
 export class UserEffects{
     constructor(private actions$:Actions, private http: HttpCommunicationsService, private router:Router, private auth:AuthService){}
 
-    registerUser(username:string,password:string,email: string):Observable<User>{
-        return this.http.retrievePostCall<User>("user",{username,password,email})
+    registerUser(user:User):Observable<User>{
+        return this.http.retrievePostCall<User>("user",user)
     }
       
     retreiveAllUsers():Observable<User[]>{
@@ -50,11 +50,9 @@ export class UserEffects{
 
     signUpUser$=createEffect(()=>this.actions$.pipe(
         ofType(signUpUser),
-        switchMap(action=>this.registerUser(action.user.username,action.user.password,action.user.email).pipe(
+        switchMap(action=>this.registerUser(action.user).pipe(
         tap(user=> console.log(user)),
-        switchMap(user=>of(this.auth.formatUser(user)).pipe(
         map( (formattedUser) => signUpUserSuccess({ user: formattedUser }))
-        ))
         ))
     ));
         
