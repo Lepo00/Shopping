@@ -27,7 +27,8 @@ export class CheckoutComponent implements OnInit {
     this.payForm=fb.group({
     method: ['', Validators.required],
     type: ['',Validators.required],
-    number: ['', Validators.compose([Validators.required,Validators.minLength(3)])]
+    number: ['', Validators.required],
+    cvv: ['', Validators.compose([Validators.required,Validators.minLength(3)])],
     })
   }
 
