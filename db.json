@@ -36,14 +36,14 @@
       "password": "123",
       "email": "luca",
       "shipping": {
-        "name": "",
-        "surname": "",
-        "phone": "",
-        "city": "",
-        "cap": "",
-        "address": "",
-        "number": "",
-        "info": ""
+        "name": "luca",
+        "surname": "lepo",
+        "phone": "3456789021",
+        "city": "milano",
+        "cap": "23456",
+        "address": "Via De Gasperi",
+        "number": 666,
+        "info": null
       }
     }
   ]

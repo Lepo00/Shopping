@@ -1,17 +1,17 @@
 <app-menu [title]="'Shipping'" [home]=true></app-menu>
 <div class="all animate__animated animate__zoomIn">
-    <form [formGroup]="shipForm" (ngSubmit)="saveShipping()">
+    <form [formGroup]="shipForm">
         <input type="text" placeholder="nome" formControlName="name">
         <input type="text" placeholder="cognome" formControlName="surname">
         <input type="text" placeholder="cellulare" formControlName="phone" autocomplete="phone">
-        <input type="text" placeholder="città" class="half left" formControlName="city">
+        <input type="text" placeholder="città" class="half left" formControlName="city" name="city">
         <input type="text" placeholder="CAP" class="half" formControlName="cap">
         <input type="text" placeholder="Indirizzo" class="address left" formControlName="address">
         <input type="number" placeholder="N°" class="num" formControlName="number">
         <input type="text" placeholder="Informazioni per corriere" formControlName="info">
         <button class="btnLeft" routerLink="/customize">Indietro</button>
-        <button type="submit" class="btnRight" [disabled]="shipForm.status === 'INVALID'">Prosegui</button>
-        <button (click)="addShip()">Salva anche su db</button>
+        <button (click)="addShip()" class="btnLeft" routerLink="/checkout">Salva</button>
+        <button type="submit" class="btnRight" (click)="saveShipping()" routerLink="/checkout" [disabled]="shipForm.status === 'INVALID'">Prosegui</button>
     </form>
 
 </div>

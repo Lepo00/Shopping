@@ -39,10 +39,11 @@ export class UserEffects{
 
     loginUserSuccess$ : Observable<Action> = createEffect(() => this.actions$.pipe(
         ofType(loginUserSuccess),
-        tap( action => {
+        tap((action)=>{
             sessionStorage.setItem("user", JSON.stringify(action.user))
+            sessionStorage.setItem("id", JSON.stringify(action.user.id)),
+            this.router.navigateByUrl('/home');
         }),
-        tap(()=>this.router.navigateByUrl('/home')),
         map(action=> initUser({user: action.user})),
     ))
 
@@ -62,15 +63,21 @@ export class UserEffects{
         //tap((action)=>console.log('utente,registrato adesso devo registrarlo nella sessione e reindirizzarlo',action)),
         map( (action) => initUser({ user:action.user })),
         tap((action)=>{
-        sessionStorage.setItem("user", JSON.stringify(action.user))
-        this.router.navigateByUrl('/home');
-    })
+            sessionStorage.setItem("user", JSON.stringify(action.user))
+            sessionStorage.setItem("id", JSON.stringify(action.user.id)),
+            this.router.navigateByUrl('/home');
+        })
     ))
 
     updateUser$=createEffect(()=>this.actions$.pipe(
         ofType(updateUser),
         switchMap((action)=>this.http.retrievePutCall("user/"+action.user.id,action.user).pipe(
             map((user:User)=>initUser({user: user}))
-        ))
+        )),
+        tap((action)=>{
+            sessionStorage.setItem("user", JSON.stringify(action.user)),
+            sessionStorage.setItem("id", JSON.stringify(action.user.id))
+        })
     ))
+
 }

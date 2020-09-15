@@ -11,10 +11,10 @@
                 <div class="div6">{{products?.length}} </div>
                 <div class="div7">{{price}}€</div>
                 <div class="div8">{{spedizione}}€</div>
-                <div class="div9">{{shipping?.address}}, {{shipping?.number}}</div>
+                <div class="div9">{{shipping?.city}}, {{shipping?.address}}, {{shipping?.number}}</div>
                 <div class="div10">{{shipping?.name}} {{shipping?.surname}}</div>
             </div>
-            <form autocomplete="off" [formGroup]="payForm" (ngSubmit)="pay()">
+            <form autocomplete="off" [formGroup]="payForm">
                 <select class="select" required formControlName="method">
                     <option value="" disabled selected hidden>Metodo di Pagamento</option>
                     <option value="carta di credito">Carta di credito</option>
@@ -28,8 +28,9 @@
                 </select>
                 <input type="tel" class="cc left" formControlName="number" inputmode="numeric" placeholder="Numero Carta" pattern="[0-9\s]{13,19}" maxlength="19">
                 <input type="text" class="cvv" placeholder="CVV" maxlength=3>
-                <button class="btnLeft">Indietro</button>
-                <button type="submit" class="btnRight" [disabled]="payForm.status === 'INVALID'">Prosegui</button>
+                <button class="btnLeft" routerLink="/shipping">Indietro</button>
+                <button (click)="addPay()" class="btnLeft">Salva</button>
+                <button type="submit" (click)="pay()" class="btnRight" [disabled]="payForm.status === 'INVALID'">Prosegui</button>
             </form>
         </ng-container>
         <ng-template #other>

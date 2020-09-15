@@ -14,34 +14,36 @@ import { updateUser } from 'src/app/redux/user/user.actions';
   styleUrls: ['./shipping.component.scss']
 })
 export class ShippingComponent implements OnInit {
+  shipping:Shipping;
   user:User;
   shipForm: FormGroup;
   constructor(private store:Store, private router: Router, private fb:FormBuilder) {
-    this.shipForm = this.fb.group({
-      name: ['', Validators.required],
-      surname: ['', Validators.required],
-      phone: ['', Validators.compose([Validators.required,Validators.minLength(9),Validators.maxLength(10)])],
-      city: ['', Validators.required],
-      cap: ['', Validators.required],
-      address: ['',Validators.required],
-      number: ['', Validators.required],
-      info: [''],
-    });
   }
 
   ngOnInit(): void {
     this.user=JSON.parse(sessionStorage.getItem("user"));
+    this.shipping=this.user.shipping;
+    this.shipForm = this.fb.group({
+      name: [this.shipping?.name, Validators.required],
+      surname: [this.shipping?.surname, Validators.required],
+      phone: [this.shipping?.phone, Validators.compose([Validators.required,Validators.minLength(9),Validators.maxLength(10)])],
+      city: [this.shipping?.city, Validators.required],
+      cap: [this.shipping?.cap, Validators.required],
+      address: [this.shipping?.address,Validators.required],
+      number: [this.shipping?.number, Validators.required],
+      info: [this.shipping?.info],
+    });
   }
+
   //prod:Product = {"color":"black","player":"eriksen","team":"inter","champions":true};
   saveShipping(){
-    let shipping:Shipping=this.shipForm.value;
-    this.store.dispatch(saveShipping({shipping}));
-    this.router.navigateByUrl("/checkout");
+    this.shipping=this.shipForm.value;
+    this.store.dispatch(saveShipping({shipping:this.shipping}));
   }
 
   addShip(){
-    let shipping:Shipping=this.shipForm.value;
-    this.user.shipping=shipping;
+    this.saveShipping();
+    this.user.shipping=this.shipping;
     this.store.dispatch(updateUser({user:this.user}));
   }
 }
