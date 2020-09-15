@@ -31,10 +31,20 @@
       "id": 2
     },
     {
+      "id": 3,
       "username": "luca",
       "password": "123",
       "email": "luca",
-      "id": 3
+      "shipping": {
+        "name": "",
+        "surname": "",
+        "phone": "",
+        "city": "",
+        "cap": "",
+        "address": "",
+        "number": "",
+        "info": ""
+      }
     }
   ]
 }

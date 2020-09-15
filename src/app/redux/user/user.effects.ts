@@ -6,7 +6,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
 import { switchMap, map, mergeMap, tap } from 'rxjs/operators';
 import { Action } from '@ngrx/store';
 import { User } from 'src/app/core/models/user';
-import { initUser, login, loginUserFailure, loginUserSuccess, signUpUser, signUpUserSuccess } from './user.actions';
+import { initUser, login, loginUserFailure, loginUserSuccess, signUpUser, signUpUserSuccess, updateUser } from './user.actions';
 import { Router } from '@angular/router';
 
 @Injectable()
@@ -40,7 +40,7 @@ export class UserEffects{
     loginUserSuccess$ : Observable<Action> = createEffect(() => this.actions$.pipe(
         ofType(loginUserSuccess),
         tap( action => {
-            sessionStorage.setItem("user", JSON.stringify({id: action.user.id,username: action.user.username, email: action.user.email }))
+            sessionStorage.setItem("user", JSON.stringify(action.user))
         }),
         tap(()=>this.router.navigateByUrl('/home')),
         map(action=> initUser({user: action.user})),
@@ -62,10 +62,15 @@ export class UserEffects{
         //tap((action)=>console.log('utente,registrato adesso devo registrarlo nella sessione e reindirizzarlo',action)),
         map( (action) => initUser({ user:action.user })),
         tap((action)=>{
-        //console.log('salvo in sessione l\'utente appena registrato');
-        sessionStorage.setItem("user", JSON.stringify({username: action.user.username, email: action.user.email }))
+        sessionStorage.setItem("user", JSON.stringify(action.user))
         this.router.navigateByUrl('/home');
     })
     ))
 
+    updateUser$=createEffect(()=>this.actions$.pipe(
+        ofType(updateUser),
+        switchMap((action)=>this.http.retrievePutCall("user/"+action.user.id,action.user).pipe(
+            map((user:User)=>initUser({user: user}))
+        ))
+    ))
 }

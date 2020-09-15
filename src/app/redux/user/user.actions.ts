@@ -1,4 +1,6 @@
 import {createAction, props} from '@ngrx/store';
+import { Payment } from 'src/app/core/models/payment';
+import { Shipping } from 'src/app/core/models/shipping';
 import { User } from 'src/app/core/models/user';
 export const login = createAction('[User] signin', props<{user:User}>());
 export const signUpUser = createAction('[Auth] signUp', props<{user:User}>());
@@ -6,3 +8,4 @@ export const signUpUserSuccess = createAction('[Auth] signUp Success', props<{us
 export const loginUserSuccess = createAction('[Auth] Login Success', props<{user: User}>());
 export const loginUserFailure = createAction('[Auth] Login Failure', props<{error: string}>());
 export const initUser = createAction('[User] init', props<{user: User}>());
+export const updateUser = createAction('[User] update', props<{user: User}>());
