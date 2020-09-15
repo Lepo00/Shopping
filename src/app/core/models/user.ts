@@ -1,3 +1,4 @@
+import { Payment } from './payment';
 import { Shipping } from './shipping';
 
 export interface User {
@@ -6,4 +7,5 @@ export interface User {
     password:string;
     id?:number;
     shipping?: Shipping;
+    payment?: Payment;
 }

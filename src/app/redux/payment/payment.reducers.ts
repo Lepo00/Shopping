@@ -1,20 +1,20 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { Shipping } from 'src/app/core/models/shipping';
-import { initShipping, saveShipping } from './payment.actions';
+import { Payment } from 'src/app/core/models/payment';
+import { initPayment } from './payment.actions';
 
-export interface ShippingState{
-    shipping: Shipping;
+export interface PaymentState{
+    payment: Payment;
 }
 
-export const initialState: ShippingState = {
-    shipping:null
+export const initialState: PaymentState = {
+    payment:null
 };
 
-const shippingReducerFun = createReducer(
+const paymentReducerFun = createReducer(
     initialState,
-    on(initShipping, (state, {shipping}) => ({ ...state.shipping, shipping: shipping})),
+    on(initPayment, (state, {payment}) => ({ ...state.payment, payment: payment})),
 );
 
-export function shippingReducer(state: ShippingState | undefined, action: Action) {
-    return shippingReducerFun(state, action);
+export function paymentReducer(state: PaymentState | undefined, action: Action) {
+    return paymentReducerFun(state, action);
 }  

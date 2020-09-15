@@ -18,6 +18,7 @@ import { UserEffects } from './redux/user/user.effects';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FeaturesModule } from './features/features.module';
 import { ShippingEffects } from './redux/shipping/shipping.effects';
+import { PaymentEffects } from './redux/payment/payment.effects';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { ShippingEffects } from './redux/shipping/shipping.effects';
   ],
   imports: [
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([CartEffects, UserEffects,ShippingEffects]),
+    EffectsModule.forRoot([CartEffects, UserEffects,ShippingEffects, PaymentEffects]),
     BrowserModule,
     AppRoutingModule,
     CoreModule,
