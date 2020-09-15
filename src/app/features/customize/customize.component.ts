@@ -15,25 +15,7 @@ export class CustomizeComponent implements OnInit {
   customizeForm: FormGroup;
   id:number;
   sub: any;
-
-  get teamControl(): FormControl{
-    return this.customizeForm.get('team') as FormControl;
-  }
-
-  get championsControl(): FormControl{
-    return this.customizeForm.get('champions') as FormControl;
-  }
-
-  get playerControl(): FormControl{
-    return this.customizeForm.get('player') as FormControl;
-  }
-
-  get colorControl(): FormControl{
-    return this.customizeForm.get('color') as FormControl;
-  }
-
-  constructor(private store:Store, private fb: FormBuilder,private route: ActivatedRoute) {
-   }
+  constructor(private store:Store, private fb: FormBuilder,private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
@@ -92,6 +74,7 @@ export class CustomizeComponent implements OnInit {
 
   teamSelected():string{
     let id=this.id%5;
+    this.changeImage(id-1);
     switch(id){
       case 0: return "";
       case 1: return "inter";

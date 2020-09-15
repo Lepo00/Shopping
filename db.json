@@ -1,62 +1,60 @@
 {
-  "products": [
-    {
-      "team": "liverpool",
-      "champions": true,
-      "player": "rty",
-      "color": "nero",
-      "price": 110,
-      "id": 4
-    },
-    {
-      "team": "atalanta",
-      "champions": true,
-      "player": "rty",
-      "color": "nero",
-      "price": 130,
-      "id": 5
-    }
-  ],
-  "user": [
-    {
-      "username": "por",
-      "password": "dio",
-      "email": "cod",
-      "id": 1
-    },
-    {
-      "username": "ciao",
-      "password": "ciao",
-      "email": "ciao",
-      "id": 2
-    },
-    {
-      "id": 3,
-      "username": "luca",
-      "password": "123",
-      "email": "luca",
-      "shipping": {
-        "name": "luca",
-        "surname": "lepo",
-        "phone": "3456789021",
-        "city": "milano",
-        "cap": "23456",
-        "address": "Via De Gasperi",
-        "number": 34,
-        "info": null
-      },
-      "payment": {
-        "method": "carta di debito",
-        "type": "mastercard",
-        "number": "1234 1234 1234 1234",
-        "cvv": "666"
-      }
-    },
-    {
-      "username": "lepo",
-      "password": "123",
-      "email": "rati",
-      "id": 4
-    }
-  ]
+    "products": [{
+            "team": "liverpool",
+            "champions": true,
+            "player": "rty",
+            "color": "nero",
+            "price": 110,
+            "id": 4
+        },
+        {
+            "team": "atalanta",
+            "champions": true,
+            "player": "rty",
+            "color": "nero",
+            "price": 130,
+            "id": 5
+        }
+    ],
+    "user": [{
+            "username": "por",
+            "password": "dio",
+            "email": "cod",
+            "id": 1
+        },
+        {
+            "username": "ciao",
+            "password": "ciao",
+            "email": "ciao",
+            "id": 2
+        },
+        {
+            "id": 3,
+            "username": "luca",
+            "password": "123",
+            "email": "luca",
+            "shipping": {
+                "name": "luca",
+                "surname": "lepo",
+                "phone": "3456789021",
+                "city": "milano",
+                "cap": "23456",
+                "address": "Via De Gasperi",
+                "number": 34,
+                "info": null
+            },
+            "payment": {
+                "method": "carta di debito",
+                "type": "mastercard",
+                "number": "1234 1234 1234 1234",
+                "cvv": "666"
+            }
+        },
+        {
+            "username": "rati",
+            "password": "123",
+            "email": "lepo",
+            "id": 4
+        }
+    ]
 }

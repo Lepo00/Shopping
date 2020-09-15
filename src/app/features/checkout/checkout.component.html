@@ -1,43 +1,52 @@
 <app-menu [title]="'Checkout'" [home]=true></app-menu>
 <div class="animate__animated animate__zoomIn">
     <div class="wrapper">
-        <ng-container *ngIf="shipping; else other">
-            <div class="parent">
-                <div class="div1">Prodotti acquistati </div>
-                <div class="div2">Prezzo </div>
-                <div class="div3">Spedizione </div>
-                <div class="div4">Indirizzo </div>
-                <div class="div5">Spedito al sig. </div>
-                <div class="div6">{{products?.length}} </div>
-                <div class="div7">{{price}}€</div>
-                <div class="div8">{{spedizione}}€</div>
-                <div class="div9">{{shipping?.city}}, {{shipping?.address}}, {{shipping?.number}}</div>
-                <div class="div10">{{shipping?.name}} {{shipping?.surname}}</div>
-            </div>
-            <form autocomplete="off" [formGroup]="payForm">
-                <select class="select" required formControlName="method">
+        <ng-container *ngIf="done==false; else finish">
+            <ng-container *ngIf="shipping; else other">
+                <div class="parent">
+                    <div class="div1">Prodotti acquistati </div>
+                    <div class="div2">Prezzo </div>
+                    <div class="div3">Spedizione </div>
+                    <div class="div4">Indirizzo </div>
+                    <div class="div5">Spedito al sig. </div>
+                    <div class="div6">{{products?.length}} </div>
+                    <div class="div7">{{price}}€</div>
+                    <div class="div8">{{spedizione}}€</div>
+                    <div class="div9">{{shipping?.city}}, {{shipping?.address}}, {{shipping?.number}}</div>
+                    <div class="div10">{{shipping?.name}} {{shipping?.surname}}</div>
+                </div>
+                <form autocomplete="off" [formGroup]="payForm">
+                    <select class="select" required formControlName="method">
                     <option value="" disabled selected hidden>Metodo di Pagamento</option>
                     <option value="carta di credito">Carta di credito</option>
                     <option value="carta di debito">Carta di debito</option>
                 </select>
-                <select class="select" required formControlName="type">
+                    <select class="select" required formControlName="type">
                     <option value="" disabled selected hidden invalid>Tipo di Carta</option>
                     <option value="visa">Visa</option>
                     <option value="mastercard">MasterCard</option>
                     <option value="maestro">Maestro</option>
                 </select>
-                <input type="tel" class="cc left" formControlName="number" inputmode="numeric" placeholder="Numero Carta" pattern="[0-9\s]{13,19}" maxlength="19">
-                <input type="text" class="cvv" placeholder="CVV" maxlength=3 formControlName="cvv">
-                <button class="btnLeft" routerLink="/shipping">Indietro</button>
-                <button (click)="addPay()" class="btnLeft">Salva</button>
-                <button type="submit" (click)="pay()" class="btnRight" [disabled]="payForm.status === 'INVALID'">Prosegui</button>
-            </form>
+                    <input type="tel" class="cc left" formControlName="number" inputmode="numeric" placeholder="Numero Carta" pattern="[0-9\s]{13,19}" maxlength="19">
+                    <input type="text" class="cvv" placeholder="CVV" maxlength=3 formControlName="cvv">
+                    <button class="btnLeft" routerLink="/shipping">Indietro</button>
+                    <button (click)="addPay()" class="btnLeft">Salva</button>
+                    <button type="submit" (click)="pay()" class="btnRight" [disabled]="payForm.status === 'INVALID'">Prosegui</button>
+                </form>
+            </ng-container>
+            <ng-template #other>
+                <div class="error">
+                    <h1>Non hai inserito i dati di spedizione</h1>
+                    <h3><a routerLink="/shipping">Inserisci ora i tuoi dati</a></h3>
+                    <h5>Oppure</h5>
+                    <h3><a routerLink="/customize">Torna a fare Shopping</a></h3>
+                </div>
+            </ng-template>
         </ng-container>
-        <ng-template #other>
+        <ng-template #finish>
             <div class="error">
-                <h1>Non hai inserito i dati di spedizione</h1>
-                <h3><a routerLink="/shipping">Inserisci ora i tuoi dati</a></h3>
-                <h5>Oppure</h5>
+                <h1>Acquisto effettuato con successo</h1>
+                <h3><a routerLink="/shipping">Ti abbiamo inviato una mail di conferma</a></h3>
                 <h3><a routerLink="/customize">Torna a fare Shopping</a></h3>
             </div>
         </ng-template>

@@ -14,5 +14,4 @@ formatUser(user:User):User{
 checkUserAccount(mail:string,password:string,users){
   return users.find(actualUser=>actualUser.email === mail && actualUser.password === password);
 }
-
 }
