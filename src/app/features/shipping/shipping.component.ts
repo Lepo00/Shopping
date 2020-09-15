@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { select, Store } from '@ngrx/store';
 import { Shipping } from 'src/app/core/models/shipping';
 import { User } from 'src/app/core/models/user';
+import { selectShipping } from 'src/app/redux/shipping';
 import { saveShipping } from 'src/app/redux/shipping/shipping.actions';
 import { selectUsers } from 'src/app/redux/user';
 import { updateUser } from 'src/app/redux/user/user.actions';
@@ -21,8 +22,13 @@ export class ShippingComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.user=JSON.parse(sessionStorage.getItem("user"));
-    this.shipping=this.user.shipping;
+    this.store.pipe(select(selectShipping)).subscribe(shipping=>{
+      this.user=JSON.parse(sessionStorage.getItem("user"));
+      this.shipping=shipping;
+      if(this.shipping==null){
+        this.shipping=this.user.shipping;
+      }
+    });
     this.shipForm = this.fb.group({
       name: [this.shipping?.name, Validators.required],
       surname: [this.shipping?.surname, Validators.required],

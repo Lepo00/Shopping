@@ -3,6 +3,7 @@ import { select, Store } from '@ngrx/store';
 import { addToCart, saveToCart } from 'src/app/redux/cart/cart.actions';
 import { Product } from 'src/app/core/models/product';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-customize',
@@ -12,6 +13,8 @@ import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms'
 export class CustomizeComponent implements OnInit {
   immagine: string;
   customizeForm: FormGroup;
+  id:number;
+  sub: any;
 
   get teamControl(): FormControl{
     return this.customizeForm.get('team') as FormControl;
@@ -29,17 +32,19 @@ export class CustomizeComponent implements OnInit {
     return this.customizeForm.get('color') as FormControl;
   }
 
+  constructor(private store:Store, private fb: FormBuilder,private route: ActivatedRoute) {
+   }
 
-  constructor(private store:Store, private fb: FormBuilder) {
+  ngOnInit(): void {
+    this.sub = this.route.params.subscribe(params => {
+      this.id = +params['id'];
+    });
     this.customizeForm = this.fb.group({
-      team: ['', Validators.required],
+      team: [this.teamSelected(), Validators.required],
       champions: false,
       player: ['',Validators.required],
       color: ['', Validators.required],
     });
-   }
-
-  ngOnInit(): void {
   }
   //prod:Product = {"color":"black","player":"eriksen","team":"inter","champions":true};
 
@@ -82,6 +87,17 @@ export class CustomizeComponent implements OnInit {
         break;
         case 3: this.immagine= "../../../assets/img/milan.jpeg";
         break;
+    }
+  }
+
+  teamSelected():string{
+    let id=this.id%5;
+    switch(id){
+      case 0: return "";
+      case 1: return "inter";
+      case 2: return "liverpool";
+      case 3: return "atalanta";
+      case 4: return "milan";
     }
   }
 

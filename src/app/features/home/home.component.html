@@ -4,7 +4,7 @@
         <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)" class="animate__animated animate__fadeInDown">
             <ng-template ngbSlide *ngFor="let img of images; index as i">
                 <div class="picsum-img-wrapper">
-                    <img [src]="img" routerLink="/customize/{{i}}">
+                    <img [src]="img" routerLink="/customize/{{i+1}}">
                     <input value={{i}} formControlName="index" [hidden]=true>
                 </div>
             </ng-template>

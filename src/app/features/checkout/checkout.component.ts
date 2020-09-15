@@ -6,6 +6,7 @@ import { Product } from 'src/app/core/models/product';
 import { Shipping } from 'src/app/core/models/shipping';
 import { User } from 'src/app/core/models/user';
 import { selectProducts } from 'src/app/redux/cart';
+import { selectPayment } from 'src/app/redux/payment';
 import { savePayment } from 'src/app/redux/payment/payment.actions';
 import { selectShipping } from 'src/app/redux/shipping';
 import { updateUser } from 'src/app/redux/user/user.actions';
@@ -16,6 +17,7 @@ import { updateUser } from 'src/app/redux/user/user.actions';
   styleUrls: ['./checkout.component.scss']
 })
 export class CheckoutComponent implements OnInit {
+  payment: Payment;
   user: User;
   payForm:FormGroup;
   shipping: Shipping;
@@ -23,20 +25,13 @@ export class CheckoutComponent implements OnInit {
   price:number;
   spedizione:number;
   
-  constructor(private store:Store, private fb:FormBuilder) {
-    this.payForm=fb.group({
-    method: ['', Validators.required],
-    type: ['',Validators.required],
-    number: ['', Validators.required],
-    cvv: ['', Validators.compose([Validators.required,Validators.minLength(3)])],
-    })
-  }
+  constructor(private store:Store, private fb:FormBuilder) {  }
 
   ngOnInit(): void {
     this.store.pipe(select(selectShipping)).subscribe(shipping=>{
       this.user=JSON.parse(sessionStorage.getItem("user"));
       this.shipping=shipping;
-      if(this.shipping===null){
+      if(this.shipping==null){
         this.shipping=this.user.shipping;
       }
     });
@@ -44,6 +39,20 @@ export class CheckoutComponent implements OnInit {
       this.products=products;
       this.calcPrice();
     });
+    this.store.pipe(select(selectPayment)).subscribe(payment=>{
+      this.user=JSON.parse(sessionStorage.getItem("user"));
+      this.payment=payment;
+      if(this.payment==null){
+        this.payment=this.user.payment;
+    }
+
+    });
+    this.payForm=this.fb.group({
+      method: [this.payment?.method, Validators.required],
+      type: [this.payment.type,Validators.required],
+      number: [this.payment?.number, Validators.required],
+      cvv: [this.payment.cvv, Validators.compose([Validators.required,Validators.minLength(3)])],
+    })
   }
 
   calcPrice(){
