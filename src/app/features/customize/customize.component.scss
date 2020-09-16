@@ -1,430 +1,488 @@
-$background: whitesmoke;
-.imgEmpty {
-    padding: 10px;
-    margin: 170px 0 121px 40px;
-}
-
-.title {
-    margin: 30px 0 0 20px;
-    font-weight: 400;
-    font-size: 35px;
-}
-
-.wrapper {
-    background-color: $background;
-    height: 490px;
-    width: 730px;
-    margin: -160px auto 20px auto;
-    border-radius: 7px 7px 7px 7px;
-    /* VIA CSS MATIC https://goo.gl/cIbnS */
-    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
-}
-
-.product-img {
-    float: left;
-    height: 490px;
-    width: 42%;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
-}
-
-.product-img img {
-    border-radius: 7px 0 0 7px;
-    height: 80%;
-    width: 100%;
-    //padding: 10px;
-    border: 30px solid $background;
-    border-bottom: 15px solid $background;
-    border-right: 15px solid $background;
-}
-
-.product-info {
-    float: left;
-    height: 490px;
-    width: 58%;
-    border-radius: 0 7px 10px 0px;
-}
-
-.product-text {
-    width: 100%;
-}
-
-.product-text h2 {
-    margin: 10px 0 15px 30px;
-    font-size: 13px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #d2d2d2;
-    letter-spacing: 0.2em;
-}
-
-.product-price-btn {
-    position: relative;
-    margin: 30px 0px;
-}
-
-.product-price-btn p {
-    display: inline-block;
-    position: absolute;
-    top: -13px;
-    height: 50px;
-    margin: 0 0 0 0px;
-    font-size: 28px;
-    font-weight: lighter;
-    color: #474747;
-}
-
-span {
-    display: inline-block;
-    height: 50px;
-    font-size: 34px;
-}
-
-.product-price-btn button {
-    height: 51px;
-    width: 177px;
-    margin: 0 0px 0 45%;
-    box-sizing: border-box;
-    border: transparent;
-    border-radius: 60px;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: #ffffff;
-    background-color: #9cebd5;
-    cursor: pointer;
-    outline: none;
-    border: 2px solid white;
-}
-
-.product-price-btn button:hover {
-    background-color: #79b0a1;
-}
-
-//reset
-.product-reset-btn {
-    height: 103px;
-    width: 260px;
-    margin-top: 15px;
-    position: relative;
-}
-
-.product-price-btn p {
-    display: inline-block;
-    position: absolute;
-    top: -13px;
-    height: 50px;
-    margin: 0 0 0 0px;
-    font-size: 28px;
-    font-weight: lighter;
-    color: #474747;
-}
-
-.product-reset-btn button {
-    float: right;
-    display: inline-block;
-    height: 51px;
-    width: 177px;
-    margin: 0 40px 0 16px;
-    box-sizing: border-box;
-    border: transparent;
-    border-radius: 60px;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: #ffffff;
-    background-color: #9cebd5;
-    cursor: pointer;
-    outline: none;
-    border: 2px solid white;
-}
-
-.product-reset-btn button:hover {
-    background-color: #79b0a1;
-}
-
-//radio
-$dark: #292929;
-$light: white;
-$red: #D91E18;
-$green: #2ECC71;
-$blue: #4183D7;
-$yellow: #FFFF00;
-$purple: #c47cd3;
-$purpledark:#8906a3;
-$font-stack: "Lato",
-sans-serif;
-.container {
-    height: 100%;
-    min-height: 100%;
-    margin: 27px 0 0 0px;
-}
-
-.button-wrap {
-    position: relative;
-}
-
-.button-label {
-    display: inline-block;
-    padding: 11px 11px;
-    margin: 0 5px;
-    cursor: pointer;
-    color: $dark;
-    border-radius: 0.25em;
-    background: $light;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
-    transition: 0.3s;
-    user-select: none;
-    h1 {
-        font-size: 20px;
-        text-transform: capitalize;
+    $background: whitesmoke;
+    .imgEmpty {
+        padding: 10px;
+        margin: 170px 0 121px 40px;
     }
-    &:hover {
-        background: darken($light, 10%);
-        color: darken($dark, 10%);
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.32);
+    
+    .title {
+        margin: 30px 0 0 20px;
+        font-weight: 400;
+        font-size: 35px;
     }
-    &:active {
-        transform: translateY(2px);
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+    
+    .wrapper {
+        background-color: $background;
+        height: 490px;
+        width: 730px;
+        margin: -160px auto 20px auto;
+        border-radius: 7px 7px 7px 7px;
+        /* VIA CSS MATIC https://goo.gl/cIbnS */
+        -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
     }
-}
-
-#button-0:checked+.button-label {
-    background: $red;
-    color: $light;
-    &:hover {
-        background: darken($red, 5%);
-        color: darken($light, 5%);
+    
+    .product-img {
+        float: left;
+        height: 490px;
+        width: 42%;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
     }
-}
-
-#button-1:checked+.button-label {
-    background: $blue;
-    color: $light;
-    &:hover {
-        background: darken($blue, 5%);
-        color: darken($light, 5%);
+    
+    .product-img img {
+        border-radius: 7px 0 0 7px;
+        height: 80%;
+        width: 100%;
+        //padding: 10px;
+        border: 30px solid $background;
+        border-bottom: 15px solid $background;
+        border-right: 15px solid $background;
     }
-}
-
-#button-2:checked+.button-label {
-    background: $green;
-    color: $light;
-    &:hover {
-        background: darken($green, 5%);
-        color: darken($light, 5%);
+    
+    .product-info {
+        float: left;
+        height: 490px;
+        width: 58%;
+        border-radius: 0 7px 10px 0px;
     }
-}
-
-#button-3:checked+.button-label {
-    background: $yellow;
-    color: $light;
-    &:hover {
-        background: darken($yellow, 5%);
-        color: darken($light, 5%);
+    
+    .product-text {
+        width: 100%;
     }
-}
-
-.hidden {
-    display: none;
-}
-
-//checkbox
-*,
-*:after,
-*:before {
-    box-sizing: border-box;
-}
-
-input#check {
-    position: absolute;
-    opacity: 0;
-    &:checked+label svg path {
-        stroke-dashoffset: 0;
+    
+    .product-text h2 {
+        margin: 10px 0 15px 30px;
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #d2d2d2;
+        letter-spacing: 0.2em;
     }
-    &:focus+label {
-        transform: scale(1.03);
+    
+    .product-price-btn {
+        position: relative;
+        margin: 30px 0px;
     }
-}
-
-#check+label {
-    margin-left: 20px;
-    display: block;
-    border: 3px solid #9c9b9b;
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all .2s ease;
-    &:active {
-        transform: scale(1.05);
-        border-radius: 30px;
+    
+    .product-price-btn p {
+        display: inline-block;
+        position: absolute;
+        top: -13px;
+        height: 50px;
+        margin: 0 0 0 0px;
+        font-size: 28px;
+        font-weight: lighter;
+        color: #474747;
     }
-    svg {
-        pointer-events: none;
-        path {
-            fill: none;
-            stroke: #333;
-            stroke-width: 4px;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-dasharray: 100;
-            stroke-dashoffset: 101;
-            transition: all 350ms cubic-bezier(1, 0, .37, .91);
+    
+    span {
+        display: inline-block;
+        height: 50px;
+        font-size: 34px;
+    }
+    
+    .product-price-btn button {
+        height: 51px;
+        width: 177px;
+        margin: 0 0px 0 45%;
+        box-sizing: border-box;
+        border: transparent;
+        border-radius: 60px;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #ffffff;
+        background-color: #9cebd5;
+        cursor: pointer;
+        outline: none;
+        border: 2px solid white;
+    }
+    
+    .product-price-btn button:hover {
+        background-color: #79b0a1;
+    }
+    
+    //reset
+    .product-reset-btn {
+        height: 103px;
+        width: 260px;
+        margin-top: 15px;
+        position: relative;
+    }
+    
+    .product-price-btn p {
+        display: inline-block;
+        position: absolute;
+        top: -13px;
+        height: 50px;
+        margin: 0 0 0 0px;
+        font-size: 28px;
+        font-weight: lighter;
+        color: #474747;
+    }
+    
+    .product-reset-btn button {
+        float: right;
+        display: inline-block;
+        height: 51px;
+        width: 177px;
+        margin: 0 40px 0 16px;
+        box-sizing: border-box;
+        border: transparent;
+        border-radius: 60px;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #ffffff;
+        background-color: #9cebd5;
+        cursor: pointer;
+        outline: none;
+        border: 2px solid white;
+    }
+    
+    .product-reset-btn button:hover {
+        background-color: #79b0a1;
+    }
+    
+    //radio
+    $dark: #292929;
+    $light: white;
+    $red: #D91E18;
+    $green: #2ECC71;
+    $blue: #4183D7;
+    $yellow: #FFFF00;
+    $purple: #c47cd3;
+    $purpledark:#8906a3;
+    $font-stack: "Lato",
+    sans-serif;
+    .container {
+        height: 100%;
+        min-height: 100%;
+        margin: 27px 0 0 0px;
+    }
+    
+    .button-wrap {
+        position: relative;
+    }
+    
+    .button-label {
+        display: inline-block;
+        padding: 11px 11px;
+        margin: 0 5px;
+        cursor: pointer;
+        color: $dark;
+        border-radius: 0.25em;
+        background: $light;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+        transition: 0.3s;
+        user-select: none;
+        h1 {
+            font-size: 20px;
+            text-transform: capitalize;
+        }
+        &:hover {
+            background: darken($light, 10%);
+            color: darken($dark, 10%);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.32);
+        }
+        &:active {
+            transform: translateY(2px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
         }
     }
-}
-
-.checkText {
-    color: black;
-    font-size: 20px;
-    margin: -28px 0 0 35px;
-}
-
-//INPUT TEXT  
-.inp {
-    position: relative;
-    margin: auto;
-    width: 100%;
-    max-width: 380px;
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-.inp .label {
-    position: absolute;
-    top: 15px;
-    left: 12px;
-    font-size: 20px;
-    color: rgba(0, 0, 0, 0.5);
-    font-weight: 500;
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    pointer-events: none;
-    margin: 8px 0 0 20px;
-}
-
-.inp .focus-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.05);
-    z-index: -1;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: left;
-    transform-origin: left;
-}
-
-.inp input {
-    margin: 10px 0 0 20px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 90%;
-    border: 0;
-    padding: 10px 12px 5px 12px;
-    height: 56px;
-    font-size: 18px;
-    font-weight: 400;
-    background: white;
-    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
-    color: #000;
-    -webkit-transition: all 0.15s ease;
-    transition: all 0.15s ease;
-}
-
-.inp input:hover {
-    background: rgba(0, 0, 0, 0.04);
-    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
-}
-
-.inp input:not(:placeholder-shown)+.label {
-    color: rgba(0, 0, 0, 0.5);
-    -webkit-transform: translate3d(0, -12px, 0) scale(0.75);
-    transform: translate3d(0, -12px, 0) scale(0.75);
-}
-
-.inp input:focus {
-    background: rgba(0, 0, 0, 0.05);
-    outline: none;
-    box-shadow: inset 0 -2px 0 #0077FF;
-}
-
-.inp input:focus+.label {
-    color: #0077FF;
-    -webkit-transform: translate3d(0, -12px, 0) scale(0.75);
-    transform: translate3d(0, -12px, 0) scale(0.75);
-}
-
-.inp input:focus+.label+.focus-bg {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-    -webkit-transition: all 0.1s ease;
-    transition: all 0.1s ease;
-}
-
-//colors
-.container-2 {
-    height: 100%;
-    min-height: 100%;
-}
-
-.button-wrap-2 {
-    margin: 20px 0 0 20px;
-    position: relative;
-}
-
-.button-label-2 {
-    display: inline-block;
-    padding: 11px 11px;
-    margin: 0 5px;
-    cursor: pointer;
-    color: $dark;
-    border-radius: 0.25em;
-    background: $light;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
-    transition: 0.3s;
-    user-select: none;
-    h1 {
+    
+    #button-0:checked+.button-label {
+        background: $red;
+        color: $light;
+        &:hover {
+            background: darken($red, 5%);
+            color: darken($light, 5%);
+        }
+    }
+    
+    #button-1:checked+.button-label {
+        background: $blue;
+        color: $light;
+        &:hover {
+            background: darken($blue, 5%);
+            color: darken($light, 5%);
+        }
+    }
+    
+    #button-2:checked+.button-label {
+        background: $green;
+        color: $light;
+        &:hover {
+            background: darken($green, 5%);
+            color: darken($light, 5%);
+        }
+    }
+    
+    #button-3:checked+.button-label {
+        background: $yellow;
+        color: $light;
+        &:hover {
+            background: darken($yellow, 5%);
+            color: darken($light, 5%);
+        }
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    //checkbox
+    *,
+    *:after,
+    *:before {
+        box-sizing: border-box;
+    }
+    
+    input#check {
+        position: absolute;
+        opacity: 0;
+        &:checked+label svg path {
+            stroke-dashoffset: 0;
+        }
+        &:focus+label {
+            transform: scale(1.03);
+        }
+    }
+    
+    #check+label {
+        margin-left: 20px;
+        display: block;
+        border: 3px solid #9c9b9b;
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all .2s ease;
+        &:active {
+            transform: scale(1.05);
+            border-radius: 30px;
+        }
+        svg {
+            pointer-events: none;
+            path {
+                fill: none;
+                stroke: #333;
+                stroke-width: 4px;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 101;
+                transition: all 350ms cubic-bezier(1, 0, .37, .91);
+            }
+        }
+    }
+    
+    .checkText {
+        color: black;
         font-size: 20px;
+        margin: -28px 0 0 35px;
     }
-    &:hover {
-        background: darken($light, 10%);
-        color: darken($dark, 10%);
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.32);
+    
+    //INPUT TEXT  
+    .inp {
+        position: relative;
+        margin: auto;
+        width: 100%;
+        max-width: 380px;
+        border-radius: 3px;
+        overflow: hidden;
     }
-    &:active {
-        transform: translateY(2px);
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+    
+    .inp .label {
+        position: absolute;
+        top: 15px;
+        left: 12px;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: 500;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        pointer-events: none;
+        margin: 8px 0 0 20px;
     }
-}
-
-#white-button:checked+.button-label-2 {
-    background: $purple;
-    color: black;
-    &:hover {
-        background: darken($purple, 20%);
+    
+    .inp .focus-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.05);
+        z-index: -1;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+    }
+    
+    .inp input {
+        margin: 10px 0 0 20px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 90%;
+        border: 0;
+        padding: 10px 12px 5px 12px;
+        height: 56px;
+        font-size: 18px;
+        font-weight: 400;
+        background: white;
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+        color: #000;
+        -webkit-transition: all 0.15s ease;
+        transition: all 0.15s ease;
+    }
+    
+    .inp input:hover {
+        background: rgba(0, 0, 0, 0.04);
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+    }
+    
+    .inp input:not(:placeholder-shown)+.label {
+        color: rgba(0, 0, 0, 0.5);
+        -webkit-transform: translate3d(0, -12px, 0) scale(0.75);
+        transform: translate3d(0, -12px, 0) scale(0.75);
+    }
+    
+    .inp input:focus {
+        background: rgba(0, 0, 0, 0.05);
+        outline: none;
+        box-shadow: inset 0 -2px 0 #0077FF;
+    }
+    
+    .inp input:focus+.label {
+        color: #0077FF;
+        -webkit-transform: translate3d(0, -12px, 0) scale(0.75);
+        transform: translate3d(0, -12px, 0) scale(0.75);
+    }
+    
+    .inp input:focus+.label+.focus-bg {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transition: all 0.1s ease;
+        transition: all 0.1s ease;
+    }
+    
+    //colors
+    .container-2 {
+        height: 100%;
+        min-height: 100%;
+    }
+    
+    .button-wrap-2 {
+        margin: 20px 0 0 20px;
+        position: relative;
+    }
+    
+    .button-label-2 {
+        display: inline-block;
+        padding: 11px 11px;
+        margin: 0 5px;
+        cursor: pointer;
+        color: $dark;
+        border-radius: 0.25em;
+        background: $light;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+        transition: 0.3s;
+        user-select: none;
+        h1 {
+            font-size: 20px;
+        }
+        &:hover {
+            background: darken($light, 10%);
+            color: darken($dark, 10%);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.32);
+        }
+        &:active {
+            transform: translateY(2px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+        }
+    }
+    
+    #white-button:checked+.button-label-2 {
+        background: $purple;
+        color: black;
+        &:hover {
+            background: darken($purple, 20%);
+            color: white;
+        }
+    }
+    
+    #black-button:checked+.button-label-2 {
+        background: $purpledark;
         color: white;
+        &:hover {
+            background: darken($purpledark, 20%);
+            color: white;
+        }
     }
-}
-
-#black-button:checked+.button-label-2 {
-    background: $purpledark;
-    color: white;
-    &:hover {
-        background: darken($purpledark, 20%);
-        color: white;
+    
+    @media only screen and (max-width: 778px) {
+        .wrapper {
+            width: 95%;
+        }
     }
-}
+    
+    @media only screen and (max-width: 755px) {
+        .wrapper {
+            width: 97%;
+        }
+        .container {
+            padding: 0;
+        }
+    }
+    
+    @media only screen and (max-width: 690px) {
+        .wrapper {
+            width: 98%;
+        }
+        .button-label {
+            margin: 0 2px;
+        }
+    }
+    
+    @media only screen and (max-width: 655px) {
+        .button-label {
+            margin: 0 1px;
+        }
+    }
+    
+    @media only screen and (max-width: 640px) {
+        .button-wrap {
+            padding: 0;
+        }
+    }
+    
+    @media only screen and (max-width: 625px) {
+        .imgEmpty {
+            font-size: 36px;
+        }
+    }
+    
+    @media only screen and (max-width: 615px) {
+        .product-img,
+        .product-info {
+            float: initial;
+            width: 100%;
+            text-align: center;
+        }
+        .wrapper {
+            box-shadow: 0;
+            background-color: white;
+        }
+        .imgEmpty {
+            margin: 60px auto 0 auto;
+        }
+    }
