@@ -3,7 +3,7 @@
     <div class="wrap cf">
         <div class="heading cf">
             <h1>Il Mio Carrello</h1>
-            <a routerLink="/customize" class="continue" *ngIf="products.length>0">Torna a fare Shopping</a>
+            <a routerLink="/home" class="continue" *ngIf="products?.length>0">Torna a fare Shopping</a>
         </div>
         <ng-container *ngIf="products.length>0;else empty">
             <div class="cart">

@@ -10,16 +10,11 @@ $background: whitesmoke;
     font-size: 35px;
 }
 
-.product-info,
-.product-img {
-    background-color: $background;
-}
-
 .wrapper {
-    height: 490px;
-    width: 730px;
+    background-color: $background;
+    width: 80%;
     margin: -160px auto 20px auto;
-    border-radius: 7px 7px 7px 7px;
+    border-radius: 7px;
     /* VIA CSS MATIC https://goo.gl/cIbnS */
     -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
@@ -28,10 +23,7 @@ $background: whitesmoke;
 
 .product-img {
     float: left;
-    height: 490px;
     width: 42%;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
 }
 
 .product-img img {
@@ -46,16 +38,12 @@ $background: whitesmoke;
 
 .product-info {
     float: left;
-    height: 490px;
     width: 58%;
-    border-radius: 0 7px 10px 0px;
 }
 
 .product-text {
     width: 100%;
 }
-
-.product-price-btn p {}
 
 .product-text h2 {
     margin: 10px 0 15px 30px;
@@ -67,7 +55,6 @@ $background: whitesmoke;
 }
 
 .product-price-btn {
-    width: 327px;
     position: relative;
     margin: 30px 100px 0px;
 }
@@ -90,11 +77,10 @@ span {
 }
 
 .product-price-btn button {
-    float: right;
     display: inline-block;
     height: 51px;
     width: 177px;
-    margin: 0 40px 0 16px;
+    margin-left: 40%;
     box-sizing: border-box;
     border: transparent;
     border-radius: 60px;
@@ -115,8 +101,6 @@ span {
 
 //reset
 .product-reset-btn {
-    height: 103px;
-    width: 260px;
     margin-top: 15px;
     position: relative;
 }
@@ -163,6 +147,8 @@ $red: #D91E18;
 $green: #2ECC71;
 $blue: #4183D7;
 $yellow: #FFFF00;
+$purple: #c47cd3;
+$purpledark:#8906a3;
 $font-stack: "Lato",
 sans-serif;
 .container {
@@ -339,7 +325,7 @@ input#check {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    width: 100%;
+    width: 90%;
     border: 0;
     padding: 10px 12px 5px 12px;
     height: 56px;
@@ -419,19 +405,19 @@ input#check {
 }
 
 #white-button:checked+.button-label-2 {
-    background: white;
-    color: black;
+    background: $purple;
+    color: white;
     &:hover {
-        background: darken(white, 20%);
+        background: darken($purple, 20%);
         color: white;
     }
 }
 
 #black-button:checked+.button-label-2 {
-    background: rgb(50, 50, 50);
+    background: $purpledark;
     color: white;
     &:hover {
-        background: darken(rgb(80, 80, 80), 5%);
-        color: black;
+        background: darken($purpledark, 20%);
+        color: white;
     }
 }

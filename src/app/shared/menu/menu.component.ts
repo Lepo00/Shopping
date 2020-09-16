@@ -31,4 +31,13 @@ export class MenuComponent implements OnInit {
     this.store.dispatch(removeToCart({id}));
   }
 
+  over(){
+    let element = document.getElementById('cart');
+    element.className="animate__animated animate__bounceInRight";
+  }
+
+  leave(){
+    let element = document.getElementById('cart');
+    element.className="";
+  }
 }

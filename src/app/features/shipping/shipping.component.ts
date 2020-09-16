@@ -52,4 +52,5 @@ export class ShippingComponent implements OnInit {
     this.user.shipping=this.shipping;
     this.store.dispatch(updateUser({user:this.user}));
   }
+
 }

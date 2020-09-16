@@ -4,49 +4,54 @@
         <span class="ihome"></span>
         <span class="items">Home</span>
     </div>
-    <div class="cart" *ngIf="cart==true">
-        <span alt="" class="icart"></span>
-        <span class="items" routerLink="/cart">Carrello
-            <ng-container *ngIf="products?.length>0">
-                ({{products.length}})
-            </ng-container>
-        </span>
-        <ng-container *ngIf="products?.length>0;else empty">
-            <ng-container *ngFor="let item of products; let i=index">
-                <table class="products" *ngIf="i<3">
-                    <tr>
-                        <td class="left">Squadra</td>
-                        <td class="strongs">{{item?.team}}</td>
-                    </tr>
-                    <tr>
-                        <td class="left">Champions</td>
-                        <td class="strongs">{{item?.champions ?'Sì' : 'No'}}</td>
-                    </tr>
-                    <tr>
-                        <td class="left">Nome</td>
-                        <td class="strongs">{{item?.player}}</td>
-                    </tr>
-                    <tr>
-                        <td class="left">Colore</td>
-                        <td class="strongs">{{item?.color}}</td>
-                    </tr>
-                    <tr>
-                        <td class="left">Prezzo</td>
-                        <td class="strongs">{{item?.price}}</td>
-                    </tr>
-                    <p class="remove" (click)="rimuovi(item.id)">Rimuovi</p>
-                </table>
-            </ng-container>
-            <p class="ecc products" routerLink="/cart" *ngIf="products?.length>3">...</p>
-            <p class="tooItems" routerLink="/cart" *ngIf="products?.length>0">Vai al Carrello</p>
-        </ng-container>
-        <ng-template #empty>
-            <table class="products">
-                <tr>
-                    <td class="empty">Carrello vuoto</td>
-                </tr>
-            </table>
-        </ng-template>
-
+    <div>
+        <div class="cart" *ngIf="cart==true" (mouseover)="over()" (mouseleave)="leave()">
+            <div class="scritta">
+                <span alt="" class="icart"></span>
+                <span class="items" routerLink="/cart">Carrello
+                    <ng-container *ngIf="products?.length>0">
+                        ({{products.length}})
+                    </ng-container>
+                </span>
+            </div>
+            <div id="cart">
+                <ng-container *ngIf="products?.length>0;else empty">
+                    <ng-container *ngFor="let item of products; let i=index">
+                        <table class="products" *ngIf="i<3">
+                            <tr>
+                                <td class="left">Squadra</td>
+                                <td class="strongs">{{item?.team}}</td>
+                            </tr>
+                            <tr>
+                                <td class="left">Champions</td>
+                                <td class="strongs">{{item?.champions ?'Sì' : 'No'}}</td>
+                            </tr>
+                            <tr>
+                                <td class="left">Nome</td>
+                                <td class="strongs">{{item?.player}}</td>
+                            </tr>
+                            <tr>
+                                <td class="left">Colore</td>
+                                <td class="strongs">{{item?.color}}</td>
+                            </tr>
+                            <tr>
+                                <td class="left">Prezzo</td>
+                                <td class="strongs">{{item?.price}}</td>
+                            </tr>
+                            <button (click)="rimuovi(item.id)">Rimuovi</button>
+                        </table>
+                    </ng-container>
+                    <p class="ecc products" routerLink="/cart" *ngIf="products?.length>3">...</p>
+                    <p class="tooItems" routerLink="/cart" *ngIf="products?.length>0">Vai al Carrello</p>
+                </ng-container>
+                <ng-template #empty>
+                    <table class="products">
+                        <tr>
+                            <td class="empty">Carrello vuoto</td>
+                        </tr>
+                    </table>
+                </ng-template>
+            </div>
+        </div>
     </div>
 </div>

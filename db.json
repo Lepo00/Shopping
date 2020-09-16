@@ -22,41 +22,25 @@
       "psg",
       "lione",
       "marsiglia",
-      "lille"
+      "nizza"
     ]
   ],
   "products": [
     {
-      "team": "marsiglia",
-      "champions": false,
-      "player": "a",
-      "color": "nero",
-      "price": 30,
-      "id": 5
-    },
-    {
-      "team": "lille",
-      "champions": false,
-      "player": "a",
-      "color": "nero",
-      "price": 40,
-      "id": 6
-    },
-    {
-      "team": "lille",
+      "team": "schalke",
       "champions": true,
-      "player": "a",
-      "color": "nero",
-      "price": 140,
-      "id": 7
+      "player": "aaa",
+      "color": "trasferta",
+      "price": 190,
+      "id": 1
     },
     {
-      "team": "psg",
-      "champions": false,
-      "player": "a",
-      "color": "nero",
-      "price": 10,
-      "id": 8
+      "team": "schalke",
+      "champions": true,
+      "player": "firmino",
+      "color": "trasferta",
+      "price": 190,
+      "id": 2
     }
   ],
   "user": [
@@ -99,6 +83,22 @@
       "password": "123",
       "email": "lepo",
       "id": 4
+    },
+    {
+      "username": "lepo",
+      "password": "123",
+      "email": "luca",
+      "id": 5,
+      "shipping": {
+        "name": "luca",
+        "surname": "lepo",
+        "phone": "3456789021",
+        "city": "milano",
+        "cap": "23456",
+        "address": "Via De Gasperi",
+        "number": 23,
+        "info": null
+      }
     }
   ]
 }

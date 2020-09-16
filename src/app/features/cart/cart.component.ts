@@ -25,15 +25,11 @@ export class CartComponent implements OnInit {
       this.products=products;
       this.calcPrice();
     });
+
   }
 
   returnImage(team:string):string{
-    switch(team){
-      case 'liverpool': return "../../../assets/img/liverpool.jpg";
-      case 'inter': return "../../../assets/img/inter.jpeg";
-      case 'atalanta': return "../../../assets/img/atalanta.jpeg";
-      case 'milan': return "../../../assets/img/milan.jpeg";
-    }
+    return "../../../assets/img/"+team+".jpeg";
   }
 
   remove(id:number){

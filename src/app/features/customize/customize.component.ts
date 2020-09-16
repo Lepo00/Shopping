@@ -12,6 +12,7 @@ import { selectCartState, selectTeams } from 'src/app/redux/cart';
   styleUrls: ['./customize.component.scss'],
 })
 export class CustomizeComponent implements OnInit {
+  team:string;
   teams: string[];
   immagine: string;
   customizeForm: FormGroup;
@@ -44,7 +45,7 @@ export class CustomizeComponent implements OnInit {
   }
 
   calcPrice(prod:Product):number {
-    let price:number=(this.teams.indexOf(prod.team)+1)*10;
+    let price:number=(this.teams.indexOf(prod.team)+1)*30;
     if(prod.champions)
       price+=100;
     return price;
@@ -56,8 +57,12 @@ export class CustomizeComponent implements OnInit {
   }
 
   changeImage(id:number){
+    this.team=this.teams[id];
     if(id==-1)
       this.immagine=null;
     else
-      this.immagine= "../../../assets/img/"+this.teams[id]+".jpeg";}
+      this.immagine= "../../../assets/img/"+this.team+".jpeg";
+    console.log(this.immagine);
+    }
+
 }
