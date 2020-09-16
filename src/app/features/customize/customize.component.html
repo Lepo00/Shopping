@@ -51,8 +51,8 @@
                     </label>
                         </div>
                     </div>
-                    <div class="product-price-btn animate__animated animate__fadeInDown animate__delay-1s">
-                        <button type="submit" [disabled]="customizeForm.status === 'INVALID'">Aggiungi al carrello</button>
+                    <div class="product-price-btn" [ngClass]="{'disabled': customizeForm.status==='INVALID'}">
+                        <button [disabled]="customizeForm.status === 'INVALID'">Aggiungi al carrello</button>
                     </div>
                 </div>
             </div>

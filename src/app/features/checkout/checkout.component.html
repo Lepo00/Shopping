@@ -30,8 +30,8 @@
                     <input type="tel" class="cc left" formControlName="number" inputmode="numeric" placeholder="Numero Carta" pattern="[0-9\s]{13,19}" maxlength="19">
                     <input type="text" class="cvv" placeholder="CVV" maxlength=3 formControlName="cvv">
                     <button class="btnLeft" routerLink="/shipping">Indietro</button>
-                    <button (click)="addPay()" class="btnLeft">Salva</button>
-                    <button type="submit" (click)="pay()" class="btnRight" [disabled]="payForm.status === 'INVALID'">Prosegui</button>
+                    <button (click)="addPay()" class="btnLeft" [ngClass]="{'disabled': payForm.status==='INVALID'}">Salva</button>
+                    <button type="submit" (click)="pay()" class="btnRight" [disabled]="payForm.status === 'INVALID'" [ngClass]="{'disabled': payForm.status==='INVALID'}">Prosegui</button>
                 </form>
             </ng-container>
             <ng-template #other>

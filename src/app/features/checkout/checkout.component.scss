@@ -258,3 +258,12 @@ button:hover span {
         width: 90%;
     }
 }
+
+.disabled {
+    background-color: rgb(204, 204, 204);
+    cursor: unset;
+}
+
+.disabled:hover {
+    animation: none;
+}

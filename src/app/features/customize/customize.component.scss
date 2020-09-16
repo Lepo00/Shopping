@@ -486,3 +486,12 @@
             margin: 60px auto 0 auto;
         }
     }
+    
+    .disabled button {
+        background-color: rgb(204, 204, 204);
+        cursor: unset;
+    }
+    
+    .disabled button:hover {
+        background-color: rgb(204, 204, 204);
+    }
