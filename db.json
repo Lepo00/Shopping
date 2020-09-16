@@ -1,60 +1,104 @@
 {
-    "products": [{
-            "team": "liverpool",
-            "champions": true,
-            "player": "rty",
-            "color": "nero",
-            "price": 110,
-            "id": 4
-        },
-        {
-            "team": "atalanta",
-            "champions": true,
-            "player": "rty",
-            "color": "nero",
-            "price": 130,
-            "id": 5
-        }
+  "team": [
+    [
+      "inter",
+      "milan",
+      "juve",
+      "atalanta"
     ],
-    "user": [{
-            "username": "por",
-            "password": "dio",
-            "email": "cod",
-            "id": 1
-        },
-        {
-            "username": "ciao",
-            "password": "ciao",
-            "email": "ciao",
-            "id": 2
-        },
-        {
-            "id": 3,
-            "username": "luca",
-            "password": "123",
-            "email": "luca",
-            "shipping": {
-                "name": "luca",
-                "surname": "lepo",
-                "phone": "3456789021",
-                "city": "milano",
-                "cap": "23456",
-                "address": "Via De Gasperi",
-                "number": 34,
-                "info": null
-            },
-            "payment": {
-                "method": "carta di debito",
-                "type": "mastercard",
-                "number": "1234 1234 1234 1234",
-                "cvv": "666"
-            }
-        },
-        {
-            "username": "rati",
-            "password": "123",
-            "email": "lepo",
-            "id": 4
-        }
+    [
+      "bayern",
+      "borussia",
+      "schalke",
+      "lipsia"
+    ],
+    [
+      "barça",
+      "real",
+      "atletico",
+      "siviglia"
+    ],
+    [
+      "psg",
+      "lione",
+      "marsiglia",
+      "lille"
     ]
+  ],
+  "products": [
+    {
+      "team": "marsiglia",
+      "champions": false,
+      "player": "a",
+      "color": "nero",
+      "price": 30,
+      "id": 5
+    },
+    {
+      "team": "lille",
+      "champions": false,
+      "player": "a",
+      "color": "nero",
+      "price": 40,
+      "id": 6
+    },
+    {
+      "team": "lille",
+      "champions": true,
+      "player": "a",
+      "color": "nero",
+      "price": 140,
+      "id": 7
+    },
+    {
+      "team": "psg",
+      "champions": false,
+      "player": "a",
+      "color": "nero",
+      "price": 10,
+      "id": 8
+    }
+  ],
+  "user": [
+    {
+      "username": "por",
+      "password": "dio",
+      "email": "cod",
+      "id": 1
+    },
+    {
+      "username": "ciao",
+      "password": "ciao",
+      "email": "ciao",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "username": "luca",
+      "password": "123",
+      "email": "luca",
+      "shipping": {
+        "name": "luca",
+        "surname": "lepo",
+        "phone": "3456789021",
+        "city": "milano",
+        "cap": "23456",
+        "address": "Via De Gasperi",
+        "number": 34,
+        "info": null
+      },
+      "payment": {
+        "method": "carta di debito",
+        "type": "mastercard",
+        "number": "1234 1234 1234 1234",
+        "cvv": "666"
+      }
+    },
+    {
+      "username": "rati",
+      "password": "123",
+      "email": "lepo",
+      "id": 4
+    }
+  ]
 }

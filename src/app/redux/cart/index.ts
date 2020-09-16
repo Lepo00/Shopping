@@ -8,3 +8,8 @@ export const selectProducts = createSelector(
     selectCartState,
     (cartState: CartState) => cartState.products
 )
+
+export const selectTeams = createSelector(
+    selectCartState,
+    (cartState: CartState) => cartState.teams
+)

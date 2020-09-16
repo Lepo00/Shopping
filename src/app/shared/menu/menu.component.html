@@ -7,11 +7,11 @@
     <div class="cart" *ngIf="cart==true">
         <span alt="" class="icart"></span>
         <span class="items" routerLink="/cart">Carrello
-            <ng-container *ngIf="products.length>0">
+            <ng-container *ngIf="products?.length>0">
                 ({{products.length}})
             </ng-container>
         </span>
-        <ng-container *ngIf="products.length>0;else empty">
+        <ng-container *ngIf="products?.length>0;else empty">
             <ng-container *ngFor="let item of products; let i=index">
                 <table class="products" *ngIf="i<3">
                     <tr>
@@ -37,8 +37,8 @@
                     <p class="remove" (click)="rimuovi(item.id)">Rimuovi</p>
                 </table>
             </ng-container>
-            <p class="ecc products" routerLink="/cart" *ngIf="products.length>3">...</p>
-            <p class="tooItems" routerLink="/cart" *ngIf="products.length>0">Vai al Carrello</p>
+            <p class="ecc products" routerLink="/cart" *ngIf="products?.length>3">...</p>
+            <p class="tooItems" routerLink="/cart" *ngIf="products?.length>0">Vai al Carrello</p>
         </ng-container>
         <ng-template #empty>
             <table class="products">

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { retrieveAllProducts, initCart } from './redux/cart/cart.actions';
+import { retrieveAllProducts, initCart, retrieveAllTeams } from './redux/cart/cart.actions';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +12,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.store.dispatch(retrieveAllProducts());
+    this.store.dispatch(retrieveAllTeams());
   }
   title = 'Shopping';
   

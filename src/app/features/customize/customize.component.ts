@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
-import { addToCart, saveToCart } from 'src/app/redux/cart/cart.actions';
+import { addToCart, retrieveAllTeams, saveToCart } from 'src/app/redux/cart/cart.actions';
 import { Product } from 'src/app/core/models/product';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { selectCartState, selectTeams } from 'src/app/redux/cart';
 
 @Component({
   selector: 'app-customize',
@@ -11,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./customize.component.scss'],
 })
 export class CustomizeComponent implements OnInit {
+  teams: string[];
   immagine: string;
   customizeForm: FormGroup;
   id:number;
@@ -19,10 +21,14 @@ export class CustomizeComponent implements OnInit {
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
-      this.id = +params['id'];
+      this.id = +params['id']%4;
     });
+    this.store.select(selectTeams).subscribe(teams=>
+      this.teams=teams[this.id]
+    )
+    
     this.customizeForm = this.fb.group({
-      team: [this.teamSelected(), Validators.required],
+      team: ['', Validators.required],
       champions: false,
       player: ['',Validators.required],
       color: ['', Validators.required],
@@ -32,24 +38,16 @@ export class CustomizeComponent implements OnInit {
 
   addToCart(){
     let product:Product=this.customizeForm.value;
-    this.calcPrice(product);
+    product.price=this.calcPrice(product);
     this.store.dispatch(addToCart({product}));
     //this.cls();
   }
 
-  calcPrice(product: Product) {
-    switch(product.team){
-      case 'liverpool': product.price=10;
-      break;
-      case 'inter': product.price=20;
-      break;
-      case 'atalanta': product.price=30;
-      break;
-      case 'milan': product.price=40;
-      break;
-    }
-    if(product.champions==true)
-      product.price+=100;
+  calcPrice(prod:Product):number {
+    let price:number=(this.teams.indexOf(prod.team)+1)*10;
+    if(prod.champions)
+      price+=100;
+    return price;
   }
 
   cls(){
@@ -58,30 +56,8 @@ export class CustomizeComponent implements OnInit {
   }
 
   changeImage(id:number){
-    switch(id){
-        case -1: this.immagine=null;
-        break;
-        case 0: this.immagine= "../../../assets/img/inter.jpeg";
-        break;
-        case 1: this.immagine= "../../../assets/img/liverpool.jpg";
-        break;
-        case 2: this.immagine= "../../../assets/img/atalanta.jpeg";
-        break;
-        case 3: this.immagine= "../../../assets/img/milan.jpeg";
-        break;
-    }
-  }
-
-  teamSelected():string{
-    let id=this.id%5;
-    this.changeImage(id-1);
-    switch(id){
-      case 0: return "";
-      case 1: return "inter";
-      case 2: return "liverpool";
-      case 3: return "atalanta";
-      case 4: return "milan";
-    }
-  }
-
+    if(id==-1)
+      this.immagine=null;
+    else
+      this.immagine= "../../../assets/img/"+this.teams[id]+".jpeg";}
 }

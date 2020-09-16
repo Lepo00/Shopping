@@ -162,6 +162,7 @@ $light: white;
 $red: #D91E18;
 $green: #2ECC71;
 $blue: #4183D7;
+$yellow: #FFFF00;
 $font-stack: "Lato",
 sans-serif;
 .container {
@@ -187,6 +188,7 @@ sans-serif;
     user-select: none;
     h1 {
         font-size: 20px;
+        text-transform: capitalize;
     }
     &:hover {
         background: darken($light, 10%);
@@ -199,7 +201,25 @@ sans-serif;
     }
 }
 
-#green-button:checked+.button-label {
+#button-0:checked+.button-label {
+    background: $red;
+    color: $light;
+    &:hover {
+        background: darken($red, 5%);
+        color: darken($light, 5%);
+    }
+}
+
+#button-1:checked+.button-label {
+    background: $blue;
+    color: $light;
+    &:hover {
+        background: darken($blue, 5%);
+        color: darken($light, 5%);
+    }
+}
+
+#button-2:checked+.button-label {
     background: $green;
     color: $light;
     &:hover {
@@ -208,38 +228,11 @@ sans-serif;
     }
 }
 
-#liverpool-button:checked+.button-label {
-    background: $red;
+#button-3:checked+.button-label {
+    background: $yellow;
     color: $light;
     &:hover {
-        background: darken($red, 5%);
-        color: darken($light, 5%);
-    }
-}
-
-#no-button:checked+.button-label {
-    background: $red;
-    color: $light;
-    &:hover {
-        background: darken($red, 5%);
-        color: darken($light, 5%);
-    }
-}
-
-#inter-button:checked+.button-label {
-    background: $blue;
-    color: $light;
-    &:hover {
-        background: darken($blue, 5%);
-        color: darken($light, 5%);
-    }
-}
-
-#atalanta-button:checked+.button-label {
-    background: $blue;
-    color: $light;
-    &:hover {
-        background: darken($blue, 5%);
+        background: darken($yellow, 5%);
         color: darken($light, 5%);
     }
 }

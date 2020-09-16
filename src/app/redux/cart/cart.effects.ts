@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import { addToCart, saveToCart, initCart, retrieveAllProducts, removeToCart, removeItem } from './cart.actions';
+import { addToCart, saveToCart, initCart, retrieveAllProducts, removeToCart, removeItem, retrieveAllTeams, initTeams } from './cart.actions';
 import { Actions, createEffect, ofType, act } from "@ngrx/effects";
 import { Observable } from 'rxjs';
 import { HttpCommunicationsService } from 'src/app/core/services/http-communications.service';
@@ -24,6 +24,13 @@ export class CartEffects{
         switchMap(action => this.http.retrieveGetCall<Product[]>("products")
         .pipe(
             map(products => initCart({ products: products }))
+        ))
+    ))
+
+    retrieveAllTeams$:Observable<Action> = createEffect(()=>this.actions$.pipe(
+        ofType(retrieveAllTeams),
+        switchMap(action => this.http.retrieveGetCall<string[][]>("team").pipe(
+            map(teams => initTeams({teams})),
         ))
     ))
 

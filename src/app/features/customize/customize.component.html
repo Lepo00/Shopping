@@ -17,22 +17,12 @@
                         <h1 class="title">Personalizza</h1>
                         <div class="container">
                             <div class="button-wrap">
-                                <input class="hidden radio-label" id="inter-button" type="radio" name="team" formControlName="team" value="inter" (click)="changeImage(0)">
-                                <label class="button-label" for="inter-button">
-                                    <h1>Inter</h1>
+                                <ng-container *ngFor="let team of teams; let i=index">
+                                    <input class="hidden radio-label" id="button-{{i}}" type="radio" name="team" formControlName="team" value={{team}} (click)="changeImage(i)">
+                                    <label class="button-label" for="button-{{i}}">
+                                    <h1>{{team}}</h1>
                                 </label>
-                                <input class="hidden radio-label" id="liverpool-button" type="radio" name="team" formControlName="team" value="liverpool" (click)="changeImage(1)">
-                                <label class="button-label" for="liverpool-button">
-                                    <h1>Liverpool</h1>
-                                </label>
-                                <input class="hidden radio-label" id="atalanta-button" type="radio" name="team" formControlName="team" value="atalanta" (click)="changeImage(2)">
-                                <label class="button-label" for="atalanta-button">
-                                    <h1>Atalanta</h1>
-                                </label>
-                                <input class="hidden radio-label" id="no-button" type="radio" name="team" formControlName="team" value="milan" (click)="changeImage(3)">
-                                <label class="button-label" for="no-button">
-                                    <h1>Milan</h1>
-                                </label>
+                                </ng-container>
                             </div>
                         </div>
                     </div>

@@ -9,7 +9,7 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/n
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  images = ["../../../assets/img/calcio.jpg","../../../assets/img/calcio-2.jpg","../../../assets/img/calcio-3.jpg","../../../assets/img/calcio-4.jpg","../../../assets/img/calcio-5.jpg"];
+  images = ["../../../assets/img/calcio.jpg","../../../assets/img/calcio-2.jpg","../../../assets/img/calcio-3.jpg","../../../assets/img/calcio-4.jpg"];
   paused = false;
   unpauseOnArrow = false;
   pauseOnIndicator = false;
