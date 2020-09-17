@@ -33,7 +33,7 @@ export class MenuComponent implements OnInit {
 
   over(){
     let element = document.getElementById('cart');
-    element.className="animate__animated animate__bounceInRight";
+    element.className="animate__animated animate__bounceInDown animate__faster";
   }
 
   leave(){
