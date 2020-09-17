@@ -41,6 +41,14 @@
       "color": "trasferta",
       "price": 190,
       "id": 2
+    },
+    {
+      "team": "atalanta",
+      "champions": false,
+      "player": "firmino",
+      "color": "casa",
+      "price": 120,
+      "id": 3
     }
   ],
   "user": [
