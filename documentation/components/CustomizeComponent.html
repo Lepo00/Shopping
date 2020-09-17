@@ -1,0 +1,1435 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>shopping documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">shopping documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>CustomizeComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/features/customize/customize.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-customize</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./customize.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./customize.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#customizeForm">customizeForm</a>
+                            </li>
+                            <li>
+                                <a href="#id">id</a>
+                            </li>
+                            <li>
+                                <a href="#immagine">immagine</a>
+                            </li>
+                            <li>
+                                <a href="#sub">sub</a>
+                            </li>
+                            <li>
+                                <a href="#team">team</a>
+                            </li>
+                            <li>
+                                <a href="#teams">teams</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addToCart">addToCart</a>
+                            </li>
+                            <li>
+                                <a href="#calcPrice">calcPrice</a>
+                            </li>
+                            <li>
+                                <a href="#changeImage">changeImage</a>
+                            </li>
+                            <li>
+                                <a href="#cls">cls</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(store: Store, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/features/customize/customize.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>store</td>
+                                                  
+                                                        <td>
+                                                                    <code>Store</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addToCart"></a>
+                    <span class="name">
+                        <b>
+                            addToCart
+                        </b>
+                        <a href="#addToCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addToCart()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/app/features/customize/customize.component.ts:40</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calcPrice"></a>
+                    <span class="name">
+                        <b>
+                            calcPrice
+                        </b>
+                        <a href="#calcPrice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>calcPrice(prod: <a href="../interfaces/Product.html">Product</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/features/customize/customize.component.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>prod</td>
+                                    <td>
+                                                <code><a href="../interfaces/Product.html" target="_self" >Product</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeImage"></a>
+                    <span class="name">
+                        <b>
+                            changeImage
+                        </b>
+                        <a href="#changeImage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeImage(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/features/customize/customize.component.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cls"></a>
+                    <span class="name">
+                        <b>
+                            cls
+                        </b>
+                        <a href="#cls"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cls()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/app/features/customize/customize.component.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/app/features/customize/customize.component.ts:23</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="customizeForm"></a>
+                        <span class="name">
+                            <b>
+                            customizeForm</b>
+                            <a href="#customizeForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/features/customize/customize.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="id"></a>
+                        <span class="name">
+                            <b>
+                            id</b>
+                            <a href="#id"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/features/customize/customize.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="immagine"></a>
+                        <span class="name">
+                            <b>
+                            immagine</b>
+                            <a href="#immagine"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/features/customize/customize.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sub"></a>
+                        <span class="name">
+                            <b>
+                            sub</b>
+                            <a href="#sub"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/features/customize/customize.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="team"></a>
+                        <span class="name">
+                            <b>
+                            team</b>
+                            <a href="#team"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/features/customize/customize.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="teams"></a>
+                        <span class="name">
+                            <b>
+                            teams</b>
+                            <a href="#teams"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/features/customize/customize.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { select, Store } from &#x27;@ngrx/store&#x27;;
+import { addToCart, retrieveAllTeams, saveToCart } from &#x27;src/app/redux/cart/cart.actions&#x27;;
+import { Product } from &#x27;src/app/core/models/product&#x27;;
+import { FormControl, FormGroup, Validators, FormBuilder } from &#x27;@angular/forms&#x27;;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+import { selectCartState, selectTeams } from &#x27;src/app/redux/cart&#x27;;
+
+@Component({
+  selector: &#x27;app-customize&#x27;,
+  templateUrl: &#x27;./customize.component.html&#x27;,
+  styleUrls: [&#x27;./customize.component.scss&#x27;],
+})
+export class CustomizeComponent implements OnInit {
+  team:string;
+  teams: string[];
+  immagine: string;
+  customizeForm: FormGroup;
+  id:number;
+  sub: any;
+  constructor(private store:Store, private fb: FormBuilder,private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.sub &#x3D; this.route.params.subscribe(params &#x3D;&gt; {
+      this.id &#x3D; +params[&#x27;id&#x27;]%4;
+    });
+    this.store.select(selectTeams).subscribe(teams&#x3D;&gt;
+      this.teams&#x3D;teams[this.id]
+    )
+    
+    this.customizeForm &#x3D; this.fb.group({
+      team: [&#x27;&#x27;, Validators.required],
+      champions: false,
+      player: [&#x27;&#x27;,Validators.required],
+      color: [&#x27;&#x27;, Validators.required],
+    });
+  }
+  //prod:Product &#x3D; {&quot;color&quot;:&quot;black&quot;,&quot;player&quot;:&quot;eriksen&quot;,&quot;team&quot;:&quot;inter&quot;,&quot;champions&quot;:true};
+
+  addToCart(){
+    let product:Product&#x3D;this.customizeForm.value;
+    product.price&#x3D;this.calcPrice(product);
+    this.store.dispatch(addToCart({product}));
+    //this.cls();
+  }
+
+  calcPrice(prod:Product):number {
+    let price:number&#x3D;(this.teams.indexOf(prod.team)+1)*30;
+    if(prod.champions)
+      price+&#x3D;100;
+    return price;
+  }
+
+  cls(){
+    this.customizeForm.reset();
+    this.changeImage(-1);
+  }
+
+  changeImage(id:number){
+    this.team&#x3D;this.teams[id];
+    if(id&#x3D;&#x3D;-1)
+      this.immagine&#x3D;null;
+    else
+      this.immagine&#x3D; &quot;../../../assets/img/&quot;+this.team+&quot;.jpeg&quot;;
+    console.log(this.immagine);
+    }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-menu [title]&#x3D;&quot;&#x27;Personalizza&#x27;&quot; [home]&#x3D;true [cart]&#x3D;true&gt;&lt;/app-menu&gt;
+&lt;div class&#x3D;&quot;animate__animated animate__flipInX gira&quot;&gt;
+    &lt;div class&#x3D;&quot;wrapper&quot;&gt;
+        &lt;div class&#x3D;&quot;product-img&quot;&gt;
+            &lt;img src&#x3D;{{immagine}} *ngIf&#x3D;&quot;immagine; else imgEmpty&quot;&gt;
+            &lt;div class&#x3D;&quot;product-reset-btn animate__animated animate__fadeInDown animate__delay-1s&quot;&gt;
+                &lt;button type&#x3D;&quot;button&quot; (click)&#x3D;&quot;cls();&quot;&gt;Reset&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;ng-template #imgEmpty&gt;
+                &lt;h1 class&#x3D;&quot;imgEmpty&quot;&gt;Scegli una squadra&lt;/h1&gt;
+            &lt;/ng-template&gt;
+        &lt;/div&gt;
+        &lt;form [formGroup]&#x3D;&quot;customizeForm&quot; (ngSubmit)&#x3D;&quot;addToCart()&quot;&gt;
+            &lt;div class&#x3D;&quot;product-info&quot;&gt;
+                &lt;div class&#x3D;&quot;product-text&quot;&gt;
+                    &lt;div&gt;
+                        &lt;h1 class&#x3D;&quot;title&quot;&gt;Personalizza&lt;/h1&gt;
+                        &lt;div class&#x3D;&quot;container&quot;&gt;
+                            &lt;div class&#x3D;&quot;button-wrap&quot;&gt;
+                                &lt;ng-container *ngFor&#x3D;&quot;let team of teams; let i&#x3D;index&quot;&gt;
+                                    &lt;input class&#x3D;&quot;hidden radio-label&quot; id&#x3D;&quot;button-{{i}}&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;team&quot; formControlName&#x3D;&quot;team&quot; value&#x3D;{{team}} (click)&#x3D;&quot;changeImage(i)&quot;&gt;
+                                    &lt;label class&#x3D;&quot;button-label&quot; for&#x3D;&quot;button-{{i}}&quot;&gt;
+                                    &lt;h1&gt;{{team}}&lt;/h1&gt;
+                                &lt;/label&gt;
+                                &lt;/ng-container&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;h2&gt;by Official Store&lt;/h2&gt;
+                    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;check&quot; formControlName&#x3D;&quot;champions&quot; /&gt;
+                    &lt;label for&#x3D;&quot;check&quot; style&#x3D;&quot;--d: 200px&quot;&gt;
+                &lt;svg viewBox&#x3D;&quot;0,0,50,50&quot;&gt;
+                    &lt;path d&#x3D;&quot;M5 30 L 20 45 L 45 5&quot;&gt;&lt;/path&gt;
+                &lt;/svg&gt;
+                &lt;p class&#x3D;&quot;checkText&quot;&gt;Champions&lt;/p&gt;
+            &lt;/label&gt;
+                    &lt;label for&#x3D;&quot;inp&quot; class&#x3D;&quot;inp&quot;&gt;
+                &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;inp&quot; placeholder&#x3D;&quot;&amp;nbsp;&quot; formControlName&#x3D;&quot;player&quot;&gt;
+                &lt;span class&#x3D;&quot;label&quot;&gt;Nome Giocatore&lt;/span&gt;
+                &lt;span class&#x3D;&quot;focus-bg&quot;&gt;&lt;/span&gt;
+            &lt;/label&gt;
+                    &lt;div class&#x3D;&quot;container-2&quot;&gt;
+                        &lt;div class&#x3D;&quot;button-wrap-2&quot;&gt;
+                            &lt;input class&#x3D;&quot;hidden radio-label-2&quot; id&#x3D;&quot;white-button&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;color&quot; formControlName&#x3D;&quot;color&quot; value&#x3D;&quot;casa&quot;&gt;
+                            &lt;label class&#x3D;&quot;button-label-2&quot; for&#x3D;&quot;white-button&quot;&gt;
+                            &lt;h1&gt;Casa&lt;/h1&gt;
+                        &lt;/label&gt;
+                            &lt;input class&#x3D;&quot;hidden radio-label-2&quot; id&#x3D;&quot;black-button&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;color&quot; formControlName&#x3D;&quot;color&quot; value&#x3D;&quot;trasferta&quot;&gt;
+                            &lt;label class&#x3D;&quot;button-label-2&quot; for&#x3D;&quot;black-button&quot;&gt;
+                            &lt;h1&gt;Trasferta&lt;/h1&gt;
+                    &lt;/label&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;product-price-btn&quot; [ngClass]&#x3D;&quot;{&#x27;disabled&#x27;: customizeForm.status&#x3D;&#x3D;&#x3D;&#x27;INVALID&#x27;}&quot;&gt;
+                        &lt;button [disabled]&#x3D;&quot;customizeForm.status &#x3D;&#x3D;&#x3D; &#x27;INVALID&#x27;&quot;&gt;Aggiungi al carrello&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./customize.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">    $background: whitesmoke;
+    .imgEmpty {
+        padding: 10px;
+        margin: 170px 0 121px 40px;
+    }
+    
+    .title {
+        margin: 30px 0 0 20px;
+        font-weight: 400;
+        font-size: 35px;
+    }
+    
+    .wrapper {
+        background-color: $background;
+        height: 490px;
+        width: 730px;
+        margin: -160px auto 20px auto;
+        border-radius: 7px 7px 7px 7px;
+        /* VIA CSS MATIC https://goo.gl/cIbnS */
+        -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.3);
+    }
+    
+    .product-img {
+        float: left;
+        height: 490px;
+        width: 42%;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+    }
+    
+    .product-img img {
+        border-radius: 7px 0 0 7px;
+        height: 80%;
+        width: 100%;
+        //padding: 10px;
+        border: 30px solid $background;
+        border-bottom: 15px solid $background;
+        border-right: 15px solid $background;
+    }
+    
+    .product-info {
+        float: left;
+        height: 490px;
+        width: 58%;
+        border-radius: 0 7px 10px 0px;
+    }
+    
+    .product-text {
+        width: 100%;
+    }
+    
+    .product-text h2 {
+        margin: 10px 0 15px 30px;
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #d2d2d2;
+        letter-spacing: 0.2em;
+    }
+    
+    .product-price-btn {
+        position: relative;
+        margin: 30px 0px;
+    }
+    
+    .product-price-btn p {
+        display: inline-block;
+        position: absolute;
+        top: -13px;
+        height: 50px;
+        margin: 0 0 0 0px;
+        font-size: 28px;
+        font-weight: lighter;
+        color: #474747;
+    }
+    
+    span {
+        display: inline-block;
+        height: 50px;
+        font-size: 34px;
+    }
+    
+    .product-price-btn button {
+        height: 51px;
+        width: 177px;
+        margin: 0 0px 0 45%;
+        box-sizing: border-box;
+        border: transparent;
+        border-radius: 60px;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #ffffff;
+        background-color: #9cebd5;
+        cursor: pointer;
+        outline: none;
+        border: 2px solid white;
+    }
+    
+    .product-price-btn button:hover {
+        background-color: #79b0a1;
+    }
+    
+    //reset
+    .product-reset-btn {
+        height: 103px;
+        width: 260px;
+        margin-top: 15px;
+        position: relative;
+    }
+    
+    .product-price-btn p {
+        display: inline-block;
+        position: absolute;
+        top: -13px;
+        height: 50px;
+        margin: 0 0 0 0px;
+        font-size: 28px;
+        font-weight: lighter;
+        color: #474747;
+    }
+    
+    .product-reset-btn button {
+        float: right;
+        display: inline-block;
+        height: 51px;
+        width: 177px;
+        margin: 0 40px 0 16px;
+        box-sizing: border-box;
+        border: transparent;
+        border-radius: 60px;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #ffffff;
+        background-color: #9cebd5;
+        cursor: pointer;
+        outline: none;
+        border: 2px solid white;
+    }
+    
+    .product-reset-btn button:hover {
+        background-color: #79b0a1;
+    }
+    
+    //radio
+    $dark: #292929;
+    $light: white;
+    $red: #D91E18;
+    $green: #2ECC71;
+    $blue: #4183D7;
+    $yellow: #FFFF00;
+    $purple: #c47cd3;
+    $purpledark:#8906a3;
+    $font-stack: &quot;Lato&quot;,
+    sans-serif;
+    .container {
+        height: 100%;
+        min-height: 100%;
+        margin: 27px 0 0 0px;
+    }
+    
+    .button-wrap {
+        position: relative;
+    }
+    
+    .button-label {
+        display: inline-block;
+        padding: 11px 11px;
+        margin: 0 5px;
+        cursor: pointer;
+        color: $dark;
+        border-radius: 0.25em;
+        background: $light;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+        transition: 0.3s;
+        user-select: none;
+        h1 {
+            font-size: 20px;
+            text-transform: capitalize;
+        }
+        &amp;:hover {
+            background: darken($light, 10%);
+            color: darken($dark, 10%);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.32);
+        }
+        &amp;:active {
+            transform: translateY(2px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+        }
+    }
+    
+    #button-0:checked+.button-label {
+        background: $red;
+        color: $light;
+        &amp;:hover {
+            background: darken($red, 5%);
+            color: darken($light, 5%);
+        }
+    }
+    
+    #button-1:checked+.button-label {
+        background: $blue;
+        color: $light;
+        &amp;:hover {
+            background: darken($blue, 5%);
+            color: darken($light, 5%);
+        }
+    }
+    
+    #button-2:checked+.button-label {
+        background: $green;
+        color: $light;
+        &amp;:hover {
+            background: darken($green, 5%);
+            color: darken($light, 5%);
+        }
+    }
+    
+    #button-3:checked+.button-label {
+        background: $yellow;
+        color: $light;
+        &amp;:hover {
+            background: darken($yellow, 5%);
+            color: darken($light, 5%);
+        }
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    //checkbox
+    *,
+    *:after,
+    *:before {
+        box-sizing: border-box;
+    }
+    
+    input#check {
+        position: absolute;
+        opacity: 0;
+        &amp;:checked+label svg path {
+            stroke-dashoffset: 0;
+        }
+        &amp;:focus+label {
+            transform: scale(1.03);
+        }
+    }
+    
+    #check+label {
+        margin-left: 20px;
+        display: block;
+        border: 3px solid #9c9b9b;
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all .2s ease;
+        &amp;:active {
+            transform: scale(1.05);
+            border-radius: 30px;
+        }
+        svg {
+            pointer-events: none;
+            path {
+                fill: none;
+                stroke: #333;
+                stroke-width: 4px;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 101;
+                transition: all 350ms cubic-bezier(1, 0, .37, .91);
+            }
+        }
+    }
+    
+    .checkText {
+        color: black;
+        font-size: 20px;
+        margin: -28px 0 0 35px;
+    }
+    
+    //INPUT TEXT  
+    .inp {
+        position: relative;
+        margin: auto;
+        width: 100%;
+        max-width: 380px;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    
+    .inp .label {
+        position: absolute;
+        top: 15px;
+        left: 12px;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: 500;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        pointer-events: none;
+        margin: 8px 0 0 20px;
+    }
+    
+    .inp .focus-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.05);
+        z-index: -1;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+    }
+    
+    .inp input {
+        margin: 10px 0 0 20px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 90%;
+        border: 0;
+        padding: 10px 12px 5px 12px;
+        height: 56px;
+        font-size: 18px;
+        font-weight: 400;
+        background: white;
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+        color: #000;
+        -webkit-transition: all 0.15s ease;
+        transition: all 0.15s ease;
+    }
+    
+    .inp input:hover {
+        background: rgba(0, 0, 0, 0.04);
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+    }
+    
+    .inp input:not(:placeholder-shown)+.label {
+        color: rgba(0, 0, 0, 0.5);
+        -webkit-transform: translate3d(0, -12px, 0) scale(0.75);
+        transform: translate3d(0, -12px, 0) scale(0.75);
+    }
+    
+    .inp input:focus {
+        background: rgba(0, 0, 0, 0.05);
+        outline: none;
+        box-shadow: inset 0 -2px 0 #0077FF;
+    }
+    
+    .inp input:focus+.label {
+        color: #0077FF;
+        -webkit-transform: translate3d(0, -12px, 0) scale(0.75);
+        transform: translate3d(0, -12px, 0) scale(0.75);
+    }
+    
+    .inp input:focus+.label+.focus-bg {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transition: all 0.1s ease;
+        transition: all 0.1s ease;
+    }
+    
+    //colors
+    .container-2 {
+        height: 100%;
+        min-height: 100%;
+    }
+    
+    .button-wrap-2 {
+        margin: 20px 0 0 20px;
+        position: relative;
+    }
+    
+    .button-label-2 {
+        display: inline-block;
+        padding: 11px 11px;
+        margin: 0 5px;
+        cursor: pointer;
+        color: $dark;
+        border-radius: 0.25em;
+        background: $light;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+        transition: 0.3s;
+        user-select: none;
+        h1 {
+            font-size: 20px;
+        }
+        &amp;:hover {
+            background: darken($light, 10%);
+            color: darken($dark, 10%);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.32);
+        }
+        &amp;:active {
+            transform: translateY(2px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+        }
+    }
+    
+    #white-button:checked+.button-label-2 {
+        background: $purple;
+        color: black;
+        &amp;:hover {
+            background: darken($purple, 20%);
+            color: white;
+        }
+    }
+    
+    #black-button:checked+.button-label-2 {
+        background: $purpledark;
+        color: white;
+        &amp;:hover {
+            background: darken($purpledark, 20%);
+            color: white;
+        }
+    }
+    
+    @media only screen and (max-width: 778px) {
+        .wrapper {
+            width: 95%;
+        }
+    }
+    
+    @media only screen and (max-width: 755px) {
+        .wrapper {
+            width: 97%;
+        }
+        .container {
+            padding: 0;
+        }
+    }
+    
+    @media only screen and (max-width: 690px) {
+        .wrapper {
+            width: 98%;
+        }
+        .button-label {
+            margin: 0 2px;
+        }
+    }
+    
+    @media only screen and (max-width: 655px) {
+        .button-label {
+            margin: 0 1px;
+        }
+    }
+    
+    @media only screen and (max-width: 640px) {
+        .button-wrap {
+            padding: 0;
+        }
+    }
+    
+    @media only screen and (max-width: 625px) {
+        .imgEmpty {
+            font-size: 36px;
+        }
+    }
+    
+    @media only screen and (max-width: 615px) {
+        .product-img,
+        .product-info {
+            float: initial;
+            width: 100%;
+            text-align: center;
+        }
+        .wrapper {
+            box-shadow: 0;
+            background-color: white;
+        }
+        .imgEmpty {
+            margin: 60px auto 0 auto;
+        }
+    }
+    
+    .disabled button {
+        background-color: rgb(204, 204, 204);
+        cursor: unset;
+    }
+    
+    .disabled button:hover {
+        background-color: rgb(204, 204, 204);
+    }</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-menu [title]="\'Personalizza\'" [home]=true [cart]=true></app-menu><div class="animate__animated animate__flipInX gira">    <div class="wrapper">        <div class="product-img">            <img src={{immagine}} *ngIf="immagine; else imgEmpty">            <div class="product-reset-btn animate__animated animate__fadeInDown animate__delay-1s">                <button type="button" (click)="cls();">Reset</button>            </div>            <ng-template #imgEmpty>                <h1 class="imgEmpty">Scegli una squadra</h1>            </ng-template>        </div>        <form [formGroup]="customizeForm" (ngSubmit)="addToCart()">            <div class="product-info">                <div class="product-text">                    <div>                        <h1 class="title">Personalizza</h1>                        <div class="container">                            <div class="button-wrap">                                <ng-container *ngFor="let team of teams; let i=index">                                    <input class="hidden radio-label" id="button-{{i}}" type="radio" name="team" formControlName="team" value={{team}} (click)="changeImage(i)">                                    <label class="button-label" for="button-{{i}}">                                    <h1>{{team}}</h1>                                </label>                                </ng-container>                            </div>                        </div>                    </div>                    <h2>by Official Store</h2>                    <input type="checkbox" id="check" formControlName="champions" />                    <label for="check" style="--d: 200px">                <svg viewBox="0,0,50,50">                    <path d="M5 30 L 20 45 L 45 5"></path>                </svg>                <p class="checkText">Champions</p>            </label>                    <label for="inp" class="inp">                <input type="text" id="inp" placeholder="&nbsp;" formControlName="player">                <span class="label">Nome Giocatore</span>                <span class="focus-bg"></span>            </label>                    <div class="container-2">                        <div class="button-wrap-2">                            <input class="hidden radio-label-2" id="white-button" type="radio" name="color" formControlName="color" value="casa">                            <label class="button-label-2" for="white-button">                            <h1>Casa</h1>                        </label>                            <input class="hidden radio-label-2" id="black-button" type="radio" name="color" formControlName="color" value="trasferta">                            <label class="button-label-2" for="black-button">                            <h1>Trasferta</h1>                    </label>                        </div>                    </div>                    <div class="product-price-btn" [ngClass]="{\'disabled\': customizeForm.status===\'INVALID\'}">                        <button [disabled]="customizeForm.status === \'INVALID\'">Aggiungi al carrello</button>                    </div>                </div>            </div>        </form>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CartComponent', 'selector': 'app-cart'},{'name': 'CheckoutComponent', 'selector': 'app-checkout'},{'name': 'CustomizeComponent', 'selector': 'app-customize'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'ShippingComponent', 'selector': 'app-shipping'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CustomizeComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CustomizeComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
