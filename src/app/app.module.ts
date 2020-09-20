@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FeaturesModule } from './features/features.module';
 import { ShippingEffects } from './redux/shipping/shipping.effects';
 import { PaymentEffects } from './redux/payment/payment.effects';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { PaymentEffects } from './redux/payment/payment.effects';
     HttpClientModule,
     BrowserAnimationsModule,
     FeaturesModule,
+    StoreRouterConnectingModule.forRoot(),
   ],
   providers: [HttpCommunicationsService],
   bootstrap: [AppComponent]

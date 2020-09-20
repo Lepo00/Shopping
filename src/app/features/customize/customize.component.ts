@@ -3,8 +3,10 @@ import { select, Store } from '@ngrx/store';
 import { addToCart, retrieveAllTeams, saveToCart } from 'src/app/redux/cart/cart.actions';
 import { Product } from 'src/app/core/models/product';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { selectCartState, selectTeams } from 'src/app/redux/cart';
+import { selectRouteParams } from 'src/app/redux';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-customize',
@@ -21,9 +23,13 @@ export class CustomizeComponent implements OnInit {
   constructor(private store:Store, private fb: FormBuilder,private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.sub = this.route.params.subscribe(params => {
-      this.id = +params['id']%4;
-    });
+    // this.sub = this.route.params.subscribe(params => {
+    //   this.id = +params['id']%4;
+    // });
+    this.store.select(selectRouteParams).subscribe((params:Params)=>
+      this.id=params['id']%4
+    )
+
     this.store.select(selectTeams).subscribe(teams=>
       this.teams=teams[this.id]
     )
@@ -41,7 +47,6 @@ export class CustomizeComponent implements OnInit {
     let product:Product=this.customizeForm.value;
     product.price=this.calcPrice(product);
     this.store.dispatch(addToCart({product}));
-    //this.cls();
   }
 
   calcPrice(prod:Product):number {

@@ -27,22 +27,6 @@
   ],
   "products": [
     {
-      "team": "schalke",
-      "champions": true,
-      "player": "theo",
-      "color": "trasferta",
-      "price": 190,
-      "id": 3
-    },
-    {
-      "team": "schalke",
-      "champions": true,
-      "player": "theo",
-      "color": "trasferta",
-      "price": 190,
-      "id": 5
-    },
-    {
       "team": "lipsia",
       "champions": true,
       "player": "theo",
