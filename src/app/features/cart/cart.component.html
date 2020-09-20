@@ -2,29 +2,34 @@
 <div class="animate__animated animate__pulse">
     <div class="wrap cf">
         <div class="heading cf">
-            <h1>Il Mio Carrello</h1>
+            <h1>Il Mio Carrello ({{products.length}})</h1>
             <a routerLink="/home" class="continue" *ngIf="products?.length>0">Torna a fare Shopping</a>
         </div>
         <ng-container *ngIf="products.length>0;else empty">
             <div class="cart">
                 <ul class="cartWrap">
-                    <li class="items odd" *ngFor="let item of products; let i=index">
-                        <div class="infoWrap">
-                            <div class="cartSection capitalize">
-                                <img src={{returnImage(item.team)}} class="itemImg">
-                                <h3>Maglia {{item.team}}</h3>
-                                <h6>Giocatore: {{item.player}}</h6>
-                                <p>Toppa Champions: {{item.champions ?'Sì' : 'No'}}</p><br>
-                                <p>Colore nome: {{item.color}}</p>
+                    <ng-container *ngFor="let item of products; let i=index;">
+                        <li class="items odd" *ngIf="mostra==true || i<2">
+                            <div class="infoWrap">
+                                <div class="cartSection capitalize">
+                                    <img src={{returnImage(item.team)}} class="itemImg">
+                                    <h3>Maglia {{item.team}}</h3>
+                                    <h6>Giocatore: {{item.player}}</h6>
+                                    <p>Toppa Champions: {{item.champions ?'Sì' : 'No'}}</p><br>
+                                    <p>Colore nome: {{item.color}}</p>
+                                </div>
+                                <div class="prodTotal cartSection">
+                                    <p>{{item.price}}€</p>
+                                </div>
+                                <div class="cartSection removeWrap" (click)="remove(item.id)">
+                                    <a class="remove">x</a>
+                                </div>
                             </div>
-                            <div class="prodTotal cartSection">
-                                <p>{{item.price}}€</p>
-                            </div>
-                            <div class="cartSection removeWrap" (click)="remove(item.id)">
-                                <a class="remove">x</a>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    </ng-container>
+                    <div class="show">
+                        <button *ngIf="products.length>3 && mostra==false" (click)="mostra=true">Mostra tutti</button>
+                    </div>
                 </ul>
             </div>
             <div class="promoCode"><label for="promo">Hai un codice promo?</label><input type="text" name="promo" placholder="Enter Code" #pr>
@@ -43,7 +48,7 @@
         </ng-container>
         <ng-template #empty>
             <h1 class="empty">Il tuo Carrello è vuoto</h1>
-            <h4 class="empty"><a routerLink="/customize"> Comincia a fare shopping</a></h4>
+            <h4 class="empty"><a routerLink="/home"> Comincia a fare shopping</a></h4>
         </ng-template>
     </div>
 </div>

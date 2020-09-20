@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { select, Store } from '@ngrx/store';
+import { Product } from 'src/app/core/models/product';
 import { Shipping } from 'src/app/core/models/shipping';
 import { User } from 'src/app/core/models/user';
+import { selectProducts } from 'src/app/redux/cart';
 import { selectShipping } from 'src/app/redux/shipping';
 import { saveShipping } from 'src/app/redux/shipping/shipping.actions';
 import { selectUsers } from 'src/app/redux/user';
@@ -15,6 +17,7 @@ import { updateUser } from 'src/app/redux/user/user.actions';
   styleUrls: ['./shipping.component.scss']
 })
 export class ShippingComponent implements OnInit {
+  products: Product[];
   shipping:Shipping;
   user:User;
   shipForm: FormGroup;
@@ -22,6 +25,9 @@ export class ShippingComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.store.pipe(select(selectProducts)).subscribe(products=>
+      this.products=products
+    )
     this.store.pipe(select(selectShipping)).subscribe(shipping=>{
       this.user=JSON.parse(sessionStorage.getItem("user"));
       this.shipping=shipping;

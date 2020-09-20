@@ -29,26 +29,34 @@
     {
       "team": "schalke",
       "champions": true,
-      "player": "aaa",
+      "player": "theo",
       "color": "trasferta",
       "price": 190,
-      "id": 1
+      "id": 3
     },
     {
       "team": "schalke",
       "champions": true,
-      "player": "firmino",
+      "player": "theo",
       "color": "trasferta",
       "price": 190,
-      "id": 2
+      "id": 5
     },
     {
-      "team": "atalanta",
-      "champions": false,
-      "player": "firmino",
+      "team": "lipsia",
+      "champions": true,
+      "player": "theo",
+      "color": "trasferta",
+      "price": 220,
+      "id": 6
+    },
+    {
+      "team": "lipsia",
+      "champions": true,
+      "player": "theo",
       "color": "casa",
-      "price": 120,
-      "id": 3
+      "price": 220,
+      "id": 7
     }
   ],
   "user": [

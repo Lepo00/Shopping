@@ -10,6 +10,7 @@ import { removeToCart } from 'src/app/redux/cart/cart.actions';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
+  mostra:boolean;
   promoz:boolean;
   netto:number;
   tot:number;
@@ -18,6 +19,7 @@ export class CartComponent implements OnInit {
   products: Product[];
   constructor(private store:Store) { 
     this.promoz=false;
+    this.mostra=false;
   }
 
   ngOnInit(): void {
