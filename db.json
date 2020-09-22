@@ -1,9 +1,29 @@
 {
     "team": [
-        ["inter", "milan", "juve", "atalanta"],
-        ["bayern", "borussia", "schalke", "lipsia"],
-        ["barça", "real", "atletico", "siviglia"],
-        ["psg", "lione", "marsiglia", "nizza"]
+        [
+            "bayern",
+            "borussia",
+            "schalke",
+            "lipsia"
+        ],
+        [
+            "inter",
+            "milan",
+            "juve",
+            "atalanta"
+        ],
+        [
+            "barça",
+            "real",
+            "atletico",
+            "siviglia"
+        ],
+        [
+            "psg",
+            "lione",
+            "marsiglia",
+            "nizza"
+        ]
     ],
     "products": [],
     "user": [{
