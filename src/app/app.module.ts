@@ -16,7 +16,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpCommunicationsService } from './core/services/http-communications.service';
 import { UserEffects } from './redux/user/user.effects';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FeaturesModule } from './features/features.module';
 import { ShippingEffects } from './redux/shipping/shipping.effects';
 import { PaymentEffects } from './redux/payment/payment.effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
@@ -38,10 +37,9 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     }),
     HttpClientModule,
     BrowserAnimationsModule,
-    FeaturesModule,
     StoreRouterConnectingModule.forRoot(),
   ],
-  providers: [HttpCommunicationsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
