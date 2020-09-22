@@ -1,96 +1,72 @@
 {
-  "team": [
-    [
-      "inter",
-      "milan",
-      "juve",
-      "atalanta"
+    "team": [
+        ["inter", "milan", "juve", "atalanta"],
+        ["bayern", "borussia", "schalke", "lipsia"],
+        ["barça", "real", "atletico", "siviglia"],
+        ["psg", "lione", "marsiglia", "nizza"]
     ],
-    [
-      "bayern",
-      "borussia",
-      "schalke",
-      "lipsia"
-    ],
-    [
-      "barça",
-      "real",
-      "atletico",
-      "siviglia"
-    ],
-    [
-      "psg",
-      "lione",
-      "marsiglia",
-      "nizza"
+    "products": [],
+    "user": [{
+            "username": "por",
+            "password": "dio",
+            "email": "cod",
+            "id": 1
+        },
+        {
+            "username": "ciao",
+            "password": "ciao",
+            "email": "ciao",
+            "id": 2
+        },
+        {
+            "id": 3,
+            "username": "luca",
+            "password": "123",
+            "email": "luca",
+            "shipping": {
+                "name": "luca",
+                "surname": "lepo",
+                "phone": "3456789021",
+                "city": "milano",
+                "cap": "23456",
+                "address": "Via De Gasperi",
+                "number": 34,
+                "info": null
+            },
+            "payment": {
+                "method": "carta di debito",
+                "type": "mastercard",
+                "number": "1234 1234 1234 1234",
+                "cvv": "666"
+            }
+        },
+        {
+            "username": "rati",
+            "password": "123",
+            "email": "lepo",
+            "id": 4
+        },
+        {
+            "username": "lepo",
+            "password": "123",
+            "email": "luca",
+            "id": 5,
+            "shipping": {
+                "name": "luca",
+                "surname": "lepo",
+                "phone": "3456789021",
+                "city": "milano",
+                "cap": "23456",
+                "address": "Via De Gasperi",
+                "number": 23,
+                "info": null
+            }
+        },
+        {
+            "username": "mat",
+            "password": "car",
+            "email": "teo",
+            "id": 6
+        }
     ]
-  ],
-  "products": [
-    {
-      "team": "inter",
-      "champions": true,
-      "player": "eriksen",
-      "color": "trasferta",
-      "price": 130,
-      "id": 1
-    }
-  ],
-  "user": [
-    {
-      "username": "por",
-      "password": "dio",
-      "email": "cod",
-      "id": 1
-    },
-    {
-      "username": "ciao",
-      "password": "ciao",
-      "email": "ciao",
-      "id": 2
-    },
-    {
-      "id": 3,
-      "username": "luca",
-      "password": "123",
-      "email": "luca",
-      "shipping": {
-        "name": "luca",
-        "surname": "lepo",
-        "phone": "3456789021",
-        "city": "milano",
-        "cap": "23456",
-        "address": "Via De Gasperi",
-        "number": 34,
-        "info": null
-      },
-      "payment": {
-        "method": "carta di debito",
-        "type": "mastercard",
-        "number": "1234 1234 1234 1234",
-        "cvv": "666"
-      }
-    },
-    {
-      "username": "rati",
-      "password": "123",
-      "email": "lepo",
-      "id": 4
-    },
-    {
-      "username": "lepo",
-      "password": "123",
-      "email": "luca",
-      "id": 5,
-      "shipping": {
-        "name": "luca",
-        "surname": "lepo",
-        "phone": "3456789021",
-        "city": "milano",
-        "cap": "23456",
-        "address": "Via De Gasperi",
-        "number": 23,
-        "info": null
-      }
-    }
-  ]
 }
