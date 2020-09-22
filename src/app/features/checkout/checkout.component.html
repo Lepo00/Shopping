@@ -16,22 +16,22 @@
                     <div class="div10">{{shipping?.name}} {{shipping?.surname}}</div>
                 </div>
                 <form autocomplete="off" [formGroup]="payForm">
-                    <select class="select" required formControlName="method">
+                    <select class="select" required formControlName="method" id="method">
                     <option value="" disabled selected hidden>Metodo di Pagamento</option>
                     <option value="carta di credito">Carta di credito</option>
                     <option value="carta di debito">Carta di debito</option>
                 </select>
-                    <select class="select" required formControlName="type">
+                    <select class="select" required formControlName="type" id="type">
                     <option value="" disabled selected hidden invalid>Tipo di Carta</option>
                     <option value="visa">Visa</option>
                     <option value="mastercard">MasterCard</option>
                     <option value="maestro">Maestro</option>
                 </select>
-                    <input type="tel" class="cc left" formControlName="number" inputmode="numeric" placeholder="Numero Carta" pattern="[0-9\s]{13,19}" maxlength="19">
-                    <input type="text" class="cvv" placeholder="CVV" maxlength=3 formControlName="cvv">
+                    <input type="tel" class="cc left" formControlName="number" inputmode="numeric" placeholder="Numero Carta" pattern="[0-9\s]{13,19}" maxlength="19" id="num">
+                    <input type="text" class="cvv" placeholder="CVV" maxlength=3 formControlName="cvv" id="cvv">
                     <button class="btnLeft" routerLink="/shipping">Indietro</button>
                     <button (click)="addPay()" class="btnLeft salva" [ngClass]="{'disabled': payForm.status==='INVALID'}">Salva</button>
-                    <button type="submit" (click)="pay()" class="btnRight" [disabled]="payForm.status === 'INVALID'" [ngClass]="{'disabled': payForm.status==='INVALID'}">Prosegui</button>
+                    <button type="submit" (click)="pay()" class="btnRight" [disabled]="payForm.status === 'INVALID'" [ngClass]="{'disabled': payForm.status==='INVALID'}" id="submit">Prosegui</button>
                 </form>
             </ng-container>
             <ng-template #other>

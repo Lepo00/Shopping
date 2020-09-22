@@ -4,7 +4,7 @@
         <div class="product-img">
             <img src={{immagine}} *ngIf="immagine; else imgEmpty">
             <div class="product-reset-btn animate__animated animate__fadeInDown animate__delay-1s">
-                <button type="button" (click)="cls();">Reset</button>
+                <button type="button" (click)="cls();" id="reset">Reset</button>
             </div>
             <ng-template #imgEmpty>
                 <h1 class="imgEmpty">Scegli una squadra</h1>
@@ -46,13 +46,13 @@
                             <h1>Casa</h1>
                         </label>
                             <input class="hidden radio-label-2" id="black-button" type="radio" name="color" formControlName="color" value="trasferta">
-                            <label class="button-label-2" for="black-button">
+                            <label class="button-label-2" for="black-button" id="trasf">
                             <h1>Trasferta</h1>
                     </label>
                         </div>
                     </div>
-                    <div class="product-price-btn" [ngClass]="{'disabled': customizeForm.status==='INVALID'}">
-                        <button [disabled]="customizeForm.status === 'INVALID'">Aggiungi al carrello</button>
+                    <div class="product-price-btn" [ngClass]="{'disabled': customizeForm.status==='INVALID'}" id="dis">
+                        <button [disabled]="customizeForm.status === 'INVALID'" id="submit">Aggiungi al carrello</button>
                     </div>
                 </div>
             </div>

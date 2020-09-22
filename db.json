@@ -27,20 +27,12 @@
   ],
   "products": [
     {
-      "team": "lipsia",
+      "team": "inter",
       "champions": true,
-      "player": "theo",
+      "player": "eriksen",
       "color": "trasferta",
-      "price": 220,
-      "id": 6
-    },
-    {
-      "team": "lipsia",
-      "champions": true,
-      "player": "theo",
-      "color": "casa",
-      "price": 220,
-      "id": 7
+      "price": 130,
+      "id": 1
     }
   ],
   "user": [

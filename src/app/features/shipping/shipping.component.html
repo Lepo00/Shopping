@@ -1,17 +1,17 @@
 <app-menu [title]="'Shipping'" [home]=true></app-menu>
 <div class="all animate__animated animate__zoomIn">
     <form [formGroup]="shipForm" *ngIf="products.length>0; else empty">
-        <input type="text" placeholder="nome" formControlName="name">
-        <input type="text" placeholder="cognome" formControlName="surname">
-        <input type="text" placeholder="cellulare" formControlName="phone" autocomplete="phone">
-        <input type="text" placeholder="città" class="half left" formControlName="city" name="city">
-        <input type="text" placeholder="CAP" class="half" formControlName="cap">
-        <input type="text" placeholder="Indirizzo" class="address left" formControlName="address">
-        <input type="number" placeholder="N°" class="num" formControlName="number">
-        <input type="text" placeholder="Informazioni per corriere" formControlName="info">
+        <input type="text" placeholder="nome" formControlName="name" id="name">
+        <input type="text" placeholder="cognome" formControlName="surname" id="surname">
+        <input type="text" placeholder="cellulare" formControlName="phone" autocomplete="phone" id="phone">
+        <input type="text" placeholder="città" class="half left" formControlName="city" name="city" id="city">
+        <input type="text" placeholder="CAP" class="half" formControlName="cap" id="cap">
+        <input type="text" placeholder="Indirizzo" class="address left" formControlName="address" id="address">
+        <input type="number" placeholder="N°" class="num" formControlName="number" id="num">
+        <input type="text" placeholder="Informazioni per corriere" formControlName="info" id="info">
         <button class="btnLeft" routerLink="/cart">Indietro</button>
         <button (click)="addShip()" class="btnLeft salva" routerLink="/checkout" [ngClass]="{'disabled': shipForm.status==='INVALID'}">Salva</button>
-        <button type="submit" class="btnRight" (click)="saveShipping()" routerLink="/checkout" [disabled]="shipForm.status === 'INVALID'" [ngClass]="{'disabled': shipForm.status==='INVALID'}">Prosegui</button>
+        <button type="submit" class="btnRight" (click)="saveShipping()" routerLink="/checkout" [disabled]="shipForm.status === 'INVALID'" [ngClass]="{'disabled': shipForm.status==='INVALID'}" id="submit">Prosegui</button>
     </form>
     <ng-template #empty>
         <h1 class="empty">Il tuo carrello è vuoto</h1>
