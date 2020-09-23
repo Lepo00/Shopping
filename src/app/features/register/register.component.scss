@@ -239,3 +239,8 @@ button:focus {
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
 }
+
+.disabled {
+    border: 1px solid red;
+    cursor: unset;
+}

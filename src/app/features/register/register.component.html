@@ -10,7 +10,7 @@
                     <input type='email' placeholder='Email' class='input-line full-width' formControlName="email" id="email">
                     <input type='password' placeholder='Password' class='input-line full-width' formControlName="password" id="password">
                 </div>
-                <div><button class='ghost-round-2 full-width-2' [disabled]="registerForm.status === 'INVALID'" id="submit">Registrati</button></div>
+                <div><button class='ghost-round-2 full-width-2' [disabled]="registerForm.status === 'INVALID'" id="submit" [ngClass]="{'disabled': registerForm.status === 'INVALID'}">Registrati</button></div>
             </form>
             <div class='spacing'>hai già un <span class='highlight' routerLink="/login">Account</span>?</div>
             <div><button class='ghost-round full-width' routerLink="/login">Effettua il Login</button></div>
