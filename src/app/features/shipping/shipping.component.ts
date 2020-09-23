@@ -55,7 +55,7 @@ export class ShippingComponent implements OnInit {
 
   addShip(){
     this.saveShipping();
-    this.user.shipping=this.shipping;
+    this.user.shipping=this.shipForm.value;
     this.store.dispatch(updateUser({user:this.user}));
   }
 

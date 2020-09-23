@@ -25,7 +25,32 @@
       "nizza"
     ]
   ],
-  "products": [],
+  "products": [
+    {
+      "team": "inter",
+      "champions": true,
+      "player": "firmino",
+      "color": "casa",
+      "price": 120,
+      "id": 2
+    },
+    {
+      "team": "milan",
+      "champions": true,
+      "player": "firmino",
+      "color": "casa",
+      "price": 140,
+      "id": 3
+    },
+    {
+      "team": "milan",
+      "champions": true,
+      "player": "ciao",
+      "color": "casa",
+      "price": 140,
+      "id": 4
+    }
+  ],
   "user": [
     {
       "id": 1,
@@ -44,6 +69,28 @@
       },
       "payment": {
         "method": "carta di debito",
+        "type": "mastercard",
+        "number": "1234 1234 1234 1234",
+        "cvv": "666"
+      }
+    },
+    {
+      "username": "luca",
+      "password": "123",
+      "email": "prova",
+      "id": 2,
+      "shipping": {
+        "name": "luca",
+        "surname": "lepo",
+        "phone": "3456789021",
+        "city": "milano",
+        "cap": "23456",
+        "address": "Via De Gasperi",
+        "number": 12,
+        "info": null
+      },
+      "payment": {
+        "method": "carta di credito",
         "type": "mastercard",
         "number": "1234 1234 1234 1234",
         "cvv": "666"

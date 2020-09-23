@@ -16,7 +16,7 @@ export class HomeComponent {
   pauseOnHover = true;
   pauseOnFocus = true;
 
-  currentSlide: string='0';
+  currentSlide: number=1;
 
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
 
@@ -37,7 +37,7 @@ export class HomeComponent {
     if (this.pauseOnIndicator && !slideEvent.paused && slideEvent.source === NgbSlideEventSource.INDICATOR) {
       this.togglePaused();
     }
-    this.currentSlide=slideEvent.current;
+    this.currentSlide=Number.parseInt(slideEvent.current)+1;
   }
 
   constructor(private fb: FormBuilder){
