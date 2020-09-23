@@ -825,22 +825,22 @@ export class CheckoutComponent implements OnInit {
                     &lt;div class&#x3D;&quot;div10&quot;&gt;{{shipping?.name}} {{shipping?.surname}}&lt;/div&gt;
                 &lt;/div&gt;
                 &lt;form autocomplete&#x3D;&quot;off&quot; [formGroup]&#x3D;&quot;payForm&quot;&gt;
-                    &lt;select class&#x3D;&quot;select&quot; required formControlName&#x3D;&quot;method&quot;&gt;
+                    &lt;select class&#x3D;&quot;select&quot; required formControlName&#x3D;&quot;method&quot; id&#x3D;&quot;method&quot;&gt;
                     &lt;option value&#x3D;&quot;&quot; disabled selected hidden&gt;Metodo di Pagamento&lt;/option&gt;
                     &lt;option value&#x3D;&quot;carta di credito&quot;&gt;Carta di credito&lt;/option&gt;
                     &lt;option value&#x3D;&quot;carta di debito&quot;&gt;Carta di debito&lt;/option&gt;
                 &lt;/select&gt;
-                    &lt;select class&#x3D;&quot;select&quot; required formControlName&#x3D;&quot;type&quot;&gt;
+                    &lt;select class&#x3D;&quot;select&quot; required formControlName&#x3D;&quot;type&quot; id&#x3D;&quot;type&quot;&gt;
                     &lt;option value&#x3D;&quot;&quot; disabled selected hidden invalid&gt;Tipo di Carta&lt;/option&gt;
                     &lt;option value&#x3D;&quot;visa&quot;&gt;Visa&lt;/option&gt;
                     &lt;option value&#x3D;&quot;mastercard&quot;&gt;MasterCard&lt;/option&gt;
                     &lt;option value&#x3D;&quot;maestro&quot;&gt;Maestro&lt;/option&gt;
                 &lt;/select&gt;
-                    &lt;input type&#x3D;&quot;tel&quot; class&#x3D;&quot;cc left&quot; formControlName&#x3D;&quot;number&quot; inputmode&#x3D;&quot;numeric&quot; placeholder&#x3D;&quot;Numero Carta&quot; pattern&#x3D;&quot;[0-9\s]{13,19}&quot; maxlength&#x3D;&quot;19&quot;&gt;
-                    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;cvv&quot; placeholder&#x3D;&quot;CVV&quot; maxlength&#x3D;3 formControlName&#x3D;&quot;cvv&quot;&gt;
+                    &lt;input type&#x3D;&quot;tel&quot; class&#x3D;&quot;cc left&quot; formControlName&#x3D;&quot;number&quot; inputmode&#x3D;&quot;numeric&quot; placeholder&#x3D;&quot;Numero Carta&quot; pattern&#x3D;&quot;[0-9\s]{13,19}&quot; maxlength&#x3D;&quot;19&quot; id&#x3D;&quot;num&quot;&gt;
+                    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;cvv&quot; placeholder&#x3D;&quot;CVV&quot; maxlength&#x3D;3 formControlName&#x3D;&quot;cvv&quot; id&#x3D;&quot;cvv&quot;&gt;
                     &lt;button class&#x3D;&quot;btnLeft&quot; routerLink&#x3D;&quot;/shipping&quot;&gt;Indietro&lt;/button&gt;
-                    &lt;button (click)&#x3D;&quot;addPay()&quot; class&#x3D;&quot;btnLeft&quot; [ngClass]&#x3D;&quot;{&#x27;disabled&#x27;: payForm.status&#x3D;&#x3D;&#x3D;&#x27;INVALID&#x27;}&quot;&gt;Salva&lt;/button&gt;
-                    &lt;button type&#x3D;&quot;submit&quot; (click)&#x3D;&quot;pay()&quot; class&#x3D;&quot;btnRight&quot; [disabled]&#x3D;&quot;payForm.status &#x3D;&#x3D;&#x3D; &#x27;INVALID&#x27;&quot; [ngClass]&#x3D;&quot;{&#x27;disabled&#x27;: payForm.status&#x3D;&#x3D;&#x3D;&#x27;INVALID&#x27;}&quot;&gt;Prosegui&lt;/button&gt;
+                    &lt;button (click)&#x3D;&quot;addPay()&quot; class&#x3D;&quot;btnLeft salva&quot; [ngClass]&#x3D;&quot;{&#x27;disabled&#x27;: payForm.status&#x3D;&#x3D;&#x3D;&#x27;INVALID&#x27;}&quot;&gt;Salva&lt;/button&gt;
+                    &lt;button type&#x3D;&quot;submit&quot; (click)&#x3D;&quot;pay()&quot; class&#x3D;&quot;btnRight&quot; [disabled]&#x3D;&quot;payForm.status &#x3D;&#x3D;&#x3D; &#x27;INVALID&#x27;&quot; [ngClass]&#x3D;&quot;{&#x27;disabled&#x27;: payForm.status&#x3D;&#x3D;&#x3D;&#x27;INVALID&#x27;}&quot; id&#x3D;&quot;submit&quot;&gt;Prosegui&lt;/button&gt;
                 &lt;/form&gt;
             &lt;/ng-container&gt;
             &lt;ng-template #other&gt;
@@ -848,7 +848,7 @@ export class CheckoutComponent implements OnInit {
                     &lt;h1&gt;Non hai inserito i dati di spedizione&lt;/h1&gt;
                     &lt;h3&gt;&lt;a routerLink&#x3D;&quot;/shipping&quot;&gt;Inserisci ora i tuoi dati&lt;/a&gt;&lt;/h3&gt;
                     &lt;h5&gt;Oppure&lt;/h5&gt;
-                    &lt;h3&gt;&lt;a routerLink&#x3D;&quot;/customize&quot;&gt;Torna a fare Shopping&lt;/a&gt;&lt;/h3&gt;
+                    &lt;h3&gt;&lt;a routerLink&#x3D;&quot;/home&quot;&gt;Torna a fare Shopping&lt;/a&gt;&lt;/h3&gt;
                 &lt;/div&gt;
             &lt;/ng-template&gt;
         &lt;/ng-container&gt;
@@ -856,7 +856,7 @@ export class CheckoutComponent implements OnInit {
             &lt;div class&#x3D;&quot;error animate__animated animate__rubberBand&quot;&gt;
                 &lt;h1&gt;Acquisto effettuato con successo&lt;/h1&gt;
                 &lt;h3&gt;Ti abbiamo inviato una mail di conferma&lt;/h3&gt;
-                &lt;h3&gt;&lt;a routerLink&#x3D;&quot;/customize&quot;&gt;Torna a fare Shopping&lt;/a&gt;&lt;/h3&gt;
+                &lt;h3&gt;&lt;a routerLink&#x3D;&quot;/home&quot;&gt;Torna a fare Shopping&lt;/a&gt;&lt;/h3&gt;
             &lt;/div&gt;
         &lt;/ng-template&gt;
     &lt;/div&gt;
@@ -946,7 +946,12 @@ input:focus,
 }
 
 .btnRight {
-    background-color: rgb(198, 155, 224);
+    background-color: rgb(180, 89, 236);
+    color: white;
+}
+
+.salva {
+    background-color: rgb(206, 156, 238);
     color: white;
 }
 
@@ -1163,7 +1168,7 @@ button:hover span {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-menu [title]="\'Checkout\'" [home]=true></app-menu><div class="animate__animated animate__zoomIn">    <div class="wrapper">        <ng-container *ngIf="done==false; else finish">            <ng-container *ngIf="shipping; else other">                <div class="parent">                    <div class="div1">Prodotti acquistati </div>                    <div class="div2">Prezzo </div>                    <div class="div3">Spedizione </div>                    <div class="div4">Indirizzo </div>                    <div class="div5">Spedito al sig. </div>                    <div class="div6">{{products?.length}} </div>                    <div class="div7">{{price}}€</div>                    <div class="div8">{{spedizione}}€</div>                    <div class="div9">{{shipping?.city}}, {{shipping?.address}}, {{shipping?.number}}</div>                    <div class="div10">{{shipping?.name}} {{shipping?.surname}}</div>                </div>                <form autocomplete="off" [formGroup]="payForm">                    <select class="select" required formControlName="method">                    <option value="" disabled selected hidden>Metodo di Pagamento</option>                    <option value="carta di credito">Carta di credito</option>                    <option value="carta di debito">Carta di debito</option>                </select>                    <select class="select" required formControlName="type">                    <option value="" disabled selected hidden invalid>Tipo di Carta</option>                    <option value="visa">Visa</option>                    <option value="mastercard">MasterCard</option>                    <option value="maestro">Maestro</option>                </select>                    <input type="tel" class="cc left" formControlName="number" inputmode="numeric" placeholder="Numero Carta" pattern="[0-9\s]{13,19}" maxlength="19">                    <input type="text" class="cvv" placeholder="CVV" maxlength=3 formControlName="cvv">                    <button class="btnLeft" routerLink="/shipping">Indietro</button>                    <button (click)="addPay()" class="btnLeft" [ngClass]="{\'disabled\': payForm.status===\'INVALID\'}">Salva</button>                    <button type="submit" (click)="pay()" class="btnRight" [disabled]="payForm.status === \'INVALID\'" [ngClass]="{\'disabled\': payForm.status===\'INVALID\'}">Prosegui</button>                </form>            </ng-container>            <ng-template #other>                <div class="error">                    <h1>Non hai inserito i dati di spedizione</h1>                    <h3><a routerLink="/shipping">Inserisci ora i tuoi dati</a></h3>                    <h5>Oppure</h5>                    <h3><a routerLink="/customize">Torna a fare Shopping</a></h3>                </div>            </ng-template>        </ng-container>        <ng-template #finish>            <div class="error animate__animated animate__rubberBand">                <h1>Acquisto effettuato con successo</h1>                <h3>Ti abbiamo inviato una mail di conferma</h3>                <h3><a routerLink="/customize">Torna a fare Shopping</a></h3>            </div>        </ng-template>    </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><app-menu [title]="\'Checkout\'" [home]=true></app-menu><div class="animate__animated animate__zoomIn">    <div class="wrapper">        <ng-container *ngIf="done==false; else finish">            <ng-container *ngIf="shipping; else other">                <div class="parent">                    <div class="div1">Prodotti acquistati </div>                    <div class="div2">Prezzo </div>                    <div class="div3">Spedizione </div>                    <div class="div4">Indirizzo </div>                    <div class="div5">Spedito al sig. </div>                    <div class="div6">{{products?.length}} </div>                    <div class="div7">{{price}}€</div>                    <div class="div8">{{spedizione}}€</div>                    <div class="div9">{{shipping?.city}}, {{shipping?.address}}, {{shipping?.number}}</div>                    <div class="div10">{{shipping?.name}} {{shipping?.surname}}</div>                </div>                <form autocomplete="off" [formGroup]="payForm">                    <select class="select" required formControlName="method" id="method">                    <option value="" disabled selected hidden>Metodo di Pagamento</option>                    <option value="carta di credito">Carta di credito</option>                    <option value="carta di debito">Carta di debito</option>                </select>                    <select class="select" required formControlName="type" id="type">                    <option value="" disabled selected hidden invalid>Tipo di Carta</option>                    <option value="visa">Visa</option>                    <option value="mastercard">MasterCard</option>                    <option value="maestro">Maestro</option>                </select>                    <input type="tel" class="cc left" formControlName="number" inputmode="numeric" placeholder="Numero Carta" pattern="[0-9\s]{13,19}" maxlength="19" id="num">                    <input type="text" class="cvv" placeholder="CVV" maxlength=3 formControlName="cvv" id="cvv">                    <button class="btnLeft" routerLink="/shipping">Indietro</button>                    <button (click)="addPay()" class="btnLeft salva" [ngClass]="{\'disabled\': payForm.status===\'INVALID\'}">Salva</button>                    <button type="submit" (click)="pay()" class="btnRight" [disabled]="payForm.status === \'INVALID\'" [ngClass]="{\'disabled\': payForm.status===\'INVALID\'}" id="submit">Prosegui</button>                </form>            </ng-container>            <ng-template #other>                <div class="error">                    <h1>Non hai inserito i dati di spedizione</h1>                    <h3><a routerLink="/shipping">Inserisci ora i tuoi dati</a></h3>                    <h5>Oppure</h5>                    <h3><a routerLink="/home">Torna a fare Shopping</a></h3>                </div>            </ng-template>        </ng-container>        <ng-template #finish>            <div class="error animate__animated animate__rubberBand">                <h1>Acquisto effettuato con successo</h1>                <h3>Ti abbiamo inviato una mail di conferma</h3>                <h3><a routerLink="/home">Torna a fare Shopping</a></h3>            </div>        </ng-template>    </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CartComponent', 'selector': 'app-cart'},{'name': 'CheckoutComponent', 'selector': 'app-checkout'},{'name': 'CustomizeComponent', 'selector': 'app-customize'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'ShippingComponent', 'selector': 'app-shipping'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CheckoutComponent'};

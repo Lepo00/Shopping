@@ -154,6 +154,9 @@
                             <a href="#selectProducts" title="src/app/redux/cart/index.ts"><b>selectProducts</b>&nbsp;&nbsp;&nbsp;(src/.../index.ts)</a>
                         </li>
                         <li>
+                            <a href="#selectRouter" title="src/app/redux/index.ts"><b>selectRouter</b>&nbsp;&nbsp;&nbsp;(src/.../index.ts)</a>
+                        </li>
+                        <li>
                             <a href="#selectShipping" title="src/app/redux/shipping/index.ts"><b>selectShipping</b>&nbsp;&nbsp;&nbsp;(src/.../index.ts)</a>
                         </li>
                         <li>
@@ -176,6 +179,9 @@
                         </li>
                         <li>
                             <a href="#signUpUserSuccess" title="src/app/redux/user/user.actions.ts"><b>signUpUserSuccess</b>&nbsp;&nbsp;&nbsp;(src/.../user.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#" title="src/app/redux/index.ts"><b></b>&nbsp;&nbsp;&nbsp;(src/.../index.ts)</a>
                         </li>
                         <li>
                             <a href="#updateUser" title="src/app/redux/user/user.actions.ts"><b>updateUser</b>&nbsp;&nbsp;&nbsp;(src/.../user.actions.ts)</a>
@@ -968,7 +974,53 @@
     userState: userReducer,
     shippingState: shippingReducer,
     paymentState: paymentReducer,
+    router: routerReducer,
 }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectRouter"></a>
+                        <span class="name">
+                            <b>
+                            selectRouter</b>
+                            <a href="#selectRouter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>createFeatureSelector&lt;
+  AppState,
+  RouterReducerState&lt;any&gt;
+&gt;(&#x27;router&#x27;)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name=""></a>
+                        <span class="name">
+                            <b>
+                            </b>
+                            <a href="#"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>getSelectors(selectRouter)</code>
                         </td>
                     </tr>
 
@@ -992,7 +1044,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>(state)&#x3D;&gt;state.cartState</code>
+                            <i>Default value : </i><code>(state: AppState)&#x3D;&gt;state.cartState</code>
                         </td>
                     </tr>
 
@@ -1112,7 +1164,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>(state)&#x3D;&gt;state.userState</code>
+                            <i>Default value : </i><code>(state: AppState)&#x3D;&gt;state.userState</code>
                         </td>
                     </tr>
 
@@ -1160,7 +1212,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>(state)&#x3D;&gt;state.paymentState</code>
+                            <i>Default value : </i><code>(state: AppState)&#x3D;&gt;state.paymentState</code>
                         </td>
                     </tr>
 
@@ -1208,7 +1260,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>(state)&#x3D;&gt;state.shippingState</code>
+                            <i>Default value : </i><code>(state: AppState)&#x3D;&gt;state.shippingState</code>
                         </td>
                     </tr>
 

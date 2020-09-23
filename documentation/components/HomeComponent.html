@@ -438,7 +438,7 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>[&quot;../../../assets/img/calcio.jpg&quot;,&quot;../../../assets/img/calcio-2.jpg&quot;,&quot;../../../assets/img/calcio-3.jpg&quot;,&quot;../../../assets/img/calcio-4.jpg&quot;]</code>
+                            <i>Default value : </i><code>[&quot;../../../assets/img/calcio-4.jpg&quot;,&quot;../../../assets/img/calcio-2.jpg&quot;,&quot;../../../assets/img/calcio-3.jpg&quot;,&quot;../../../assets/img/calcio.jpg&quot;]</code>
                         </td>
                     </tr>
                         <tr>
@@ -597,7 +597,7 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from &#x27;@ng-bootst
   styleUrls: [&#x27;./home.component.scss&#x27;]
 })
 export class HomeComponent {
-  images &#x3D; [&quot;../../../assets/img/calcio.jpg&quot;,&quot;../../../assets/img/calcio-2.jpg&quot;,&quot;../../../assets/img/calcio-3.jpg&quot;,&quot;../../../assets/img/calcio-4.jpg&quot;];
+  images &#x3D; [&quot;../../../assets/img/calcio-4.jpg&quot;,&quot;../../../assets/img/calcio-2.jpg&quot;,&quot;../../../assets/img/calcio-3.jpg&quot;,&quot;../../../assets/img/calcio.jpg&quot;];
   paused &#x3D; false;
   unpauseOnArrow &#x3D; false;
   pauseOnIndicator &#x3D; false;
@@ -644,7 +644,7 @@ export class HomeComponent {
         &lt;/ng-template&gt;
     &lt;/ngb-carousel&gt;
     &lt;div class&#x3D;&quot;bott&quot;&gt;
-        &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;animate__animated animate__pulse animate__delay-1s&quot; routerLink&#x3D;&quot;/customize/{{currentSlide}}&quot;&gt;Personalizza ora&lt;/button&gt;
+        &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;animate__animated animate__pulse animate__delay-1s&quot; routerLink&#x3D;&quot;/customize/{{currentSlide}}&quot; id&#x3D;&quot;cust&quot;&gt;Personalizza ora&lt;/button&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </div>
@@ -767,7 +767,7 @@ button:hover span {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-menu [title]="\'Benvenuto su CalcioStore\'" [cart]=true></app-menu><div class="all">    <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)" class="animate__animated animate__fadeInDown">        <ng-template ngbSlide *ngFor="let img of images; index as i" [id]=i>            <div class="picsum-img-wrapper">                <img [src]="img" routerLink="/customize/{{i+1}}">            </div>        </ng-template>    </ngb-carousel>    <div class="bott">        <button type="submit" class="animate__animated animate__pulse animate__delay-1s" routerLink="/customize/{{currentSlide}}">Personalizza ora</button>    </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><app-menu [title]="\'Benvenuto su CalcioStore\'" [cart]=true></app-menu><div class="all">    <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)" class="animate__animated animate__fadeInDown">        <ng-template ngbSlide *ngFor="let img of images; index as i" [id]=i>            <div class="picsum-img-wrapper">                <img [src]="img" routerLink="/customize/{{i+1}}">            </div>        </ng-template>    </ngb-carousel>    <div class="bott">        <button type="submit" class="animate__animated animate__pulse animate__delay-1s" routerLink="/customize/{{currentSlide}}" id="cust">Personalizza ora</button>    </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CartComponent', 'selector': 'app-cart'},{'name': 'CheckoutComponent', 'selector': 'app-checkout'},{'name': 'CustomizeComponent', 'selector': 'app-customize'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'ShippingComponent', 'selector': 'app-shipping'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
