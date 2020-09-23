@@ -95,6 +95,28 @@
         "number": "1234 1234 1234 1234",
         "cvv": "666"
       }
+    },
+    {
+      "username": "exe",
+      "password": "exe",
+      "email": "exe",
+      "id": 3,
+      "shipping": {
+        "name": "luca",
+        "surname": "lepo",
+        "phone": "3456789021",
+        "city": "milano",
+        "cap": "23456",
+        "address": "Via De Gasperi",
+        "number": 666,
+        "info": null
+      },
+      "payment": {
+        "method": "carta di debito",
+        "type": "mastercard",
+        "number": "1234 1234 1234 1234",
+        "cvv": "555"
+      }
     }
   ]
 }

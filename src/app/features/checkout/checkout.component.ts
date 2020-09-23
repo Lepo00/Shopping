@@ -79,8 +79,8 @@ export class CheckoutComponent implements OnInit {
   }
 
   addPay(){
-    this.pay();
-    this.user.payment=this.payment;
+    //this.pay();
+    this.user.payment=this.payForm.value;
     this.store.dispatch(updateUser({user:this.user}));
   }
 
