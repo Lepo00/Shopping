@@ -1,51 +1,53 @@
 {
-    "team": [
-        [
-            "bayern",
-            "borussia",
-            "schalke",
-            "lipsia"
-        ],
-        [
-            "inter",
-            "milan",
-            "juve",
-            "atalanta"
-        ],
-        [
-            "barça",
-            "real",
-            "atletico",
-            "siviglia"
-        ],
-        [
-            "psg",
-            "lione",
-            "marsiglia",
-            "nizza"
-        ]
+  "team": [
+    [
+      "bayern",
+      "borussia",
+      "schalke",
+      "lipsia"
     ],
-    "products": [],
-    "user": [{
-        "id": 1,
-        "username": "luca",
-        "password": "123",
-        "email": "luca",
-        "shipping": {
-            "name": "luca",
-            "surname": "lepo",
-            "phone": "3456789021",
-            "city": "milano",
-            "cap": "23456",
-            "address": "Via De Gasperi",
-            "number": 34,
-            "info": null
-        },
-        "payment": {
-            "method": "carta di debito",
-            "type": "mastercard",
-            "number": "1234 1234 1234 1234",
-            "cvv": "666"
-        }
-    }]
+    [
+      "inter",
+      "milan",
+      "juve",
+      "atalanta"
+    ],
+    [
+      "barça",
+      "real",
+      "atletico",
+      "siviglia"
+    ],
+    [
+      "psg",
+      "lione",
+      "marsiglia",
+      "nizza"
+    ]
+  ],
+  "products": [],
+  "user": [
+    {
+      "id": 1,
+      "username": "luca",
+      "password": "123",
+      "email": "luca",
+      "shipping": {
+        "name": "luca",
+        "surname": "lepo",
+        "phone": "3456789021",
+        "city": "milano",
+        "cap": "23456",
+        "address": "Via De Gasperi",
+        "number": 34,
+        "info": null
+      },
+      "payment": {
+        "method": "carta di debito",
+        "type": "mastercard",
+        "number": "1234 1234 1234 1234",
+        "cvv": "666"
+      }
+    }
+  ]
 }

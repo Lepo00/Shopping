@@ -50,7 +50,7 @@ export class CustomizeComponent implements OnInit {
   }
 
   calcPrice(prod:Product):number {
-    let price:number=(this.teams.indexOf(prod.team)+1)*30;
+    let price:number=(this.teams.indexOf(prod.team)+1)*20;
     if(prod.champions)
       price+=100;
     return price;
